@@ -1,0 +1,224 @@
+html, body {
+  margin:0;
+  padding:0;
+  font-family: "Arial";
+}
+@font-face {
+    font-family: WaverlyCF;
+    src: url(../fonts/WaverlyCF-Medium.ttf);
+    src: url(../fonts/WaverlyCF-Medium.otf);
+   }
+@font-face{
+    font-family: WaverlyCF_K;
+    src: url(../fonts/WaverlyCF-Light.ttf);
+}
+@font-face{
+    font-family: Proxima;
+    src: url(../fonts/ProximaNova-Regular.ttf);
+}
+/*                                     Теги                            */
+up {
+	background-color: #eeeff1;
+	width: 100%;
+	height: 20%;
+	display: block;
+}
+category {
+	width: 100%;
+	height: 17%;
+	display: block;
+}
+slider {
+	width: 100%;
+	height: 83%;
+	display: block;
+	background-color: #eeeff1;
+}
+products {
+	width: 100%;
+	padding-top:  10%;
+		padding-bottom:  10%;
+	display: block;
+}
+news {
+	width: 100%;
+	height: 50%;
+	display: block;
+	background-color: #eeeff1;
+}
+/*                                      Header                           */
+.category {
+	margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+}
+.category_name {
+	width: 8%;
+	padding-left: 1.55%;
+	padding-right: 1.55%;
+	height:100%;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+}
+.category_name:hover .name {
+	border-bottom: 3px solid #cd1639;
+	transition: 0.1s;	
+}
+
+.category_name .name{
+	font-size: 1vw;
+	height:30%;
+	padding-bottom: 5px;
+	font-family: Proxima;
+	font-weight: bold;
+}
+.category_name .image {
+	height:65%;
+	width: 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+.logo {
+	width: 15%;
+	height: 100%;
+	margin-left: 16.5%;
+	background-image: url('../img/logo.png');
+	background-position: 50% 50%;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	float: left;
+}
+.right_header {
+	width: 53%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+}
+.menu {
+	width: 80%;
+	height: 12.5%;
+	padding-left: 20%;
+	display: table;
+	padding-top: 2%;
+}
+.menu a{
+	color: black;
+	text-decoration: none;
+}
+.menu_name {
+	border-right: 1px solid black;
+	padding-right: 3%;
+	padding-left: 4%;
+	font-size: 1.18vw;
+	display: table-cell;
+	vertical-align: bottom;
+	font-family: Proxima;
+}
+.menu_name_last {
+	padding-right: 3%;
+	padding-left: 4%;
+	font-size: 1.18vw;
+	display: table-cell;
+	vertical-align: bottom;
+	font-family: Proxima;
+}
+.call {
+	width:100%;
+	height:70%;
+}
+.call_but_header {
+	width: 32%;
+	height:100%;
+	display: table;
+	padding-right: 7%;
+	float: left;
+}
+.but {
+	margin-left:20%;
+	text-align: center;
+	font-size: 1vw;
+	padding-top: 2.5%;
+	padding-bottom: 1.5%;
+	border: 2px solid #cd1639;
+	background-color: white;
+	font-family: Proxima;
+	cursor: pointer;
+	transition: 0.3s;
+}
+.but:hover {
+	background-color: #cd1639;
+	color: white;
+	transition: 0.3s;
+}
+.block_down {
+	padding-left: 3%;
+	width: 26%;
+	height:100%;
+	float: left;
+	display: table;
+}
+.block_down .call_img {
+	height:100%;
+	width:100%;
+	background-image: url(../img/call_header.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	float: left;
+}
+.block_down .call_number {
+	height:100%;
+	width: 80%;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 1.1vw;
+	padding-left: 5%;
+	font-weight: bold;
+	font-family: Proxima;
+}
+.block_down .clock_img {
+	height:100%;
+	width:100%;
+	background-image: url(../img/clock_header.png);
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	float: left;
+}
+.block_down .clock_info {
+	height:100%;
+	width: 80%;
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 0.7333vw;
+	padding-left: 5%;
+	font-family: Proxima;
+}
+.social {
+	font-size: 0.8vw;
+	height:6%;
+	float: left;
+	display: table;
+	width: 72%;
+	padding-top: 1%;
+}
+.social_text {
+display: table-cell;
+vertical-align: middle;
+height: 100%;
+text-align: right;
+}
+.icons {
+	height: 4%;
+	float: left;
+	width: 25%;
+	padding-top: 0.8%;
+	overflow: hidden;
+}
+.icons .social_block {
+	width: 7%;
+	height: 100%;
+	margin-left: 2%;
+	float: left;
+}
