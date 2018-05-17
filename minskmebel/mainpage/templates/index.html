@@ -1,18 +1,19 @@
 <html>
 <head>
 	<meta charset="utf-8" />
+	{% load staticfiles %}
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/scss" href="scss/style.scss">
-    <link rel="stylesheet" type="text/css" href="css/style_index.css">
+	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style.css' %}">
+	<link rel="stylesheet" type="text/scss" href="{% static 'mainpage/scss/style.scss' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style_index.css' %}">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  	<script src="src/js/lightslider.js"></script> 
-  	<script src="js/slider2.js"></script> 
-  	<script src="js/slider3.js"></script> 
-  	<link rel="stylesheet"  href="src/css/lightslider.css"/>
-  	<link rel="stylesheet"  href="css/slider2.css"/>
-  	<link rel="stylesheet"  href="css/slider3.css"/>
+  	<script src="{% static 'mainpage/src/js/lightslider.js' %}"></script>
+  	<script src="{% static 'mainpage/js/slider2.js' %}"></script>
+  	<script src="{% static 'mainpage/js/slider3.js' %}"></script>
+  	<link rel="stylesheet"  href="{% static 'mainpage/src/css/lightslider.css' %}"/>
+  	<link rel="stylesheet"  href="{% static 'mainpage/css/slider2.css' %}"/>
+  	<link rel="stylesheet"  href="{% static 'mainpage/css/slider3.css' %}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
@@ -53,47 +54,47 @@
 	<category>
 			<div class="category" >
 				<div class="category_name">
-					<div class="image" style="background-image: url('img/myagkaya_mebel.png')"></div>
+					<div class="image" style="background-image: url('../static/mainpage/img/myagkaya_mebel.png')"></div>
 					<div class="name">МЯГКАЯ МЕБЕЛЬ</div>
 				</div>
 				
 				<div class="category_name">
-					<div class="image" style="background-image: url('img/gostinaya.png')"></div>
+					<div class="image" style="background-image: url('../static/mainpage/img/gostinaya.png')"></div>
 					<div class="name">ГОСТИНАЯ</div>
 				</div>
 
 				<div class="category_name">
-					<div class="image" style="background-image: url('img/spalnaya.png')"></div>
+					<div class="image" style="background-image: url('../static/mainpage/img/spalnaya.png')"></div>
 					<div class="name">СПАЛЬНЯ</div>
 				</div>
 
 				<div class="category_name">
-					<div class="image" style="background-image: url('img/kuhnya.png')"></div>
+					<div class="image" style="background-image: url('../static/mainpage/img/kuhnya.png')"></div>
 					<div class="name">КУХНЯ</div>
 				</div>
 
 				<div class="category_name">
-					<div class="image" style="background-image: url('img/stolovaya.png')"></div>
+					<div class="image" style="background-image: url('../static/mainpage/img/stolovaya.png')"></div>
 					<div class="name">СТОЛОВАЯ</div>
 				</div>
 
 				<div class="category_name">
-					<div class="image" style="background-image: url('img/prihozhaya.png')"></div>
+					<div class="image" style="background-image: url('../static/mainpage/img/prihozhaya.png')"></div>
 					<div class="name">ПРИХОЖАЯ</div>
 				</div>
 
 				<div class="category_name">
-					<div class="image" style="background-image: url('img/vannaya.png')"></div>
+					<div class="image" style="background-image: url('../static/mainpage/img/vannaya.png')"></div>
 					<div class="name">ВАННАЯ</div>
 				</div>
 
 				<div class="category_name">
-					<div class="image" style="background-image: url('img/detskaya.png')"></div>
+					<div class="image" style="background-image: url('../static/mainpage/img/detskaya.png')"></div>
 					<div class="name">ДЕТСКАЯ</div>
 				</div>
 
 				<div class="category_name">
-					<div class="image" style="background-image: url('img/rabochiy_kabinet.png')"></div>
+					<div class="image" style="background-image: url('../static/mainpage/img/rabochiy_kabinet.png')"></div>
 					<div class="name">РАБОЧИЙ КАБИНЕТ</div>
 				</div>
 			</div>
@@ -183,15 +184,15 @@
 			<div class="more"><b>МинскМЕБЕЛЬ</b> - это дorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </div>
 		</div>
 	<div class="image">
-    	<div class="back" style="background-image: url(img/geo.png);"></div>
+    	<div class="back" style="background-image: url(../static/mainpage/img/geo.png);"></div>
     	Все белорусские производители в одном месте
     </div>
     <div class="image">
-    	<div class="back" style="background-image: url(img/sale.png);"></div>
+    	<div class="back" style="background-image: url(../static/mainpage/img/sale.png);"></div>
     	Скидки, акции, распродажи, рассрочка
     </div>
     <div class="image">
-    	<div class="back" style="background-image: url(img/shop.png);"></div>
+    	<div class="back" style="background-image: url(../static/mainpage/img/shop.png);"></div>
     	Доступность (ст.м. Я.Коласа) и удобный подъезд
     </div>
 </div>
@@ -207,7 +208,7 @@
                <div>
                   <li class="listitem" >
                   <div class="contentslider2">
-                  		<div class="image" style="background-image: url(img/slider2/mango.png);"></div>
+                  		<div class="image" style="background-image: url(../static/mainpage/img/slider2/mango.png);"></div>
                   		<div style="display:table; height: 10%">
                   			<div class="name">
                   				Стенка Манго
@@ -235,7 +236,7 @@
             <div>
                   <li class="listitem" >
                   <div class="contentslider2">
-                  		<div class="image" style="background-image: url(img/slider2/alex.png);"></div>
+                  		<div class="image" style="background-image: url(../static/mainpage/img/slider2/alex.png);"></div>
                   		<div style="display:table; height: 10%">
                   			<div class="name">
                   				Александрия угловая
@@ -263,7 +264,7 @@
             <div>
                   <li class="listitem" >
                   <div class="contentslider2">
-                  		<div class="image" style="background-image: url(img/slider2/mango.png);"></div>
+                  		<div class="image" style="background-image: url(../static/mainpage/img/slider2/mango.png);"></div>
                   		<div style="display:table; height: 10%">
                   			<div class="name">
                   				Стенка Манго
@@ -291,7 +292,7 @@
             <div>
                   <li class="listitem" >
                   <div class="contentslider2">
-                  		<div class="image" style="background-image: url(img/slider2/alex.png);"></div>
+                  		<div class="image" style="background-image: url(../static/mainpage/img/slider2/alex.png);"></div>
                   		<div style="display:table; height: 10%">
                   			<div class="name">
                   				Александрия угловая
@@ -319,7 +320,7 @@
             <div>
                   <li class="listitem" >
                   <div class="contentslider2">
-                  		<div class="image" style="background-image: url(img/slider2/mango.png);"></div>
+                  		<div class="image" style="background-image: url(../static/mainpage/img/slider2/mango.png);"></div>
                   		<div style="display:table; height: 10%">
                   			<div class="name">
                   				Стенка Манго
@@ -347,7 +348,7 @@
             <div>
                   <li class="listitem" >
                   <div class="contentslider2">
-                  		<div class="image" style="background-image: url(img/slider2/alex.png);"></div>
+                  		<div class="image" style="background-image: url(../static/mainpage/img/slider2/alex.png);"></div>
                   		<div style="display:table; height: 10%">
                   			<div class="name">
                   				Александрия угловая
@@ -385,7 +386,7 @@
                <div>
                   <li class="listitem" >
                   <div class="contentslider3">
-                  		<div class="image" style="background-image: url(img/slider3/house.png);"></div>
+                  		<div class="image" style="background-image: url(../static/mainpage/img/slider3/house.png);"></div>
                   		<div class="text">
                   			<div style="display: table; padding-left:5%; height: 15%">
                   				<div class="date">22/11/2018</div>
@@ -403,7 +404,7 @@
                 <div>
                   <li class="listitem" >
                   <div class="contentslider3">
-                  		<div class="image" style="background-image: url(img/slider3/interer.png);"></div>
+                  		<div class="image" style="background-image: url(../static/mainpage/img/slider3/interer.png);"></div>
                   		<div class="text">
                   			<div style="display: table; padding-left:5%; height: 15%">
                   				<div class="date">22/11/2018</div>
@@ -421,7 +422,7 @@
             <div>
                   <li class="listitem" >
                   <div class="contentslider3">
-                  		<div class="image" style="background-image: url(img/slider3/photo-flat.png);"></div>
+                  		<div class="image" style="background-image: url(../static/mainpage/img/slider3/photo-flat.png);"></div>
                   		<div class="text">
                   			<div style="display: table; padding-left:5%; height: 15%">
                   				<div class="date">22/11/2018</div>
@@ -439,7 +440,7 @@
             <div>
                   <li class="listitem" >
                   <div class="contentslider3">
-                  		<div class="image" style="background-image: url(img/slider3/house.png);"></div>
+                  		<div class="image" style="background-image: url(../static/mainpage/img/slider3/house.png);"></div>
                   		<div class="text">
                   			<div style="display: table; padding-left:5%; height: 15%">
                   				<div class="date">22/11/2018</div>
@@ -457,7 +458,7 @@
                 <div>
                   <li class="listitem" >
                   <div class="contentslider3">
-                  		<div class="image" style="background-image: url(img/slider3/interer.png);"></div>
+                  		<div class="image" style="background-image: url(../static/mainpage/img/slider3/interer.png);"></div>
                   		<div class="text">
                   			<div style="display: table; padding-left:5%; height: 15%">
                   				<div class="date">22/11/2018</div>
@@ -475,7 +476,7 @@
             <div>
                   <li class="listitem" >
                   <div class="contentslider3">
-                  		<div class="image" style="background-image: url(img/slider3/photo-flat.png);"></div>
+                  		<div class="image" style="background-image: url(../static/mainpage/img/slider3/photo-flat.png);"></div>
                   		<div class="text">
                   			<div style="display: table; padding-left:5%; height: 15%">
                   				<div class="date">22/11/2018</div>
@@ -501,14 +502,14 @@
 			</div>
 		</div>
 		<div class="shop">
-			<a href="#"><div class="shop_image" style="background-image: url(img/ami.png);"></div></a>
-			<a href="#"><div class="shop_image" style="background-image: url(img/vegas.png);"></div></a>
-			<a href="#"><div class="shop_image" style="background-image: url(img/brw.png);"></div></a>
-			<a href="#"><div class="shop_image" style="background-image: url(img/minsk_mebel.png);"></div></a>
-			<a href="#"><div class="shop_image" style="background-image: url(img/trevi.png);"></div></a>
-			<a href="#"><div class="shop_image" style="background-image: url(img/anrex.png);"></div></a>
-			<a href="#"><div class="shop_image" style="background-image: url(img/petra.png);"></div></a>
-			<a href="#"><div class="shop_image" style="background-image: url(img/alta.png);"></div></a>
+			<a href="#"><div class="shop_image" style="background-image: url(../static/mainpage/img/ami.png);"></div></a>
+			<a href="#"><div class="shop_image" style="background-image: url(../static/mainpage/img/vegas.png);"></div></a>
+			<a href="#"><div class="shop_image" style="background-image: url(../static/mainpage/img/brw.png);"></div></a>
+			<a href="#"><div class="shop_image" style="background-image: url(../static/mainpage/img/minsk_mebel.png);"></div></a>
+			<a href="#"><div class="shop_image" style="background-image: url(../static/mainpage/img/trevi.png);"></div></a>
+			<a href="#"><div class="shop_image" style="background-image: url(../static/mainpage/img/anrex.png);"></div></a>
+			<a href="#"><div class="shop_image" style="background-image: url(../static/mainpage/img/petra.png);"></div></a>
+			<a href="#"><div class="shop_image" style="background-image: url(../static/mainpage/img/alta.png);"></div></a>
 		</div>
 		<div class="name" style="height: 5%">
 			<div class="text" style="font-size: 2.5vh; color: #cd1639; font-weight: 100;">
@@ -569,6 +570,6 @@
 		</div>
 	</footer>
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
-    <script  src="js/index.js"></script>
+    <script  src="{% static 'mainpage/js/index.js' %}"></script>
 </body>
 </html>
