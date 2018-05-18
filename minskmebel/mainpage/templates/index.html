@@ -177,7 +177,7 @@
 		<div class="contrs right" onclick="prev()"></div>
 		 <ul id="content-slider" class="content-slider">
 
-			 
+
              {% for objj in slider2 %}
              <div>
                   <li class="listitem" >
@@ -219,6 +219,27 @@
 			<div class="contrs left" onclick="next1()"></div>
 		<div class="contrs right" onclick="prev1()"></div>
 		 <ul id="content-slider2" class="content-slider">
+			 {% for objj in slider3 %}
+			 <div>
+                  <li class="listitem" >
+                  <div class="contentslider3">
+                  		<div class="image" style="background-image: url({{objj.image.url}});"></div>
+                  		<div class="text">
+                  			<div style="display: table; padding-left:5%; height: 15%">
+                  				<div class="date">{{objj.date}}</div>
+                  			</div>
+                  			<div style="display: table; padding-left:5%;  padding-right:5%; height: 50%;overflow: hidden">
+                  				<div class="more">{{objj.title}}</div>
+                  			</div>
+                  			<div style="display: table; padding-left:5%; height: 35%">
+                  				<div class="morenews">Подробнее...</div>
+                  			</div>
+                  		</div>
+                  </div>
+                </li>
+            </div>
+			 {% endfor %}
+			 <!--
                <div>
                   <li class="listitem" >
                   <div class="contentslider3">
@@ -327,6 +348,7 @@
                   </div>
                 </li>
             </div>
+            -->
             </ul>
 		</div>
 	</news>

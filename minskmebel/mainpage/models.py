@@ -13,3 +13,9 @@ class slider2fill(models.Model):
     nowprice = models.CharField(max_length=10)
     prevprice = models.CharField(max_length=10)
     image = models.ImageField(upload_to="",null=True, blank=True)
+
+class slider3fill(models.Model):
+    title = models.CharField(max_length=100)
+    date = models.DateField()
+    image = models.ImageField(upload_to="",null=True, blank=True)
+    discription = models.TextField()

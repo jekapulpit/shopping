@@ -4,5 +4,7 @@ from . import models
 def index(request):
         slider1 = models.slider1fill.objects.all()
         slider2 = models.slider2fill.objects.all()
-        context={"slider1":slider1, "slider2":slider2}
+        slider3 = models.slider3fill.objects.all()
+
+        context={"slider1":slider1, "slider2":slider2, "slider3":slider3}
         return render(request,'index.html', context)
