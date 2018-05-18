@@ -117,37 +117,15 @@
 	    <div class="slider_show">
 	<div class="swiper-container main-slider loading">
         <div class="swiper-wrapper">
-      {% for objj in object_list %}
+
+      {% for objj in slider1 %}
       <div class="swiper-slide">
       <figure class="slide-bgimg" style="background-size:100% 100%;background-image:url({{objj.image.url}})">
         <img src="{{objj.image.url}}" class="entity-img" />
       </figure>
      	</div>
       {% endfor %}
-	  <!--
-    <div class="swiper-slide">
-      <figure class="slide-bgimg" style="background-size:100% 100%;background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLbVhsNzdIYmlfN1E)">
-        <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLbVhsNzdIYmlfN1E" class="entity-img" />
-      </figure>
-     	</div>
-    <div class="swiper-slide">
-      <figure class="slide-bgimg" style="background-size:cover;background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLWTdaX3J5b1VueDg)">
-        <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLWTdaX3J5b1VueDg" class="entity-img" />
-      </figure>
-    </div>
-    <div class="swiper-slide">
-      <figure class="slide-bgimg" style="background-size:cover;background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLRml1b3B6eXVqQ2s)">
-        <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLRml1b3B6eXVqQ2s" class="entity-img" />
-      </figure>
-      
-    </div>
-    <div class="swiper-slide">
-      <figure class="slide-bgimg" style="background-image:url(https://ae01.alicdn.com/kf/HTB1uQ_NOVXXXXahaXXXq6xXFXXX5/220095343/HTB1uQ_NOVXXXXahaXXXq6xXFXXX5.jpg)">
-        <img src="https://ae01.alicdn.com/kf/HTB1uQ_NOVXXXXahaXXXq6xXFXXX5/220095343/HTB1uQ_NOVXXXXahaXXXq6xXFXXX5.jpg" class="entity-img" />
-      </figure>
-      
-    </div>
-    -->
+
     </div>
   <!-- If we need navigation buttons -->
   <div class="swiper-button-prev swiper-button-white"></div>
@@ -157,35 +135,15 @@
 <!-- Thumbnail navigation -->
 <div class="swiper-container nav-slider loading">
   <div class="swiper-wrapper">
-      {% for objj in object_list %}
+
+      {% for objj in slider1 %}
       <div class="swiper-slide">
       <figure class="slide-bgimg" style="background-image:url({{objj.image.url}})">
         <img src="{{objj.image.url}}" class="entity-img" />
       </figure>
     </div>
       {% endfor %}
-      <!--
-    <div class="swiper-slide">
-      <figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLbVhsNzdIYmlfN1E)">
-        <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLbVhsNzdIYmlfN1E" class="entity-img" />
-      </figure>
-    </div>
-    <div class="swiper-slide">
-      <figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLWTdaX3J5b1VueDg)">
-        <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLWTdaX3J5b1VueDg" class="entity-img" />
-      </figure>
-    </div>
-    <div class="swiper-slide">
-      <figure class="slide-bgimg" style="background-image:url(https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLRml1b3B6eXVqQ2s)">
-        <img src="https://drive.google.com/uc?export=view&id=0B_koKn2rKOkLRml1b3B6eXVqQ2s" class="entity-img" />
-      </figure>
-    </div>
-    <div class="swiper-slide">
-      <figure class="slide-bgimg" style="background-image:url(https://ae01.alicdn.com/kf/HTB1uQ_NOVXXXXahaXXXq6xXFXXX5/220095343/HTB1uQ_NOVXXXXahaXXXq6xXFXXX5.jpg)">
-        <img src="https://ae01.alicdn.com/kf/HTB1uQ_NOVXXXXahaXXXq6xXFXXX5/220095343/HTB1uQ_NOVXXXXahaXXXq6xXFXXX5.jpg" class="entity-img" />
-      </figure>
-    </div>
--->
+
   </div>
 </div>
 			</div>
@@ -218,173 +176,38 @@
 			<div class="contrs left" onclick="next()"></div>
 		<div class="contrs right" onclick="prev()"></div>
 		 <ul id="content-slider" class="content-slider">
-               <div>
-                  <li class="listitem" >
-                  <div class="contentslider2">
-                  		<div class="image" style="background-image: url(../static/mainpage/img/slider2/mango.png);"></div>
-                  		<div style="display:table; height: 10%">
-                  			<div class="name">
-                  				Стенка Манго
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 7%">
-                  			<div class="more">
-                  				Эргономичная компактная стенка для вашей гостиной
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 16%">
-                  			<div class="price">
-                  				856р.-
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 7%">
-                  			<div class="preprice">
-                  				прежняя цена: 956р
-                  			</div>
-                  		</div>
-                  </div>
-                </li>
-            </div>
-                
-            <div>
-                  <li class="listitem" >
-                  <div class="contentslider2">
-                  		<div class="image" style="background-image: url(../static/mainpage/img/slider2/alex.png);"></div>
-                  		<div style="display:table; height: 10%">
-                  			<div class="name">
-                  				Александрия угловая
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 7%">
-                  			<div class="more">
-                  				Функциональный диван-кровать для отдыха и ежедневного сна...
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 16%">
-                  			<div class="price">
-                  				686р.-
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 7%">
-                  			<div class="preprice">
-                  				прежняя цена: 956р
-                  			</div>
-                  		</div>
-                  </div>
-                </li>
-            </div>
 
-            <div>
+			 
+             {% for objj in slider2 %}
+             <div>
                   <li class="listitem" >
                   <div class="contentslider2">
-                  		<div class="image" style="background-image: url(../static/mainpage/img/slider2/mango.png);"></div>
+                  		<div class="image" style="background-image: url({{objj.image.url}});"></div>
                   		<div style="display:table; height: 10%">
                   			<div class="name">
-                  				Стенка Манго
+                  				{{objj.title}}
                   			</div>
                   		</div>
                   		<div style="display:table; height: 7%">
                   			<div class="more">
-                  				Эргономичная компактная стенка для вашей гостиной
+                  				{{objj.discriotion}}
                   			</div>
                   		</div>
                   		<div style="display:table; height: 16%">
                   			<div class="price">
-                  				856р.-
+                  				{{objj.nowprice}}р.-
                   			</div>
                   		</div>
                   		<div style="display:table; height: 7%">
                   			<div class="preprice">
-                  				прежняя цена: 956р
+                  				прежняя цена: {{objj.prevprice}}р
                   			</div>
                   		</div>
                   </div>
                 </li>
             </div>
-                
-            <div>
-                  <li class="listitem" >
-                  <div class="contentslider2">
-                  		<div class="image" style="background-image: url(../static/mainpage/img/slider2/alex.png);"></div>
-                  		<div style="display:table; height: 10%">
-                  			<div class="name">
-                  				Александрия угловая
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 7%">
-                  			<div class="more">
-                  				Функциональный диван-кровать для отдыха и ежедневного сна...
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 16%">
-                  			<div class="price">
-                  				686р.-
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 7%">
-                  			<div class="preprice">
-                  				прежняя цена: 956р
-                  			</div>
-                  		</div>
-                  </div>
-                </li>
-            </div>
+             {% endfor %}
 
-            <div>
-                  <li class="listitem" >
-                  <div class="contentslider2">
-                  		<div class="image" style="background-image: url(../static/mainpage/img/slider2/mango.png);"></div>
-                  		<div style="display:table; height: 10%">
-                  			<div class="name">
-                  				Стенка Манго
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 7%">
-                  			<div class="more">
-                  				Эргономичная компактная стенка для вашей гостиной
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 16%">
-                  			<div class="price">
-                  				856р.-
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 7%">
-                  			<div class="preprice">
-                  				прежняя цена: 956р
-                  			</div>
-                  		</div>
-                  </div>
-                </li>
-            </div>
-                
-            <div>
-                  <li class="listitem" >
-                  <div class="contentslider2">
-                  		<div class="image" style="background-image: url(../static/mainpage/img/slider2/alex.png);"></div>
-                  		<div style="display:table; height: 10%">
-                  			<div class="name">
-                  				Александрия угловая
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 7%">
-                  			<div class="more">
-                  				Функциональный диван-кровать для отдыха и ежедневного сна...
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 16%">
-                  			<div class="price">
-                  				686р.-
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 7%">
-                  			<div class="preprice">
-                  				прежняя цена: 956р
-                  			</div>
-                  		</div>
-                  </div>
-                </li>
-            </div>
             </ul>
 		</div>
 	</products>
