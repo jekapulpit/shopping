@@ -17,88 +17,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
-	<up>
-		<div class="logo"></div>
-		<div class="right_header">
-<div style="width:100%; height:100%; display:table">
-		<div style="width:100%;display:table-cell;vertical-align: middle">
-			<div class="menu"></div>
-			<div class="menu">
-				<div class="menu_name"><a href="#">Каталог</a></div>
-				<div class="menu_name"><a href="#">Акции</a></div>
-				<div class="menu_name">Магазины</div>
-				<div class="menu_name">Новости</div>
-				<div class="menu_name">Арендаторам</div>
-				<div class="menu_name" style="border: none">Контакты</div>
-			</div>
-			<div class="menu"></div>
-			<div class="call">
-				<div class="call_but_header">
-					<div style="display:table-cell; vertical-align: middle"><div class="but">ЗАКАЗАТЬ ЗВОНОК</div></div>
-				</div>
-				<div class="block_down">
-					<div class="call_img"></div>
-					<div class="call_number">МИНСК<br>УЛ. В. ХОРУЖЕЙ, 25</div>
-				</div>
-				<div class="block_down">
-					<div class="clock_img"></div>
-					<div class="clock_info">ВРЕМЯ РАБОТЫ ТЦ:<br><b>ПН-ПТ: 10:00 - 20:00</b><br><b>СБ-ВС: 10:00 - 19:00</b></div>
-				</div>
-			</div>
-			<div class="callandtime"></div>
-		</div>
-	</div>
-		</div>
-	</up>
-
-	<category>
-			<div class="category" >
-				<div class="category_name">
-					<div class="image" style="background-image: url('../static/mainpage/img/myagkaya_mebel.png')"></div>
-					<div class="name">МЯГКАЯ МЕБЕЛЬ</div>
-				</div>
-				
-				<div class="category_name">
-					<div class="image" style="background-image: url('../static/mainpage/img/gostinaya.png')"></div>
-					<div class="name">ГОСТИНАЯ</div>
-				</div>
-
-				<div class="category_name">
-					<div class="image" style="background-image: url('../static/mainpage/img/spalnaya.png')"></div>
-					<div class="name">СПАЛЬНЯ</div>
-				</div>
-
-				<div class="category_name">
-					<div class="image" style="background-image: url('../static/mainpage/img/kuhnya.png')"></div>
-					<div class="name">КУХНЯ</div>
-				</div>
-
-				<div class="category_name">
-					<div class="image" style="background-image: url('../static/mainpage/img/stolovaya.png')"></div>
-					<div class="name">СТОЛОВАЯ</div>
-				</div>
-
-				<div class="category_name">
-					<div class="image" style="background-image: url('../static/mainpage/img/prihozhaya.png')"></div>
-					<div class="name">ПРИХОЖАЯ</div>
-				</div>
-
-				<div class="category_name">
-					<div class="image" style="background-image: url('../static/mainpage/img/vannaya.png')"></div>
-					<div class="name">ВАННАЯ</div>
-				</div>
-
-				<div class="category_name">
-					<div class="image" style="background-image: url('../static/mainpage/img/detskaya.png')"></div>
-					<div class="name">ДЕТСКАЯ</div>
-				</div>
-
-				<div class="category_name">
-					<div class="image" style="background-image: url('../static/mainpage/img/rabochiy_kabinet.png')"></div>
-					<div class="name">РАБОЧИЙ КАБИНЕТ</div>
-				</div>
-			</div>
-	</category>
+ {% block content %}
+  {% include "header.html" %}
+{% endblock %}
 
 	<slider>
 	<div class="social_url"><div class="social">
@@ -239,116 +160,7 @@
                 </li>
             </div>
 			 {% endfor %}
-			 <!--
-               <div>
-                  <li class="listitem" >
-                  <div class="contentslider3">
-                  		<div class="image" style="background-image: url(../static/mainpage/img/slider3/house.png);"></div>
-                  		<div class="text">
-                  			<div style="display: table; padding-left:5%; height: 15%">
-                  				<div class="date">22/11/2018</div>
-                  			</div>
-                  			<div style="display: table; padding-left:5%;  padding-right:5%; height: 50%;overflow: hidden">
-                  				<div class="more">Как обустроить свой дом и не свихнуться</div>
-                  			</div>
-                  			<div style="display: table; padding-left:5%; height: 35%">
-                  				<div class="morenews">Подробнее...</div>
-                  			</div>
-                  		</div>
-                  </div>
-                </li>
-            </div>
-                <div>
-                  <li class="listitem" >
-                  <div class="contentslider3">
-                  		<div class="image" style="background-image: url(../static/mainpage/img/slider3/interer.png);"></div>
-                  		<div class="text">
-                  			<div style="display: table; padding-left:5%; height: 15%">
-                  				<div class="date">22/11/2018</div>
-                  			</div>
-                  			<div style="display: table; padding-left:5%; padding-right:5%; height: 50%;overflow: hidden">
-                  				<div class="more">Светлый интерьер как новое веенье в дизайне</div>
-                  			</div>
-                  			<div style="display: table; padding-left:5%; height: 35%">
-                  				<div class="morenews">Подробнее...</div>
-                  			</div>
-                  		</div>
-                  </div>
-                </li>
-            </div>
-            <div>
-                  <li class="listitem" >
-                  <div class="contentslider3">
-                  		<div class="image" style="background-image: url(../static/mainpage/img/slider3/photo-flat.png);"></div>
-                  		<div class="text">
-                  			<div style="display: table; padding-left:5%; height: 15%">
-                  				<div class="date">22/11/2018</div>
-                  			</div>
-                  			<div style="display: table; padding-left:5%; padding-right:5%; height: 50%;overflow: hidden">
-                  				<div class="more">Как правильно фотографировать квартиру</div>
-                  			</div>
-                  			<div style="display: table; padding-left:5%; height: 35%">
-                  				<div class="morenews">Подробнее...</div>
-                  			</div>
-                  		</div>
-                  </div>
-                </li>
-            </div>
-            <div>
-                  <li class="listitem" >
-                  <div class="contentslider3">
-                  		<div class="image" style="background-image: url(../static/mainpage/img/slider3/house.png);"></div>
-                  		<div class="text">
-                  			<div style="display: table; padding-left:5%; height: 15%">
-                  				<div class="date">22/11/2018</div>
-                  			</div>
-                  			<div style="display: table; padding-left:5%; padding-right:5%; height: 50%;overflow: hidden">
-                  				<div class="more">Как обустроить свой дом и не свихнуться</div>
-                  			</div>
-                  			<div style="display: table; padding-left:5%; height: 35%">
-                  				<div class="morenews">Подробнее...</div>
-                  			</div>
-                  		</div>
-                  </div>
-                </li>
-            </div>
-                <div>
-                  <li class="listitem" >
-                  <div class="contentslider3">
-                  		<div class="image" style="background-image: url(../static/mainpage/img/slider3/interer.png);"></div>
-                  		<div class="text">
-                  			<div style="display: table; padding-left:5%; height: 15%">
-                  				<div class="date">22/11/2018</div>
-                  			</div>
-                  			<div style="display: table; padding-left:5%; padding-right:5%; height: 50%;overflow: hidden">
-                  				<div class="more">Светлый интерьер как новое веенье в дизайне</div>
-                  			</div>
-                  			<div style="display: table; padding-left:5%; height: 35%">
-                  				<div class="morenews">Подробнее...</div>
-                  			</div>
-                  		</div>
-                  </div>
-                </li>
-            </div>
-            <div>
-                  <li class="listitem" >
-                  <div class="contentslider3">
-                  		<div class="image" style="background-image: url(../static/mainpage/img/slider3/photo-flat.png);"></div>
-                  		<div class="text">
-                  			<div style="display: table; padding-left:5%; height: 15%">
-                  				<div class="date">22/11/2018</div>
-                  			</div>
-                  			<div style="display: table; padding-left:5%; padding-right:5%; height: 50%;overflow: hidden">
-                  				<div class="more">Как правильно фотографировать квартиру</div>
-                  			</div>
-                  			<div style="display: table; padding-left:5%; height: 35%">
-                  				<div class="morenews">Подробнее...</div>
-                  			</div>
-                  		</div>
-                  </div>
-                </li>
-            </div>
-            -->
+
             </ul>
 		</div>
 	</news>
@@ -360,6 +172,11 @@
 			</div>
 		</div>
 		<div class="shop">
+
+			{% for objj in shops %}
+			<a href="{{objj.link}}"><div class="shop_image" style="background-image: url({{objj.image.url}});"></div></a>
+
+			<!--
 			<a href="#"><div class="shop_image" style="background-image: url(../static/mainpage/img/ami.png);"></div></a>
 			<a href="#"><div class="shop_image" style="background-image: url(../static/mainpage/img/vegas.png);"></div></a>
 			<a href="#"><div class="shop_image" style="background-image: url(../static/mainpage/img/brw.png);"></div></a>
@@ -368,6 +185,9 @@
 			<a href="#"><div class="shop_image" style="background-image: url(../static/mainpage/img/anrex.png);"></div></a>
 			<a href="#"><div class="shop_image" style="background-image: url(../static/mainpage/img/petra.png);"></div></a>
 			<a href="#"><div class="shop_image" style="background-image: url(../static/mainpage/img/alta.png);"></div></a>
+			-->
+
+			{% endfor %}
 		</div>
 		<div class="name" style="height: 5%">
 			<div class="text" style="font-size: 2.5vh; color: #cd1639; font-weight: 100;">
@@ -390,43 +210,11 @@
 		</div>
 	</map>
 
-	<footer>
-		<div style="width:18%; height: 100%; margin-left: 16%; float: left; display: inline-block;">
-		    <div class="logo"></div>
-		    <div class="social" style="padding-top: 10%">ПРИСОЕДИНИТЬСЯ К НАМ В СОЦ. СЕТЯХ <br>
-			    <a href="#"><div class="social_block" style="background-color: #4e76a4;"></div></a>
-			    <a href="#"><div class="social_block" style="background-color: #3d5b9a;"></div></a>
-			    <a href="#"><div class="social_block" style="background-color: #f68c33;"></div></a>
-			    <a href="#"><div class="social_block" style="background-color: #cc2027;"></div></a>
-			    <a href="#"><div class="social_block" style="background-color: #1da0f3;"></div></a>
-		    </div>
-	    </div>
-		<div class="catalog">
-			<div class="content">КАТАЛОГ ТОВАРОВ <br>
-				Прихожая <br>
-				Гостиная <br>
-				Ванная <br>
-				Спальня <br>
-				Столовая <br>
-				Кухня <br>
-			</div>
-		</div>
-		<div class="catalog">
-			<div class="content"><br>
-				Для вашего бизнеса <br>
-				Детская <br>
-				Мягкая мебель <br>
-			</div>
-		</div>
-		<div class="catalog">
-			<div class="content">СВЯЖИТЕСЬ С НАМИ
-			</div>
-		</div>
-		<div class="catalog">
-			<div class="content">СВЯЖИТЕСЬ С НАМИ
-			</div>
-		</div>
-	</footer>
+
+ {% block footer %}
+ {% include "footer.html" %}
+ {% endblock %}
+
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
     <script  src="{% static 'mainpage/js/index.js' %}"></script>
 </body>

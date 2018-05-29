@@ -19,3 +19,7 @@ class slider3fill(models.Model):
     date = models.DateField()
     image = models.ImageField(upload_to="",null=True, blank=True)
     discription = models.TextField()
+
+class shops(models.Model):
+    image = models.ImageField(upload_to="",null=True, blank=True)
+    link = models.CharField(max_length=200)
