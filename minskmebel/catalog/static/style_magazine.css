@@ -1,0 +1,94 @@
+.imageslider {
+	width:57%;
+	height:100%;
+	display: inline-block;
+	float: left;
+	background-size: 100% 100%;
+}
+.contentslider {
+	width:43%;
+	height:100%;
+	background-color: white;
+	float: left;
+	font-family: Proxima;
+	overflow: hidden;
+}
+.contentslider .name {
+	width:80%;
+	padding-left: 10%;
+	height: 40%;
+	display: table;
+	font-size: 4vh;
+	overflow: hidden;
+}
+.name .content {
+	display: table-cell;
+	vertical-align: middle;
+	font-weight: bold;
+}
+.contentslider .text {
+	width:80%;
+	height: 42%;
+	padding-left: 10%; 
+	font-size: 2vh;
+	overflow-y: hidden;
+}
+                /**/
+.slidermagazin {
+	width:100%;
+	height:45%;
+	background-color: #efefef;
+}
+.shops {
+	width:70%;
+	height: auto;
+	background-color: #efefef;
+	padding-left: 15%;
+	padding-right:15%;
+	margin: 0;
+	font-size: 0;
+}
+.shopblock {
+	width: 25%;
+	height: 25%;
+	display: inline-block;
+	padding:0;
+	margin: 0;
+}
+.shopblock .content{
+	padding-top: 12.5%;
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+	width: 95%;
+	height:75%;
+	background-color: white;
+	font-size: 2vh;
+	font-family: Proxima;
+	overflow: hidden;
+}
+.content .img {
+	width:100%;
+	height:80%;
+	background-size: 80%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+.content .name {
+	width:90%;
+	padding-left: 5%;
+	height: 10%;
+	padding-top:2.5%;
+	font-family: Proxima;
+}
+.shops .shopname {
+	width:94%;
+	font-size: 4vh;
+	text-align: center;
+	padding:3%;
+	font-family: Proxima;
+	font-weight: bold;
+}
+.shopbot {
+	width:100%;
+	height:10%;
+}

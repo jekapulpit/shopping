@@ -1,0 +1,215 @@
+.tovsorcollections {
+	margin-left: 20%;
+    margin-right: 20%;
+    width: 60%;
+    height: 10%;	
+}
+catalog {
+	width: 100%;
+	height: auto;
+	display: block;
+	background-color: #eeeff1;
+	
+}
+.tovsorcols, .tovsorcols p {
+	display: inline-block;
+	font-family: Proxima;
+	font-size: 2vh;
+	color: black;
+	transition-duration: 1s;
+	margin-right: 2%; 
+}
+.tovsorcols:hover p{
+	color: #cd1639;
+}
+.slidersort {
+	  width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.irs-single {
+	width: 100%;
+	text-align: center;
+}
+
+.tovsorcols.active p{
+	color: #cd1639;
+}
+
+.tovarcontent {
+	margin-left: 20%;
+	margin-right: 10%;
+	width: 65%;
+	
+}
+.tovs {
+	width: 72.5%;
+	font-size: 0;
+	height: 250%;
+	display: inline-block;
+}
+.brand {
+	display: block;
+	margin-top: 10%;
+}
+.brand input{
+	display: none;
+}
+.checkbox-custom{
+	position: relative; 
+	display: block;
+	width: 10px;
+	height: 10px;
+	border: 1px solid #CDCDCD;
+	border-radius: 2px;
+
+
+}
+.checkbox:checked + .checkbox-custom::before{
+	content: "";             /* Добавляем наш псевдоэлемент */
+	display: block;			 /* Делаем его блочным элементом */
+	position: absolute;      /* Позиционируем его абсолютным образом */
+	/* Задаем расстояние от верхней, правой, нижней и левой границы */
+	top:-1;
+	right: -1;
+	bottom:-1;
+	left: -1;
+	border: 1px solid orange;
+	background: #cd1639;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+	border-radius: 2px;
+}
+.checkbox-custom,
+.label {
+	display: inline-block;
+	vertical-align: middle;
+
+}
+.label {
+	font-size: 2vh;
+	margin-left: 10px;
+	font-family: Proxima;
+
+}
+.sortchecks{
+	margin-top: 50px;
+	margin-left: 10%;
+}
+.select {
+	margin-left: 20%;
+	margin-right: 10%;
+	width: 65%; 
+	height: 3%;
+
+}
+.select select{
+	position: relative;
+	margin-left: 45%;
+	height: 100%;
+	font-size: 2vh;
+	border: none;
+	background-color: #eeeff1;
+	text-decoration: underline;
+	text-decoration-style: solid;	
+	text-decoration-color: #D8D8DA;	
+	font-family: Proxima;
+}
+
+.sortout {
+	font-size: 0;
+	position: absolute;
+	right: 17.8%;
+	top: 45.5%;
+	width: 15%;
+	height: 250%;
+	
+}
+.sort{
+	width: 100%;
+	height: 400px;
+	background-color: white;
+}
+.tovaritem {
+	width: 47%;
+	font-size: 0;
+	margin-right: 3%; 
+	margin-top:  2.5%; 
+	display: inline-block;
+	height: 17%;
+	background-color: white;
+	cursor: pointer;
+
+}
+.tovaritem .image {
+	height: 65%;
+	background-size: 100% 100%;
+}
+.tovaritem .name {
+			height:15%;
+			width:100%;
+			font-family: Proxima;
+			font-size: 2.8vh;
+			display:table-cell;
+			vertical-align: middle;
+			
+}
+.tovaritem .more {
+			height:15%;
+			width:100%;
+			font-family: Proxima;
+			font-size: 1.6vh;
+			display:table-cell;
+			vertical-align: middle;
+			color: #6f6f6f;
+}
+.tovaritem .price {
+	height:15%;
+			width:100%;
+			font-family: Proxima;
+			font-size: 3.6vh	;
+			font-weight: bold;
+			display:table-cell;
+			vertical-align: bottom;
+}
+
+.pages {
+	margin-left: 20%;
+	margin-right: 10%;
+	width: 65%;
+	height: 20%;
+
+
+} 
+.pagess {
+	width: 20%;
+	height: 25%;
+border: 1px solid #CDCDCD;
+}
+td {
+
+	width: 20%;
+	height: 100%;
+	border: 1px solid #CDCDCD;
+	text-align: center;
+	display: table-cell;
+	vertical-align: middle;
+	transition-duration: 1s;
+}
+td a {
+	text-decoration: none;
+	color: black;
+	font-family: Proxima;
+transition-duration: 1s;
+
+}
+td a:hover, td:hover{
+	cursor: pointer;
+	color: #cd1639;
+	border-color: #cd1639;
+}
+
+td.active, td.active a {
+	color: #cd1639;
+	border-color: #cd1639;
+}
+
+
