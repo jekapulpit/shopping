@@ -6,7 +6,7 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
     	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style.css' %}">
-
+    <title>Товары</title>
     <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style_index.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style_magazine.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style_catalog.css' %}">
@@ -64,7 +64,7 @@
                       <div class="image" style="background-image: url('{{objj.image.url}}');"></div>
                       <div style="display:table; height: 10%;margin-left: 10px;margin-right: 10px;">
                         <div class="name">
-                          {{objj.title}}
+                          <a href="/catalog/{{objj.id}}/" style="text-decoration: none; color: black">{{objj.title}}</a>
                         </div>
                       </div>
                       <div style="display:table; height: 7%;margin-left: 10px;margin-right: 10px;">

@@ -1,0 +1,259 @@
+body {
+	background-color: #efefef;
+}
+a {
+	text-decoration: none;
+}
+category {
+	background-color: #ffffff;
+}
+.way {
+	height:5%;
+	padding-left: 15%;
+	width:70%;
+	overflow-x: hidden;
+	padding-top: 1%;
+	padding-bottom: 1%;
+	text-align: justify;
+	font-size: 0;
+}
+.way .wayname {
+	font-size: 2.2vh;
+	font-family: Proxima;
+    padding-right: 1%;
+	font-weight: 300;
+	cursor: pointer;
+	display: inline-block;
+}
+.page_content {
+	width:70%;
+	height: 55%;
+	padding-left: 15%;
+	margin: 0;
+	font-size: 0;
+}
+.page_content .image {
+	width:50%;
+	height:100%;	
+	background-color: white;
+	float: left;
+	background-size: 60% 90%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+.page_content .content {
+	padding-left:3%;
+	width:47%;
+	height: 100%;
+	overflow: hidden; 
+	float: left;
+	font-family: Proxima;
+}
+.contentup {
+	height: 50%;
+	width: 100%;
+	overflow: hidden; 
+}
+.contentdown {
+	height:50%;
+	width: 100%;
+	overflow: hidden;
+	font-size: 3vh;
+}
+.contentdown .text {
+	width: 70%;
+	height:100%;
+	float: left;
+}
+.contentdown .image {
+	width:30%;
+	height:100%;
+	float: left;
+	background-size: 100%;
+	background-color: rgba(255,255,255,0);
+}
+.content .name {
+	font-size: 5vh;
+}
+.content .more {
+	padding-top: 1%;
+	font-size: 2.5vh;
+	color: #818181;
+}
+.content .price {
+	padding-top: 3%;
+	font-size: 5vh;
+	font-weight: bold
+}
+.content .pricemore {
+	padding-top: 1%;
+	font-size: 2vh;
+	color: #818181;
+}
+.page_contentdown {
+	width:70%;
+	padding-top: 2%;
+	height: 55%;
+	padding-left: 15%;
+	margin: 0;
+	font-size: 0;
+}
+.page_contentdown .left {
+	width:50%;
+	height: 100%;
+	float: left;
+	margin: 0;
+	font-size: 0;
+}
+.left .content {
+	width:22%;
+	margin: 1.5%;
+	margin-top: 0;
+	height:22%;
+	display: inline-block;
+	background-color: white;
+	background-size: 60% 90%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+.page_contentdown .right {
+	padding-left: 2.5%;
+	width:47.5%;
+	height: 100%;
+	float: left;
+	margin: 0;
+	font-size: 0;
+}
+.right .right_content{
+	width:100%;
+	height:100%;
+	background-color: white;
+}
+.right .name {
+	width:100%;
+	height: 15%;
+	overflow: hidden;
+}
+.right .title {
+	padding-left: 4%;
+	padding-top: 4%;
+	display: inline-block;
+	font-size: 1vw;
+	font-family: Proxima;
+	color: black;
+}
+.right .text {
+	padding-left: 4%;
+	padding-right: 4%;
+	width: 92%;
+	height:81%;
+	font-size: 1vw;
+	font-family: Proxima;
+	overflow:hidden;
+}
+.plus {
+	width:70%;
+	height:20%;
+	margin:15%;
+	margin-top: 5%;
+	margin-bottom: 5%;
+	background-color: white;
+	font-size: 0;
+}
+.plus .content {
+	width:33.33%;
+	height:100%;
+	display: inline-block;
+}
+.plus .content .image {
+	width:30%;
+	height: 100%;
+	background-size: 70%;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	display: inline-block;
+}
+.plus .content .text {
+	width:50%;
+	padding-left: 5%;
+	height:100%;
+	overflow:hidden;
+	font-size: 1vw;
+	font-family: Proxima;
+	display: inline-block;
+}
+.text .content {
+	width:100%;
+	height: 100%;
+	display: table;
+}
+.text .content .name {
+	display: table-cell;
+	vertical-align: middle;
+	font-size: 1.1vw;
+	font-weight: bold;
+}
+.collection {
+	width:70%;
+	padding-left: 15%;
+	overflow-x: hidden;
+	font-size: 0;
+}
+.tovar {
+	padding-top:2%;
+}
+.collection .item {
+	width:30%;
+	height:40%;
+	padding:1.666%;
+	display: inline-block;
+}
+.item .content {
+	width:100%;
+	height: 100%;
+	background-color: white;
+}
+.item .content .image {
+	width: 100%;
+	height: 50%;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+.item .content .name {
+	width:90%;
+	padding-left: 5%;
+	height:10%;
+	font-size: 1.5vw;
+	font-family: Proxima;
+	overflow: hidden;
+}
+.item .content .more {
+	width:90%;
+	padding-left: 5%;
+	height:15%;
+	font-size: 1vw;
+	overflow: hidden;
+	color: #818181;
+	font-family: Proxima;
+}
+.item .content .price {
+	width:90%;
+	padding-left: 5%;
+	height:15%;
+	font-size: 2vw;
+	font-weight: bold;
+	font-family: Proxima;
+	overflow: hidden;
+}
+.tovar .name {
+	padding-left: 1.666%;
+	font-size: 1.5vw;
+	font-weight: bold;
+	font-family: Proxima;
+	padding-top:1%;
+	padding-bottom:1%;
+}
+footer {
+	background-color: white;
+}

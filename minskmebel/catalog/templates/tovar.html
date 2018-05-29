@@ -1,0 +1,166 @@
+
+
+<html>
+<head>
+  <meta charset="utf-8" />
+    {% load staticfiles %}
+
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style_page.css' %}">
+    <title>{{item.title}}</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{% static 'js/lightslider.js' %}"></script>
+    <script src="{% static 'js/slider2.js' %}" ></script>
+    <link rel="stylesheet"  href="{% static 'lightslider.css' %}"/>
+    <link rel="stylesheet"  href="{% static 'slider2.css' %}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+
+<body>
+{% block content %}
+  {% include "header.html" %}
+{% endblock %}
+
+
+  <div class="way">
+    <div class="wayname" style="color:#cd1639">Товары</div>
+  
+  </div>
+  <div class="page_content">
+    <div class="image" style="background-image: url({{item.image.url}});"></div>
+    <div class="content">
+      <div class="contentup">
+        <div class="name">{{item.title}}</div>
+      <div class="more">{{item.subtitle}}</div>
+      <div class="price">{{item.price}}p.-</div>
+      <div class="pricemore">Информацию о наличии и цене уточняйте у консультантов</div>
+      </div>
+      <div class="contentdown">
+        <div class="text">
+          <b>Магазин "{{item.seller.title}}"</b><br><br>
+        <p style="font-size: 1vw">{{item.seller.phone1}} — Велком<br>
+        {{item.seller.phone2}} — МТС <br><br>
+        Пн. - Сб.: с 10.00 до 20.00<br>
+        Вс.: с 11.00 до 20.00</p>
+        </div>
+        <div class="image" style="background-image: url({{item.seller.image.url}});"></div>
+      </div>
+    </div>
+  </div>
+    <div class="page_contentdown">
+      <div class="left">
+        <div class="content" style="background-image: url({{item.image.url}});"></div>
+          {% if item.image1 %}
+        <div class="content" style="background-image: url({{item.image1.url}});"></div>
+          {% endif %}
+          {% if item.image2 %}
+        <div class="content" style="background-image: url({{item.image2.url}});"></div>
+          {% endif %}
+           {% if item.image3 %}
+        <div class="content" style="background-image: url({{item.image3.url}});"></div>
+          {% endif %}
+           {% if item.image4 %}
+        <div class="content" style="background-image: url({{item.image4.url}});"></div>
+          {% endif %}
+           {% if item.image5 %}
+        <div class="content" style="background-image: url({{item.image5.url}});"></div>
+          {% endif %}
+           {% if item.image6 %}
+        <div class="content" style="background-image: url({{item.image6.url}});"></div>
+          {% endif %}
+           {% if item.image7 %}
+        <div class="content" style="background-image: url({{item.image7.url}});"></div>
+          {% endif %}
+           {% if item.image8 %}
+        <div class="content" style="background-image: url({{item.image8.url}});"></div>
+          {% endif %}
+
+
+      </div>
+      <div class="right">
+        <div class="right_content">
+        <div class="name">
+          <a href=""><div class="title">Описание</div></a>
+          <a href=""><div class="title">Характеристики</div></a>
+        </div>
+        <div class="text">{{item.discriotion}}</div>
+      </div>
+      </div>
+  </div>
+  <products style="background-color: white; margin-top:2%">
+    <div style="font-family: Proxima; font-size: 1.95vw; text-align: center;padding-top: 2%;padding-bottom: 2%;font-weight: bold">Похожие товары</div>
+    <div class="slider2">
+      <div class="contrs left" style= "background-image: url('{% static 'img/right.png' %}');" onclick="next()"></div>
+    <div class="contrs right" style= "background-image: url('{% static 'img/left.png' %}');" onclick="prev()"></div>
+     <ul id="content-slider" class="content-slider">
+                {% for objj in SimularItems %}
+
+               <div>
+                  <li class="listitem" >
+                  <div class="contentslider2">
+                      <div class="image" style="background-image: url({{objj.image.url}});"></div>
+                      <div style="display:table; height: 10%">
+                        <div class="name">
+                          {{objj.title}}
+                        </div>
+                      </div>
+                      <div style="display:table; height: 7%">
+                        <div class="more">
+                            {{objj.subtitle}}
+                        </div>
+                      </div>
+                      <div style="display:table; height: 16%">
+                        <div class="price">
+                          {{objj.price}}р.-
+                        </div>
+                      </div>
+                  </div>
+                </li>
+            </div>
+                
+
+
+         {% endfor %}
+            </ul>
+    </div>
+  </products>
+<div class="plus">
+  <div class="content">
+    <div class="image" style="background-image: url({% static 'img/geo.png' %});"></div>
+    <div class="text">
+      <div class="content">
+        <div class="name">Доступность и удобный подъезд</div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="image" style="background-image: url({% static 'img/sale.png' %});"></div>
+    <div class="text">
+      <div class="content">
+        <div class="name">Скидки, акции, распродажи, рассрочка</div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="image" style="background-image: url({% static 'img/shop.png' %});"></div>
+    <div class="text">
+      <div class="content">
+        <div class="name">Лучшая мебель в одном месте</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    {% block footer %}
+        {% include "footer.html" %}
+    {% endblock %}
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
+    <script  src="{% static 'mainpage/js/index.js' %}"></script>
+</body>
+</html>
