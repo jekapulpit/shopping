@@ -1,101 +1,27 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  {% load staticfiles %}
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/style_index.css">
-    <link rel="stylesheet" type="text/css" href="css/style_shoppage.css">
-<link rel="stylesheet" type="text/css" href="css/style_magazine.css">
+      	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style.css' %}">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style_index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style_shoppage.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'style_magazine.css' %}">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
-<body style="background-color: #eeeff1">
- 
-  <up>
-    <div class="logo"></div>
-    <div class="right_header">
-<div style="width:100%; height:100%; display:table">
-    <div style="width:100%;display:table-cell;vertical-align: middle">
-      <div class="menu"></div>
-      <div class="menu">
-        <div class="menu_name"><a href="#">Каталог</a></div>
-        <div class="menu_name"><a href="#">Акции</a></div>
-        <div class="menu_name">Магазины</div>
-        <div class="menu_name">Новости</div>
-        <div class="menu_name">Арендаторам</div>
-        <div class="menu_name" style="border: none">Контакты</div>
-      </div>
-      <div class="menu"></div>
-      <div class="call">
-        <div class="call_but_header">
-          <div style="display:table-cell; vertical-align: middle"><div class="but">ЗАКАЗАТЬ ЗВОНОК</div></div>
-        </div>
-        <div class="block_down">
-          <div class="call_img"></div>
-          <div class="call_number">МИНСК<br>УЛ. В. ХОРУЖЕЙ, 25</div>
-        </div>
-        <div class="block_down">
-          <div class="clock_img"></div>
-          <div class="clock_info">ВРЕМЯ РАБОТЫ ТЦ:<br><b>ПН-ПТ: 10:00 - 20:00</b><br><b>СБ-ВС: 10:00 - 19:00</b></div>
-        </div>
-      </div>
-      <div class="callandtime"></div>
-    </div>
-  </div>
-    </div>
-  </up>
+<body >
 
-  <category style="background-color: white">
-      <div class="category" >
-        <div class="category_name">
-          <div class="image" style="background-image: url('img/myagkaya_mebel.png')"></div>
-          <div class="name">МЯГКАЯ МЕБЕЛЬ</div>
-        </div>
-        
-        <div class="category_name">
-          <div class="image" style="background-image: url('img/gostinaya.png')"></div>
-          <div class="name">ГОСТИНАЯ</div>
-        </div>
+{% block content %}
+  {% include "header.html" %}
+{% endblock %}
 
-        <div class="category_name">
-          <div class="image" style="background-image: url('img/spalnaya.png')"></div>
-          <div class="name">СПАЛЬНЯ</div>
-        </div>
 
-        <div class="category_name">
-          <div class="image" style="background-image: url('img/kuhnya.png')"></div>
-          <div class="name">КУХНЯ</div>
-        </div>
-
-        <div class="category_name">
-          <div class="image" style="background-image: url('img/stolovaya.png')"></div>
-          <div class="name">СТОЛОВАЯ</div>
-        </div>
-
-        <div class="category_name">
-          <div class="image" style="background-image: url('img/prihozhaya.png')"></div>
-          <div class="name">ПРИХОЖАЯ</div>
-        </div>
-
-        <div class="category_name">
-          <div class="image" style="background-image: url('img/vannaya.png')"></div>
-          <div class="name">ВАННАЯ</div>
-        </div>
-
-        <div class="category_name">
-          <div class="image" style="background-image: url('img/detskaya.png')"></div>
-          <div class="name">ДЕТСКАЯ</div>
-        </div>
-
-        <div class="category_name">
-          <div class="image" style="background-image: url('img/rabochiy_kabinet.png')"></div>
-          <div class="name">РАБОЧИЙ КАБИНЕТ</div>
-        </div>
-      </div>
-  </category>
- <social>
+ <social style="background-color: #eeeff1; display: block">
     <div class="social_url">
       <div class="social">
         <div style=" display:table; float:right">
@@ -114,13 +40,14 @@
 
   <topshop>
     <div class="stand">
-      <div class="screen" style="background-color:white;background-image: url(img/vegas.png); background-size: 80%; background-position: 50% 50%; background-repeat: no-repeat;"></div> 
+      <div class="screen" style="background-color:white;background-image: url({{item.image.url}}); background-size: 80%; background-position: 50% 50%; background-repeat: no-repeat;"></div>
         <div class="info">
-          <p class="header"><b>Мебель "Vegas"</b></p>
+          <p class="header"><b>{{item.title}}</b></p>
           <p class="infoitem">
-            Сегодня Vegas - крупнейшая сеть специализированных салонов в Беларуси с широким ассортиментом товаров для здорового, комфортного сна. Vegas - был и остается синонимом качества и хорошего обслуживания. Высококвалифицированные консультанты в салоне помогут подобрать то, что нужно именно вам. 
+            {{item.discription}}
           </p>
           <div class="links">
+
             <a href="" class="linktoshop"><b>Спальня</b></a>
             <p class="linktoshop"><b>|</b></p>
             <a href="" class="linktoshop"><b>Детская</b></a>
@@ -128,11 +55,11 @@
         </div>
         <div class="contacts">
           <div class="inner">
-            <div class="pic"></div>
+            <div class="pic" style="background-image: url({{item.image.url}})"></div>
             <p class="topheader">сайт:</p>
             <a href="http://vegas.by" class="linktoshop1"><b>www.vegas.by</b></a>
             <p class="topheader">телефон:</p>
-            <p class="infoitem"><b>+375(29) 640-75-30 - Велком</b></p>
+            <p class="infoitem"><b>{{item.phone1}} - Велком</b></p>
             <p class="topheader">время работы:</p>
             <p class="infoitem"><b>Пн.-Вс.: с 10:00 до 20:00</b></p>
             <a href="" class="linktoshop1"><b>как проехать</b></a>
@@ -147,82 +74,21 @@
   </topshop>
   <div class="shops">
     <div class="shopname">Товары</div>
+    {% for objj in staff %}
     <div class="shopblock" style="width:33.33%;height:50%">
       <div class="content" style="padding-top:0%; height:100%">
-        <div class="img" style="background-image: url(img/slider2/alex.png); height:65%; background-size: 100% 100%"></div>
-        <div class="name" style="height:7%">AMI Мебель</div>
-        <div class="more" style="padding-left:5%;height: 7%; font-size:1.5vh; color:#818181; padding-top:2.5%">dsfg</div>
-        <div class="more" style="padding-left:5%;height: 15%; font-size:3vh; color:black; padding-top:2.5%; padding-bottom:2.5%; font-weight: bold">856р.-</div>
+        <div class="img" style="background-image: url({{objj.image.url}}); height:65%; background-size: 100% 100%"></div>
+        <div class="name" style="height:7%"><a style="text-decoration: none; color:black;" href="/catalog/{{objj.id}}" >{{objj.title}}</a></div>
+        <div class="more" style="padding-left:5%;height: 7%; font-size:1.5vh; color:#818181; padding-top:2.5%">{{objj.subtitle}}</div>
+        <div class="more" style="padding-left:5%;height: 15%; font-size:3vh; color:black; padding-top:2.5%; padding-bottom:2.5%; font-weight: bold">{{objj.price}}р.-</div>
       </div>
-
     </div>
-    <div class="shopblock" style="width:33.33%;height:50%">
-      <div class="content" style="padding-top:0%; height:100%">
-        <div class="img" style="background-image: url(img/slider2/alex.png); height:65%; background-size: 100% 100%"></div>
-        <div class="name" style="height:7%">AMI Мебель</div>
-        <div class="more" style="padding-left:5%;height: 7%; font-size:1.5vh; color:#818181; padding-top:2.5%">dsfg</div>
-        <div class="more" style="padding-left:5%;height: 15%; font-size:3vh; color:black; padding-top:2.5%; padding-bottom:2.5%; font-weight: bold">856р.-</div>
-      </div>
-
-    </div>
-    <div class="shopblock" style="width:33.33%;height:50%;padding-bottom: 2%;">
-      <div class="content" style="padding-top:0%; height:100%">
-        <div class="img" style="background-image: url(img/slider2/alex.png); height:65%; background-size: 100% 100%"></div>
-        <div class="name" style="height:7%">AMI Мебель</div>
-        <div class="more" style="padding-left:5%;height: 7%; font-size:1.5vh; color:#818181; padding-top:2.5%">dsfg</div>
-        <div class="more" style="padding-left:5%;height: 15%; font-size:3vh; color:black; padding-top:2.5%; padding-bottom:2.5%; font-weight: bold">856р.-</div>
-      </div>
-
-    </div>
-    <div class="shopblock" style="width:33.33%;height:50%">
-      <div class="content" style="padding-top:0%; height:100%">
-        <div class="img" style="background-image: url(img/slider2/alex.png); height:65%; background-size: 100% 100%"></div>
-        <div class="name" style="height:7%">AMI Мебель</div>
-        <div class="more" style="padding-left:5%;height: 7%; font-size:1.5vh; color:#818181; padding-top:2.5%">dsfg</div>
-        <div class="more" style="padding-left:5%;height: 15%; font-size:3vh; color:black; padding-top:2.5%; padding-bottom:2.5%; font-weight: bold">856р.-</div>
-      </div>
-
-    </div>
+    {% endfor %}
     <div class="shopbot"></div>
+
   </div>
-
-
-  <footer  style="background-color: white">
-    <div style="width:18%; height: 100%; margin-left: 16%; float: left; display: inline-block;">
-        <div class="logo"></div>
-        <div class="social" style="padding-top: 10%">ПРИСОЕДИНИТЬСЯ К НАМ В СОЦ. СЕТЯХ <br>
-          <a href="#"><div class="social_block" style="background-color: #4e76a4;"></div></a>
-          <a href="#"><div class="social_block" style="background-color: #3d5b9a;"></div></a>
-          <a href="#"><div class="social_block" style="background-color: #f68c33;"></div></a>
-          <a href="#"><div class="social_block" style="background-color: #cc2027;"></div></a>
-          <a href="#"><div class="social_block" style="background-color: #1da0f3;"></div></a>
-        </div>
-      </div>
-    <div class="catalog">
-      <div class="content">КАТАЛОГ ТОВАРОВ <br>
-        Прихожая <br>
-        Гостиная <br>
-        Ванная <br>
-        Спальня <br>
-        Столовая <br>
-        Кухня <br>
-      </div>
-    </div>
-    <div class="catalog">
-      <div class="content"><br>
-        Для вашего бизнеса <br>
-        Детская <br>
-        Мягкая мебель <br>
-      </div>
-    </div>
-    <div class="catalog">
-      <div class="content">СВЯЖИТЕСЬ С НАМИ
-      </div>
-    </div>
-    <div class="catalog">
-      <div class="content">СВЯЖИТЕСЬ С НАМИ
-      </div>
-    </div>
-  </footer>
+{% block footer %}
+  {% include "footer.html" %}
+{% endblock %}
 </body>
 </html>

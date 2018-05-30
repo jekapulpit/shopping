@@ -4,6 +4,7 @@ from django.db import models
 # Create your models here.
 class shops(models.Model):
     title = models.CharField(default="Neme",max_length=40)
+    discription = models.TextField(default="Описание магазина")
     image = models.ImageField(upload_to="",null=True, blank=True)
     phone1 = models.CharField(default="+375445106036",max_length=40)
     phone2 = models.CharField(default="+375445106036",max_length=40)

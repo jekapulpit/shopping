@@ -9,4 +9,5 @@ urlpatterns = [
     re_path(r'^collections/$', views.collections),
     re_path(r'^(?P<number>[0-9]+)/', views.Tovar),
     re_path(r'^(?P<category>[a-z]+)/', views.catalog1),
+
 ]

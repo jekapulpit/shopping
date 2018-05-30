@@ -49,9 +49,9 @@ def collections(request):
         values.append(objj.price)
     minvalue = min(values)
     maxvalue = max(values)
-    if min1 is None:
+    if min1 is None or '':
         min1 = minvalue
-    if max1 is None:
+    if max1 is None or '':
         max1 = maxvalue
     if Categoty is None:
         items2 = models.Collection.objects.all()
@@ -109,9 +109,9 @@ def catalog1(request):
         values.append(objj.price)
     minvalue = min(values)
     maxvalue = max(values)
-    if min1 is None:
+    if min1 is None or min1 is '':
         min1 = minvalue
-    if max1 is None:
+    if max1 is None or max1 is '':
         max1 = maxvalue
     if Categoty is None:
         items2 = models.ShopItem.objects.all()
@@ -136,3 +136,11 @@ def catalog1(request):
                                             'min1' : min1,
                                             'category': Categoty,
                                             'sort': sortparams1},)
+
+
+
+def shoppage(request, shopid):
+    item = models.shops.objects.get(id = shopid)
+    Staff = models.ShopItem.objects.filter(seller = item)
+    context = {"item" : item, "staff" : Staff}
+    return render(request, 'shoppage.html', context)
