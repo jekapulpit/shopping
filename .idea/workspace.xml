@@ -3,15 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="fc98d77f-2998-4899-979e-6e64a9bc8c3d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/minskmebel/catalog/admin.py" afterPath="$PROJECT_DIR$/minskmebel/catalog/admin.py" />
-      <change beforePath="$PROJECT_DIR$/minskmebel/catalog/models.py" afterPath="$PROJECT_DIR$/minskmebel/catalog/models.py" />
-      <change beforePath="$PROJECT_DIR$/minskmebel/catalog/static/js/func.js" afterPath="$PROJECT_DIR$/minskmebel/catalog/static/js/func.js" />
-      <change beforePath="$PROJECT_DIR$/minskmebel/catalog/templates/catalog.html" afterPath="$PROJECT_DIR$/minskmebel/catalog/templates/catalog.html" />
+      <change beforePath="$PROJECT_DIR$/minskmebel/catalog/templates/allcollections.html" afterPath="$PROJECT_DIR$/minskmebel/catalog/templates/allcollections.html" />
       <change beforePath="$PROJECT_DIR$/minskmebel/catalog/views.py" afterPath="$PROJECT_DIR$/minskmebel/catalog/views.py" />
       <change beforePath="$PROJECT_DIR$/minskmebel/db.sqlite3" afterPath="$PROJECT_DIR$/minskmebel/db.sqlite3" />
       <change beforePath="$PROJECT_DIR$/minskmebel/mainpage/models.py" afterPath="$PROJECT_DIR$/minskmebel/mainpage/models.py" />
-      <change beforePath="$PROJECT_DIR$/minskmebel/mainpage/templates/index.html" afterPath="$PROJECT_DIR$/minskmebel/mainpage/templates/index.html" />
-      <change beforePath="$PROJECT_DIR$/minskmebel/mainpage/views.py" afterPath="$PROJECT_DIR$/minskmebel/mainpage/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -42,41 +37,45 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minskmebel/catalog/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="97" column="38" lean-forward="true" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
+            <state relative-caret-position="74">
+              <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
-                <element signature="e#948#2838#0" expanded="false" />
+                <element signature="e#3104#5237#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="collection.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/minskmebel/catalog/templates/collection.html">
+      <file leaf-file-name="allcollections.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/minskmebel/catalog/templates/allcollections.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
-              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-              <folding>
-                <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#1;n#products#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
+              <caret line="64" column="41" lean-forward="true" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="catalog.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/minskmebel/catalog/templates/catalog.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="70" column="20" lean-forward="true" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/minskmebel/mainpage/models.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="323">
-              <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+              <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
               <folding>
-                <element signature="e#448#2048#0" expanded="false" />
-                <element signature="e#2088#2149#0" expanded="false" />
-                <element signature="e#2188#2425#0" expanded="false" />
-                <element signature="e#2464#2637#0" expanded="false" />
+                <element signature="e#2089#2150#0" expanded="false" />
+                <element signature="e#2189#2426#0" expanded="false" />
+                <element signature="e#2465#2638#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -85,7 +84,7 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/minskmebel/catalog/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
+            <state relative-caret-position="74">
               <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="14" />
               <folding>
                 <element signature="e#0#28#0" expanded="true" />
@@ -98,7 +97,7 @@
         <entry file="file://$PROJECT_DIR$/minskmebel/catalog/admin.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -111,16 +110,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="catalog.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/minskmebel/catalog/templates/catalog.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="56" column="33" lean-forward="true" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -140,7 +129,7 @@
         <entry file="file://$PROJECT_DIR$/minskmebel/mainpage/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="52" lean-forward="true" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+              <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -191,7 +180,6 @@
         <option value="$PROJECT_DIR$/minskmebel/catalog/templates/tovar.html" />
         <option value="$PROJECT_DIR$/minskmebel/catalog/templates/collection.html" />
         <option value="$PROJECT_DIR$/minskmebel/catalog/static/js/ion.rangeSlider.js" />
-        <option value="$PROJECT_DIR$/minskmebel/catalog/templates/allcollections.html" />
         <option value="$PROJECT_DIR$/minskmebel/catalog/urls.py" />
         <option value="$PROJECT_DIR$/minskmebel/catalog/static/style_shoppage.css" />
         <option value="$PROJECT_DIR$/minskmebel/catalog/templates/shoppage.html" />
@@ -200,14 +188,15 @@
         <option value="$PROJECT_DIR$/minskmebel/minskmebel/urls.py" />
         <option value="$PROJECT_DIR$/minskmebel/catalog/templates/shop.html" />
         <option value="$PROJECT_DIR$/minskmebel/catalog/static/js/shopslider.js" />
-        <option value="$PROJECT_DIR$/minskmebel/mainpage/models.py" />
         <option value="$PROJECT_DIR$/minskmebel/catalog/admin.py" />
         <option value="$PROJECT_DIR$/minskmebel/mainpage/views.py" />
         <option value="$PROJECT_DIR$/minskmebel/mainpage/templates/index.html" />
         <option value="$PROJECT_DIR$/minskmebel/catalog/models.py" />
-        <option value="$PROJECT_DIR$/minskmebel/catalog/views.py" />
         <option value="$PROJECT_DIR$/minskmebel/catalog/static/js/func.js" />
         <option value="$PROJECT_DIR$/minskmebel/catalog/templates/catalog.html" />
+        <option value="$PROJECT_DIR$/minskmebel/catalog/views.py" />
+        <option value="$PROJECT_DIR$/minskmebel/catalog/templates/allcollections.html" />
+        <option value="$PROJECT_DIR$/minskmebel/mainpage/models.py" />
       </list>
     </option>
   </component>
@@ -260,22 +249,13 @@
               <item name="SHOPPROJECT" type="462c0819:PsiDirectoryNode" />
               <item name="minskmebel" type="462c0819:PsiDirectoryNode" />
               <item name="catalog" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SHOPPROJECT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SHOPPROJECT" type="462c0819:PsiDirectoryNode" />
-              <item name="minskmebel" type="462c0819:PsiDirectoryNode" />
-              <item name="catalog" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SHOPPROJECT" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SHOPPROJECT" type="462c0819:PsiDirectoryNode" />
-              <item name="minskmebel" type="462c0819:PsiDirectoryNode" />
-              <item name="catalog" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SHOPPROJECT" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SHOPPROJECT" type="462c0819:PsiDirectoryNode" />
+              <item name="minskmebel" type="462c0819:PsiDirectoryNode" />
+              <item name="mainpage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -335,7 +315,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298791" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -557,13 +537,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/minskmebel/catalog/templates/allcollections.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="143" column="29" lean-forward="false" selection-start-line="143" selection-start-column="29" selection-end-line="143" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/minskmebel/catalog/static/style_shoppage.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="251">
@@ -682,23 +655,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/minskmebel/catalog/views.py">
+    <entry file="file://$PROJECT_DIR$/minskmebel/mainpage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="97" column="38" lean-forward="true" selection-start-line="97" selection-start-column="38" selection-end-line="97" selection-end-column="38" />
+        <state relative-caret-position="170">
+          <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
-            <element signature="e#948#2838#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/minskmebel/mainpage/views.py">
+    <entry file="file://$PROJECT_DIR$/minskmebel/catalog/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="52" lean-forward="true" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minskmebel/catalog/templates/collection.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#products#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -708,52 +693,6 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minskmebel/catalog/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minskmebel/catalog/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minskmebel/mainpage/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="56" column="0" lean-forward="true" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding>
-            <element signature="e#448#2048#0" expanded="false" />
-            <element signature="e#2088#2149#0" expanded="false" />
-            <element signature="e#2188#2425#0" expanded="false" />
-            <element signature="e#2464#2637#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/minskmebel/catalog/templates/collection.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#products#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#4;n#body#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -767,9 +706,50 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/minskmebel/catalog/templates/catalog.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="56" column="33" lean-forward="true" selection-start-line="56" selection-start-column="33" selection-end-line="56" selection-end-column="33" />
+        <state relative-caret-position="204">
+          <caret line="70" column="20" lean-forward="true" selection-start-line="70" selection-start-column="20" selection-end-line="70" selection-end-column="20" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minskmebel/catalog/templates/allcollections.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="64" column="41" lean-forward="true" selection-start-line="64" selection-start-column="41" selection-end-line="64" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minskmebel/catalog/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="35" column="24" lean-forward="true" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#3104#5237#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minskmebel/catalog/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="74">
+          <caret line="29" column="14" lean-forward="false" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/minskmebel/mainpage/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="26" column="29" lean-forward="false" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
+          <folding>
+            <element signature="e#2089#2150#0" expanded="false" />
+            <element signature="e#2189#2426#0" expanded="false" />
+            <element signature="e#2465#2638#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

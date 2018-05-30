@@ -24,7 +24,7 @@ class Collection(models.Model):
     subtitle = models.CharField("Краткое описание",default="Краткое описание", max_length=40)
     discriotion = models.TextField("Полное описание", default="Описание товара")
     properties = models.TextField("Характеристики товара", default="(длина, ширина и т.д.)")
-    price = models.CharField("Цена",default="", max_length=10)
+    price = models.FloatField("Цена",default='', max_length=10)
     Category = models.CharField("Категория",default='Мягкая мебель',max_length=20, choices=categoryTemplate)
     fullprice = models.CharField("Полная цена без скидки",default="",max_length=15)
     seller = models.ForeignKey(shops, on_delete=models.CASCADE, default=None)

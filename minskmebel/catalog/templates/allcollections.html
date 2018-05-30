@@ -37,7 +37,7 @@
                            return location.href = '?category={{category}}&min1=' + from + '&max1='+to;
              {% endif %}
             {% if category is None %}
-                           return location.href = '?min1=' + from + '&max1='+to;
+                           return location.href = '?min1=' + from + '&max1='+to + '&priority={{priority}}';
              {% endif %}
         },
 
@@ -61,11 +61,23 @@
       </a>
     </div>
 <div class="select">
-      <select onchange="">
-      <option>Сначала популярные</option>
-      <option>ваывапыавпы</option>
-      <option>фывфы</option>
-      <option>фывфывыфв</option>
+       <select id="ssss" onchange="return location.href = ('?max1={{max1}}&min1={{min1}}&priority=' + ($('#ssss').val()))">
+          {% if priority == 'Category' %}
+      <option value="Category" selected>По категориям</option>
+          {% else %}
+      <option value="Category">По категориям</option>
+          {% endif %}
+          {% if priority == 'price' %}
+      <option value="price" selected>Сначала дешевые</option>
+          {% else %}
+      <option value="price">Сначала дешевые</option>
+          {% endif %}
+          {% if priority == '-price' %}
+      <option value="-price" selected>Сначала дорогие</option>
+          {% else %}
+      <option value="-price">Сначала дорогие</option>
+          {% endif %}
+
       </select>
     </div>
 

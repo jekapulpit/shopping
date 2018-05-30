@@ -31,7 +31,9 @@ def collections(request):
         "childroom": '8',
         "office": '9',
     }
-
+    sortparam = request.GET.get('priority');
+    if (sortparam is None or sortparam is ""):
+        sortparam = 'Category'
     min1 = request.GET.get('min1')
     max1 = request.GET.get('max1')
     Categoty = request.GET.get('category')
@@ -43,7 +45,7 @@ def collections(request):
             sortparams1.remove(SORT)
 
     values = [];
-    allshops = shops.objects.all()
+    allshops = models.shops.objects.all()
     allitems = models.Collection.objects.all()
     for objj in allitems:
         values.append(objj.price)
@@ -54,9 +56,9 @@ def collections(request):
     if max1 is None or '':
         max1 = maxvalue
     if Categoty is None:
-        items2 = models.Collection.objects.all()
+        items2 = models.Collection.objects.all().order_by(sortparam)
     else:
-        items2 = models.Collection.objects.filter(Category=categories[Categoty])
+        items2 = models.Collection.objects.filter(Category=categories[Categoty]).order_by(sortparam)
     items1 = []
     for objj in items2:
         if float(objj.price) >= float(min1) and float(objj.price) <= float(max1):
@@ -75,7 +77,8 @@ def collections(request):
                                             'max1': max1,
                                             'min1': min1,
                                             'category': Categoty,
-                                            'sort': sortparams1}, )
+                                            'sort': sortparams1,
+                                            'priority' : sortparam})
 
 
 
