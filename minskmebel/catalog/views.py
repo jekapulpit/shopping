@@ -96,6 +96,9 @@ def catalog1(request):
     max1 = request.GET.get('max1')
     Categoty = request.GET.get('category')
     SORT = request.GET.get('shopsort')
+    sortparam = request.GET.get('priority');
+    if(sortparam is None or sortparam is ""):
+        sortparam  = 'isdiscount'
     if(request.GET.get('opt') == 'add'):
         sortparams1.append(SORT)
     else:
@@ -114,9 +117,9 @@ def catalog1(request):
     if max1 is None or max1 is '':
         max1 = maxvalue
     if Categoty is None:
-        items2 = models.ShopItem.objects.all()
+        items2 = models.ShopItem.objects.all().order_by(sortparam)
     else:
-        items2 = models.ShopItem.objects.filter(Category = categories[Categoty])
+        items2 = models.ShopItem.objects.filter(Category = categories[Categoty]).order_by(sortparam)
     items1 = []
     for objj in items2:
         if float(objj.price) >= float(min1) and float(objj.price) <= float(max1):
@@ -128,6 +131,7 @@ def catalog1(request):
                 items.append(objj)
     else:
         items = items1
+
     return render(request, 'catalog.html', {'items': items,
                                             'shops':allshops,
                                             'min':minvalue,
@@ -135,7 +139,8 @@ def catalog1(request):
                                             'max1' : max1,
                                             'min1' : min1,
                                             'category': Categoty,
-                                            'sort': sortparams1},)
+                                            'sort': sortparams1,
+                                            'priority' : sortparam})
 
 
 

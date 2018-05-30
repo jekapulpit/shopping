@@ -6,6 +6,7 @@ from mainpage.models import Collection
 
 
 
+
 class ShopItem(models.Model):
     ischeap = (
         ('1','да'),
@@ -26,7 +27,7 @@ class ShopItem(models.Model):
     subtitle = models.CharField(default="Краткое описание",max_length=40)
     discriotion = models.TextField(default="Описание товара")
     price = models.FloatField(default=0.00)
-    isdiscount = models.CharField("нет",max_length=3, choices=ischeap)
+    isdiscount = models.CharField("популярный?",max_length=3, choices=ischeap)
     seller = models.ForeignKey(shops, on_delete=models.CASCADE)
     Category = models.CharField("Категория",default='Мягкая мебель',max_length=20, choices=categoryTemplate)
     inCollection = models.ForeignKey(Collection, on_delete=models.CASCADE)
@@ -47,4 +48,6 @@ class ShopItem(models.Model):
         return res
 
 
-
+class discounts(models.Model):
+    tovar = models.ForeignKey(ShopItem, on_delete=models.CASCADE)
+    nowprice = models.FloatField("Цена со скидкой")

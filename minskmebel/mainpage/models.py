@@ -1,6 +1,5 @@
 from django.db import models
 
-
 # Create your models here.
 class shops(models.Model):
     title = models.CharField(default="Neme",max_length=40)
