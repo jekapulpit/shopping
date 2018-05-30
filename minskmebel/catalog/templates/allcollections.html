@@ -6,7 +6,7 @@
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
     	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style.css' %}">
-    <title>Товары</title>
+    <title>Коллекции</title>
     <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style_index.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style_magazine.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style_catalog.css' %}">
@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
-  <script type="text/javascript">
+ <script type="text/javascript">
     $(document).ready(function(){
 
     $("#slider5").ionRangeSlider({
@@ -52,11 +52,11 @@
 
   <catalog>
     <div class="tovsorcollections">
-      <a href="" class="tovsorcols active">
+      <a href="../" class="tovsorcols">
         <p>Товары</p>
       </a>
       <p class="tovsorcols">|</p>
-      <a href="collections/" class="tovsorcols">
+      <a href="" class="tovsorcols active">
         <p>Коллекции</p>
       </a>
     </div>
@@ -68,7 +68,7 @@
       <option>фывфывыфв</option>
       </select>
     </div>
-      
+
     <div class="tovarcontent">
 
       <div class="tovs">
@@ -78,7 +78,7 @@
                       <div class="image" style="background-image: url('{{objj.image.url}}');"></div>
                       <div style="display:table; height: 10%;margin-left: 10px;margin-right: 10px;">
                         <div class="name">
-                          <a href="/catalog/{{objj.id}}/" style="text-decoration: none; color: black">{{objj.title}}</a>
+                          <a href="/catalog/collections/{{objj.id}}/" style="text-decoration: none; color: black">{{objj.title}}</a>
                         </div>
                       </div>
                       <div style="display:table; height: 7%;margin-left: 10px;margin-right: 10px;">
@@ -99,7 +99,7 @@
 
           -->
         </div>
-        
+
 
        <div class="sortout">
         <div class="sort">
@@ -119,10 +119,10 @@
         </div>
         </div>
       </div>
-      
+
       </div>
       <div class="pages">
-        
+
         <table class="pagess" cellpadding="0" cellspacing="0" align="middle">
           <td class="active"><a href="?page=1" class="ss"><b>1</b></a></td>
           <td><a href="?page=2" class="ss"><b>2</b></a></td>
@@ -132,7 +132,7 @@
 
         </table>
       </div>
-        
+
 
   </catalog>
 
@@ -141,7 +141,6 @@
  {% endblock %}
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
-    <script  src="{% static 'mainpage/js/index.js' %}"></script>
     <script  src="{% static 'js/func.js' %}"></script>
 </body>
 </html>

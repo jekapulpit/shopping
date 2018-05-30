@@ -25,12 +25,11 @@ class ShopItem(models.Model):
     title = models.CharField(default="Название товара",max_length=40)
     subtitle = models.CharField(default="Краткое описание",max_length=40)
     discriotion = models.TextField(default="Описание товара")
-    price = models.CharField(default="Цена(просто число)",max_length=10)
+    price = models.FloatField(default=0.00)
     isdiscount = models.CharField("нет",max_length=3, choices=ischeap)
     seller = models.ForeignKey(shops, on_delete=models.CASCADE)
     Category = models.CharField("Категория",default='Мягкая мебель',max_length=20, choices=categoryTemplate)
     inCollection = models.ForeignKey(Collection, on_delete=models.CASCADE)
-
     image = models.ImageField(upload_to="",null=False, blank=True)
     image1 = models.ImageField(default=None,upload_to="",null=True, blank=True)
     image2 = models.ImageField(default=None,upload_to="",null=True, blank=True)
