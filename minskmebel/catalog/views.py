@@ -16,3 +16,9 @@ def Tovar(request, number):
     SimularItems = models.ShopItem.objects.filter(Category=item.Category).exclude(id = item.id)
     context = {"item" : item, "SimularItems" : SimularItems}
     return render(request, 'tovar.html', context)
+
+def collection(request, number):
+    item = models.Collection.objects.get(id=number)
+    inCollection1 = models.ShopItem.objects.filter(inCollection=item)
+    context = {'items': inCollection1, 'item':item}
+    return render(request, 'collection.html', context)

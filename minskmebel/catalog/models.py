@@ -1,6 +1,9 @@
 from django.db import models
 from mainpage.models import shops
+from mainpage.models import Collection
+
 # Create your models here.
+
 
 
 class ShopItem(models.Model):
@@ -26,8 +29,10 @@ class ShopItem(models.Model):
     isdiscount = models.CharField("нет",max_length=3, choices=ischeap)
     seller = models.ForeignKey(shops, on_delete=models.CASCADE)
     Category = models.CharField("Категория",default='Мягкая мебель',max_length=20, choices=categoryTemplate)
+    inCollection = models.ForeignKey(Collection, on_delete=models.CASCADE)
+
     image = models.ImageField(upload_to="",null=False, blank=True)
-    image1 = models.ImageField(default=None, upload_to="",null=True, blank=True)
+    image1 = models.ImageField(default=None,upload_to="",null=True, blank=True)
     image2 = models.ImageField(default=None,upload_to="",null=True, blank=True)
     image3 = models.ImageField(default=None,upload_to="",null=True, blank=True)
     image4 = models.ImageField(default=None,upload_to="",null=True, blank=True)
@@ -41,3 +46,6 @@ class ShopItem(models.Model):
         except:
             res = False
         return res
+
+
+
