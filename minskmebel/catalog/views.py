@@ -103,7 +103,7 @@ def catalog1(request):
             sortparams1.remove(SORT)
 
     values = [];
-    allshops = shops.objects.all()
+    allshops = models.shops.objects.all()
     allitems = models.ShopItem.objects.all()
     for objj in allitems:
         values.append(objj.price)
@@ -144,3 +144,9 @@ def shoppage(request, shopid):
     Staff = models.ShopItem.objects.filter(seller = item)
     context = {"item" : item, "staff" : Staff}
     return render(request, 'shoppage.html', context)
+
+
+
+def shops(request):
+        allshops = models.shops.objects.all()
+        return render(request, 'shop.html', {'shops' : allshops} )

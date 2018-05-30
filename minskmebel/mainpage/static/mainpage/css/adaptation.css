@@ -1,0 +1,126 @@
+@media only screen and (max-width: 767px) {
+up {
+	background-color:white;
+}
+category {
+	background-color:#cd1639;
+	height:7%;
+}
+news {
+	display: none;
+}
+shop {
+	display: none;
+}
+map {
+	display: none;
+}
+footer {
+	display: none;
+}
+.sliderTwo {
+	width:100%;
+}
+.lslide {
+	width: 90%;
+}
+.contrs {
+	display: none;
+}
+.social {
+	display: none;
+}
+.contentslider2 .name {
+	font-size: 4vw;
+}
+.contentslider2 .more {
+	font-size: 3vw;
+}
+.contentslider2 .price {
+	font-size: 6vw;
+}
+.contentslider2 .preprice {
+	font-size: 3vw;
+}
+.nav-slider {
+	width:0;
+	display: none;
+}
+.best_sale .block .image {
+	display:none;
+}
+.best_sale {
+	height:15%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+slider {
+	height: auto;
+}
+.info .name {
+	width:100%;
+	text-align: center;
+	font-size: 3vw
+}
+.info .more {
+	font-size: 2vw
+}
+.block .info {
+	padding-right: 1%;
+	width: 100%;
+}
+.best_sale .block {
+	margin-left: 2%;
+	width:96%;
+}
+.swipper-slide {
+	width:100%;
+}
+.swiper-button-prev {
+	display: none;
+}
+.swiper-button-next {
+	display: none;
+}
+.swiper-container {
+	width:100%;
+}
+.slider_show {
+	margin:0;
+	width:100%;
+	height: 58%;
+}
+.category_name {
+	display: none;
+}
+.menu {
+	display: none;
+}
+.call_but_header {
+	display:none;
+}
+.logo {
+	width: 40%;
+}
+.right_header {
+	width:43%;
+}
+.block_down {
+	float: none;
+	height:50%;
+	width: 75%
+}
+.call {
+	height:80%;
+	width:80%;
+	padding-left:10%;
+}
+.block_down .clock_info {
+	width:65%;
+	font-size: 1.5vw
+}
+.block_down .call_number {
+	width:65%;
+	font-size: 1.5vw
+}
+}

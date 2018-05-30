@@ -9,6 +9,7 @@ urlpatterns = [
     re_path(r'^', include('mainpage.urls')),
     re_path(r'^catalog/', include('catalog.urls')),
     re_path(r'^shops/(?P<shopid>[0-9]+)/', views.shoppage),
+    re_path(r'^shops/', views.shops),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
