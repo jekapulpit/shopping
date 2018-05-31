@@ -70,6 +70,18 @@ def collections(request):
                 items.append(objj)
     else:
         items = items1
+    paginator = Paginator(items, 8)
+    page = request.GET.get('page')
+    if (page is None or page == ''):
+        page = 1
+    try:
+        items = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        items = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        items = paginator.page(paginator.num_pages)
     return render(request, 'allcollections.html', {'items': items,
                                             'shops': allshops,
                                             'min': minvalue,
@@ -78,7 +90,10 @@ def collections(request):
                                             'min1': min1,
                                             'category': Categoty,
                                             'sort': sortparams1,
-                                            'priority' : sortparam})
+                                            'priority' : sortparam,
+                                            'minpage' : int(page) - 2,
+                                            'maxpage': int(page) + 2,
+                                            'maxpage1': int(paginator.num_pages) - 1,})
 
 
 
@@ -134,7 +149,18 @@ def catalog1(request):
                 items.append(objj)
     else:
         items = items1
-
+    paginator = Paginator(items, 8)
+    page = request.GET.get('page')
+    if(page is None or page == ''):
+        page = 1
+    try:
+        items = paginator.page(page)
+    except PageNotAnInteger:
+        # If page is not an integer, deliver first page.
+        items = paginator.page(1)
+    except EmptyPage:
+        # If page is out of range (e.g. 9999), deliver last page of results.
+        items = paginator.page(paginator.num_pages)
     return render(request, 'catalog.html', {'items': items,
                                             'shops':allshops,
                                             'min':minvalue,
@@ -143,7 +169,10 @@ def catalog1(request):
                                             'min1' : min1,
                                             'category': Categoty,
                                             'sort': sortparams1,
-                                            'priority' : sortparam})
+                                            'priority' : sortparam,
+                                            'minpage' : int(page) - 2,
+                                            'maxpage': int(page) + 2,
+                                            'maxpage1': int(paginator.num_pages) - 1,})
 
 
 

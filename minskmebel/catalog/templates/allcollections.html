@@ -34,10 +34,10 @@
             var from = slider.result.from
             var to = slider.result.to
             {% if category is not None %}
-                           return location.href = '?category={{category}}&min1=' + from + '&max1='+to;
+                           return location.href = '?category={{category}}&min1=' + from + '&max1='+to+'&page={{items.number}}';
              {% endif %}
             {% if category is None %}
-                           return location.href = '?min1=' + from + '&max1='+to + '&priority={{priority}}';
+                           return location.href = '?min1=' + from + '&max1='+to + '&priority={{priority}}&page={{items.number}}';
              {% endif %}
         },
 
@@ -61,7 +61,7 @@
       </a>
     </div>
 <div class="select">
-       <select id="ssss" onchange="return location.href = ('?max1={{max1}}&min1={{min1}}&priority=' + ($('#ssss').val()))">
+       <select id="ssss" onchange="return location.href = ('?max1={{max1}}&min1={{min1}}&page={{items.number}}&priority=' + ($('#ssss').val()))">
           {% if priority == 'Category' %}
       <option value="Category" selected>По категориям</option>
           {% else %}
@@ -136,11 +136,44 @@
       <div class="pages">
 
         <table class="pagess" cellpadding="0" cellspacing="0" align="middle">
-          <td class="active"><a href="?page=1" class="ss"><b>1</b></a></td>
-          <td><a href="?page=2" class="ss"><b>2</b></a></td>
-           <td><a href="?page=3" class="ss"><b>3</b></a></td>
-           <td><a href="?page=4" class="ss"><b>4</b></a></td>
-           <td><a href="?page=5" class="ss"><b>5</b></a></td>
+
+    {% if items.has_previous %}
+          <td><a href="?page={{items.previous_page_number}}&max1={{max1}}&min1={{min1}}&priority={{priority}}" class="ss"><b>Пред.</b></a></td>
+    {% endif %}
+    {% if items.number == 1 %}
+         <td class="active"><a href="?page=1&max1={{max1}}&min1={{min1}}&priority={{priority}}" class="ss"><b>1</b></a></td>
+    {% else %}
+         <td><a href="?page=1&max1={{max1}}&min1={{min1}}&priority={{priority}}" class="ss"><b>1</b></a></td>
+    {% endif %}
+
+    {% if minpage > 1 %}
+         <td><a class="ss"><b>...</b></a></td>
+    {% endif %}
+
+    {% for num in items.paginator.page_range %}
+        {% if num != 1 and num != items.paginator.num_pages and num > minpage and num < maxpage%}
+            {% if num == items.number %}
+            <td class="active"><a href="?page={{num}}&max1={{max1}}&min1={{min1}}&priority={{priority}}" class="ss"><b>{{num}}</b></a></td>
+            {% else %}
+            <td><a href="?page={{num}}&max1={{max1}}&min1={{min1}}&priority={{priority}}" class="ss"><b>{{num}}</b></a></td>
+            {% endif %}
+        {% endif %}
+    {% endfor %}
+
+    {% if maxpage < items.paginator.num_pages %}
+         <td><a class="ss"><b>...</b></a></td>
+    {% endif %}
+    {% if items.paginator.num_pages != 1 %}
+        {% if items.number == items.paginator.num_pages %}
+             <td class="active"><a href="?page={{items.paginator.num_pages}}&max1={{max1}}&min1={{min1}}&priority={{priority}}" class="ss"><b>{{items.paginator.num_pages}}</b></a></td>
+        {% else %}
+             <td><a href="?page={{items.paginator.num_pages}}&max1={{max1}}&min1={{min1}}&priority={{priority}}" class="ss"><b>{{items.paginator.num_pages}}</b></a></td>
+        {% endif %}
+    {% endif %}
+    {% if items.has_next %}
+          <td><a href="?page={{items.next_page_number}}&max1={{max1}}&min1={{min1}}&priority={{priority}}" class="ss"><b>След.</b></a></td>
+    {% endif %}
+
 
         </table>
       </div>
