@@ -7,6 +7,8 @@ class shops(models.Model):
     image = models.ImageField(upload_to="",null=True, blank=True)
     phone1 = models.CharField(default="+375445106036",max_length=40)
     phone2 = models.CharField(default="+375445106036",max_length=40)
+    def __str__(self):
+        return self.title
 
 class Collection(models.Model):
     categoryTemplate = (
@@ -36,6 +38,8 @@ class Collection(models.Model):
     image5 = models.ImageField(default=None, upload_to="", null=True, blank=True)
     image6 = models.ImageField(default=None, upload_to="", null=True, blank=True)
     image7 = models.ImageField(default=None, upload_to="", null=True, blank=True)
+    def __str__(self):
+        return self.title
 
 
 class slider1fill(models.Model):
@@ -47,11 +51,21 @@ class slider2fill(models.Model):
     nowprice = models.CharField(max_length=10)
     prevprice = models.CharField(max_length=10)
     image = models.ImageField(upload_to="",null=True, blank=True)
+    def __str__(self):
+        return self.title
 
 class slider3fill(models.Model):
     title = models.CharField(max_length=100)
     date = models.DateField()
     image = models.ImageField(upload_to="",null=True, blank=True)
     discription = models.TextField()
+    def __str__(self):
+        return self.title
 
+class Sale(models.Model):
+    title = models.CharField(max_length=40)
+    discriotion = models.TextField()
+    image = models.ImageField(upload_to="", null=True, blank=True)
 
+    def __str__(self):
+        return self.title

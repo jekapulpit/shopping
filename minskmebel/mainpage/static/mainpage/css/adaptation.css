@@ -3,7 +3,7 @@ up {
 	background-color:white;
 }
 category {
-	background-color:#cd1639;
+	background-color:#cd1639 !important;
 	height:7%;
 }
 news {
@@ -82,6 +82,16 @@ slider {
 .swiper-button-next {
 	display: none;
 }
+.menu_mobile {
+	display: block;
+}
+.catalog_mobile {
+	display: block;
+}
+.category {
+	width:100%;
+	margin:0;
+}
 .swiper-container {
 	width:100%;
 }
@@ -122,5 +132,161 @@ slider {
 .block_down .call_number {
 	width:65%;
 	font-size: 1.5vw
+}
+
+/*           SALES              */
+.howtoconnect {
+	margin:0;
+	width:100%;
+}
+.map {
+	height:15%;
+}
+.news .name {
+	font-size: 4vw !important;
+}
+.news .content {
+	font-size: 3vw !important;
+}
+.plus {
+	height: 10%;
+}
+/*            CONTACTS          */
+.callback {
+	display: none;
+}
+.inform {
+	width: 55%;
+}
+.infoitem1 {
+	margin-right: 0 !important;
+}
+.mapandform {
+	height: auto;
+}
+contacts {
+	height: auto;
+}
+.infoitem {
+	font-size: 2.5vw;
+}
+/*              COLLECTIONS               */
+.way {
+	display: none;
+}
+.collection .item {
+	height: 10%;
+}
+.contentdown {
+	display: none;
+}
+.page_contentdown .left{
+	display: none;
+}
+.page_contentdown .right{
+	width:100%;
+	padding-left: 0;
+	height: auto;
+}
+.right .name {
+	height:7.5%;
+}
+.right .title {
+	font-size: 2vw;
+}
+.right .text {
+	font-size: 2.5vw;
+	height: auto;
+	padding-bottom:5%;
+}
+.right .right_content {
+	height: auto;
+}
+.page_contentdown {
+	height:auto;
+}
+.page_content .image {
+	float: none;
+	height: 70%;
+	width: 100%;
+	margin-top: 5%;
+}
+.page_content .content {
+	width:100%;
+	height: auto;
+}
+.news .content {
+	font-weight: 100 !important;
+}
+/*                 CATALOG                 */
+.tovarcontent {
+	margin:0;
+}
+.sortout {
+	width:30%;
+	right:2%;
+	top: 40%;
+}
+.irs-single {
+	font-size: 3vw !important;
+}
+.tovs {
+	width: 100%;
+}
+.tovaritem {
+	height:12%;
+	width:100%;
+}
+.tovsorcollections {
+	height: 6%;
+}
+.pagess {
+	width:auto;
+	height: auto;
+}
+/*              SHOP                  */
+.preview {
+	width: 100% !important;
+	padding:0 !important;
+}
+.contentslider .name .content {
+	font-size: 3vw;
+}
+.contentslider .name {
+	height: 20%;
+}
+.contentslider .text {
+	font-size: 2vw;
+}
+.shops .shopblock {
+	width:50% !important;
+}
+.shopblock .content .img {
+	height: 60%;
+}
+/*                    SHOP PAGE              */
+topshop .stand {
+	height: 15%;
+	margin-top: 3%;
+}
+.info .infoitem {
+	display: none;
+}
+.contacts .inner .topheader{
+	display: none ;
+}
+.contacts .inner .infoitem{
+	display: none ;
+}
+.contacts .inner .linktoshop1{
+	display: none ;
+}
+.contacts .inner{
+	height: 100%;
+	display:table;
+}
+.contacts .inner .pic{
+	margin-top: 75%;
+	height: 25%;
 }
 }

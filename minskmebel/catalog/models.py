@@ -46,8 +46,10 @@ class ShopItem(models.Model):
         except:
             res = False
         return res
-
+    def __str__(self):
+        return self.title
 
 class discounts(models.Model):
     tovar = models.ForeignKey(ShopItem, on_delete=models.CASCADE)
     nowprice = models.FloatField("Цена со скидкой")
+

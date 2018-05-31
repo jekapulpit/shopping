@@ -1,0 +1,139 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+    {% load staticfiles %}
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
+ <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style_page.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style_contacts.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/menu.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/adaptation.css' %}">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="{% static 'js/lightslider.js' %}"></script>
+        <script  src="{% static 'mainpage/js/menu.js' %}"></script>
+
+    <script src="{% static 'js/slider2.js' %}" ></script>
+    <link rel="stylesheet"  href="{% static 'lightslider.css' %}"/>
+    <link rel="stylesheet"  href="{% static 'slider2.css' %}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+ {% block content %}
+  {% include "header.html" %}
+{% endblock %}
+
+ <social>
+    <div class="social_url">
+      <div class="social">
+        <div style=" display:table; float:right">
+          <div style="display:table-cell; vertical-align: middle">ПРИСОЕДИНИТЬСЯ К НАМ В СОЦ. СЕТЯХ</div>
+            <div style="float:right; width: 125px">
+              <a href="#"><div class="social_block1" style="background-color: #4e76a4;"></div></a>
+              <a href="#"><div class="social_block1" style="background-color: #3d5b9a;"></div></a>
+              <a href="#"><div class="social_block1" style="background-color: #f68c33;"></div></a>
+              <a href="#"><div class="social_block1" style="background-color: #cc2027;"></div></a>
+              <a href="#"><div class="social_block1" style="background-color: #1da0f3;"></div></a>
+            </div>
+         </div>
+      </div>
+    </div>
+  </social>
+
+  <contacts style="height: auto">
+    
+      <div class="howtoconnect" style="height: auto">
+        <div class="leftside" style="height:auto">
+          <div class="spisok">
+            <p class="spisokitems active"><b>что-то1</b></p>
+            <p class="spisokitems"><b>чтото2</b></p>
+            <p class="spisokitems"><b>чтото3</b></p>
+            <p class="spisokitems"><b>ывафавы</b></p>
+          </div> 
+        </div>
+        <div class="mapandform" style="height:auto">
+            <div class="map" style="background-image: url({{sale.image.url}}); background-size: 100% 100%; margin-top: 0">
+            </div>
+            <div class="news" style="width:100%;">
+              <div class="name" style= "width:100%;font-weight: bold; font-size: 1.8vw; padding-top: 2%; padding-bottom: 2%; font-family: Proxima">{{sale.title}}</div>
+              <div class="content" style= "background-color:white;width:92%;font-weight: bold; font-size: 1vw;margin-bottom: 2%; padding: 4%; font-family: Proxima">
+                  {{sale.discriotion}}
+              </div>
+            </div>
+        </div>
+          </div>
+      </div>
+  </contacts>
+  <products style="background-color:white">
+    <div style="font-family: Proxima; font-size: 1.95vw; text-align: center;padding-top: 2%;padding-bottom: 2%;font-weight: bold">Популярные товары и вкусные цены</div>
+    <div class="slider2">
+      <div class="contrs left" onclick="next()" style="background-image: url(/static/img/right.png);"></div>
+    <div class="contrs right" onclick="prev()"  style="background-image: url(/static/img/left.png);"></div>
+     <ul id="content-slider" class="content-slider">
+               {% for objj in slider2 %}
+             <div>
+                  <li class="listitem" >
+                  <div class="contentslider2">
+                  		<div class="image" style="background-image: url({{objj.tovar.image.url}});"></div>
+                  		<div style="display:table; height: 10%">
+                  			<div class="name">
+                  				{{objj.tovar.title}}
+                  			</div>
+                  		</div>
+                  		<div style="display:table; height: 7%">
+                  			<div class="more">
+                  				{{objj.tovar.discriotion}}
+                  			</div>
+                  		</div>
+                  		<div style="display:table; height: 16%">
+                  			<div class="price">
+                  				{{objj.nowprice}}р.-
+                  			</div>
+                  		</div>
+                  		<div style="display:table; height: 7%">
+                  			<div class="preprice">
+                  				прежняя цена: {{objj.tovar.price}}р
+                  			</div>
+                  		</div>
+                  </div>
+                </li>
+            </div>
+             {% endfor %}
+            </ul>
+    </div>
+  </products>
+  <div class="plus">
+  <div class="content">
+    <div class="image" style="background-image: url({% static 'img/geo.png' %});"></div>
+    <div class="text">
+      <div class="content">
+        <div class="name">Доступность и удобный подъезд</div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="image" style="background-image: url({% static 'img/sale.png' %});"></div>
+    <div class="text">
+      <div class="content">
+        <div class="name">Скидки, акции, распродажи, рассрочка</div>
+      </div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="image" style="background-image: url({% static 'img/shop.png' %});"></div>
+    <div class="text">
+      <div class="content">
+        <div class="name">Лучшая мебель в одном месте</div>
+      </div>
+    </div>
+  </div>
+</div>
+  {% block footer %}
+  {% include "footer.html" %}
+{% endblock %}
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
+</body>
+</html>

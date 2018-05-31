@@ -3,12 +3,14 @@
 	<meta charset="utf-8" />
 	{% load staticfiles %}
 	<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
 	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style.css' %}">
 	<link rel="stylesheet" type="text/scss" href="{% static 'mainpage/scss/style.scss' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style_index.css' %}">
-	    <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/adaptation.css' %}">
-
+    <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/menu.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/adaptation.css' %}">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   	<script src="{% static 'mainpage/src/js/lightslider.js' %}"></script>
   	<script src="{% static 'mainpage/js/slider2.js' %}"></script>
@@ -16,7 +18,7 @@
   	<link rel="stylesheet"  href="{% static 'mainpage/src/css/lightslider.css' %}"/>
   	<link rel="stylesheet"  href="{% static 'mainpage/css/slider2.css' %}"/>
   	<link rel="stylesheet"  href="{% static 'mainpage/css/slider3.css' %}"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
 </head>
 <body>
  {% block content %}
@@ -209,5 +211,6 @@
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
     <script  src="{% static 'mainpage/js/index.js' %}"></script>
+    <script  src="{% static 'mainpage/js/menu.js' %}"></script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+.menumobile{
+	position: absolute;
+	width: 100%;
+	top: 27%;
+	height: 73%;
+	margin:0;
+	z-index: 9999;
+		background-color: #cd1639;
+
+}
+.menumobile .category_name {
+	display: block;
+	position: relative;
+	height: 20%;
+	width: 50%;
+	padding: 0;
+	z-index: 9999;
+	background-color: #cd1639;
+
+
+
+}
+.menumobile .category_name .image { 
+filter: brightness(20);
+
+}
+.menumobile .category_name .name { 
+color: white;
+}
+.border {
+	border: 1px solid white;
+	border-left: none; 
+}

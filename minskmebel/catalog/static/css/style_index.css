@@ -83,6 +83,41 @@ footer {
 	cursor: pointer;
 	transition: 0.1s;
 }
+.menu_mobile {
+	width: 15%;
+	height: 100%;
+	display:none;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	transition: 0.1s;
+	background-size: 100% 100%;
+	background-image: url(../img/burger.png);
+	border-right: 1px double white;
+}
+.catalog_mobile {
+	height: 100%;
+	display:none;
+	float: right;
+	text-align: center;
+	cursor: pointer;
+	font-size: 6vw;
+	text-align: center;
+}
+.catalog_mobile .catalog_content{
+	display:table;
+	width:100%;
+	height:100%;
+}
+.catalog_content .text {
+	display:table-cell;
+	vertical-align: middle;
+	color:white;
+	padding-right: 15%;
+	padding-left: 10%;
+	border-left: 1px double white;
+	font-family: 
+}
 .category_name:hover {
 	width: 8%;
 	padding-left: 1.55%;

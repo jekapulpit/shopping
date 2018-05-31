@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from . import models
 from mainpage.models import shops
+from mainpage.models import Sale
 
 from django.views.generic import ListView, DeleteView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -186,4 +187,15 @@ def shoppage(request, shopid):
 
 def shops(request):
         allshops = models.shops.objects.all()
-        return render(request, 'shop.html', {'shops' : allshops} )
+        return render(request, 'shop.html', {'shops' : allshops, 'sale' : sale} )
+
+def sales(request, num):
+    sale = Sale.objects.get(id=num);
+    allsales = Sale.objects.all()
+    alldiscounts = models.discounts.objects.all();
+    return render(request, 'sales.html', {'sale': sale, 'slider2': alldiscounts})
+
+def allsales(request):
+    allsales = Sale.objects.all()
+    alldiscounts = models.discounts.objects.all();
+    return render(request, 'allsales.html', {'sales': allsales, 'slider2': alldiscounts})
