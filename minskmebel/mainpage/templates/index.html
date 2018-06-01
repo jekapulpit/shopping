@@ -108,25 +108,25 @@
              <div>
                   <li class="listitem" >
                   <div class="contentslider2">
-                  		<div class="image" style="background-image: url({{objj.tovar.image.url}});"></div>
+                  		<div class="image" style="background-image: url({{objj.image.url}});"><a href="/catalog/{{objj.id}}" style="display: block; width: 100%; height: 100%"></a> </div>
                   		<div style="display:table; height: 10%">
                   			<div class="name">
-                  				{{objj.tovar.title}}
+                  				<a href="/catalog/{{objj.id}}" style="text-decoration: none; color: black">{{objj.title}}</a>
                   			</div>
                   		</div>
                   		<div style="display:table; height: 7%">
                   			<div class="more">
-                  				{{objj.tovar.discriotion}}
+                  				{{objj.subtitle}}
                   			</div>
                   		</div>
                   		<div style="display:table; height: 16%">
                   			<div class="price">
-                  				{{objj.nowprice}}р.-
+                  				{{objj.newprice}}р.-
                   			</div>
                   		</div>
                   		<div style="display:table; height: 7%">
                   			<div class="preprice">
-                  				прежняя цена: {{objj.tovar.price}}р
+                  				прежняя цена: {{objj.price}}р
                   			</div>
                   		</div>
                   </div>

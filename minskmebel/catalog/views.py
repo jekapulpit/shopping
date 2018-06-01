@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from . import models
-from mainpage.models import shops
-from mainpage.models import Sale
+from mainpage.models import shops, Sale, New
 
 from django.views.generic import ListView, DeleteView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
@@ -117,7 +116,7 @@ def catalog1(request):
     SORT = request.GET.get('shopsort')
     sortparam = request.GET.get('priority');
     if(sortparam is None or sortparam is ""):
-        sortparam  = 'isdiscount'
+        sortparam  = '-isdiscount'
     if(request.GET.get('opt') == 'add'):
         sortparams1.append(SORT)
     else:
@@ -128,7 +127,7 @@ def catalog1(request):
     allshops = models.shops.objects.all()
     allitems = models.ShopItem.objects.all()
     for objj in allitems:
-        values.append(objj.price)
+        values.append(objj.newprice)
     minvalue = min(values)
     maxvalue = max(values)
     if min1 is None or min1 is '':
@@ -141,7 +140,7 @@ def catalog1(request):
         items2 = models.ShopItem.objects.filter(Category = categories[Categoty]).order_by(sortparam)
     items1 = []
     for objj in items2:
-        if float(objj.price) >= float(min1) and float(objj.price) <= float(max1):
+        if float(objj.newprice) >= float(min1) and float(objj.newprice) <= float(max1):
             items1.append(objj)
     items = []
     if(sortparams1 != []):
@@ -187,16 +186,24 @@ def shoppage(request, shopid):
 
 def shops(request):
         allshops = models.shops.objects.all()
-        sale = Sale.objects.all()
-        return render(request, 'shop.html', {'shops' : allshops, 'sale' : sale} )
+        news = New.objects.all()
+        return render(request, 'shop.html', {'shops' : allshops, 'news': news} )
 
 def sales(request, num):
     sale = Sale.objects.get(id=num);
     allsales = Sale.objects.all()
-    alldiscounts = models.discounts.objects.all();
+    alldiscounts1 = models.ShopItem.objects.all();
+    alldiscounts = []
+    for objj in alldiscounts1:
+        if objj.isdiscount1:
+            alldiscounts.append(objj)
     return render(request, 'sales.html', {'sale': sale, 'slider2': alldiscounts})
 
 def allsales(request):
     allsales = Sale.objects.all()
-    alldiscounts = models.discounts.objects.all();
+    alldiscounts1 = models.ShopItem.objects.all();
+    alldiscounts = []
+    for objj in alldiscounts1:
+        if objj.isdiscount:
+            alldiscounts.append(objj)
     return render(request, 'allsales.html', {'sales': allsales, 'slider2': alldiscounts})

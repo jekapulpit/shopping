@@ -2,11 +2,12 @@ from django.db import models
 
 # Create your models here.
 class shops(models.Model):
-    title = models.CharField(default="Neme",max_length=40)
-    discription = models.TextField(default="Описание магазина")
-    image = models.ImageField(upload_to="",null=True, blank=True)
-    phone1 = models.CharField(default="+375445106036",max_length=40)
-    phone2 = models.CharField(default="+375445106036",max_length=40)
+    title = models.CharField("Название",default="Neme",max_length=40)
+    discription = models.TextField("Описание",default="Описание магазина")
+    image = models.ImageField("Мини-логотип", upload_to="",null=True, blank=True)
+    mainimage = models.ImageField("Полная картинка",upload_to="",null=True, blank=True, default=None)
+    phone1 = models.CharField("Телефон Velcom",default="+375445106036",max_length=40)
+    phone2 = models.CharField("Телефон МТС",default="+375445106036",max_length=40)
     def __str__(self):
         return self.title
 
@@ -67,5 +68,12 @@ class Sale(models.Model):
     discriotion = models.TextField()
     image = models.ImageField(upload_to="", null=True, blank=True)
 
+    def __str__(self):
+        return self.title
+
+class New(models.Model):
+    title = models.CharField("Заголовок новости", max_length=40)
+    image = models.ImageField("Картинка", upload_to="", null=True, blank=True)
+    discriotion = models.TextField("Текст новости")
     def __str__(self):
         return self.title

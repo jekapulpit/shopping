@@ -339,6 +339,16 @@ font-size: 3vw !important;
 .contentslider2 .price {
 font-size: 9vw !important;
 }
+
+.nowprice {
+
+    font-size: 8vw !im;
+
+}
+.preprice {
+   display: none;
+
+}
 .contentslider2 .preprice {
 font-size: 4vw !important;
 }

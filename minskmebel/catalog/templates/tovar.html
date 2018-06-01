@@ -124,7 +124,12 @@
       <div class="contentup">
         <div class="name">{{item.title}}</div>
       <div class="more">{{item.subtitle}}</div>
-      <div class="price">{{item.price}}p.-</div>
+          {% if item.isdiscount %}
+      <div class="price" style="color: #cd1639;">Новая цена - {{item.newprice}}p.</div>
+          {% else %}
+      <div class="price">{{item.price}}p.</div>
+
+          {% endif %}
       <div class="pricemore">Информацию о наличии и цене уточняйте у консультантов</div>
       </div>
       <div class="contentdown">
@@ -190,7 +195,7 @@
                <div>
                   <li class="listitem" >
                   <div class="contentslider2">
-                      <div class="image" style="background-image: url({{objj.image.url}});"></div>
+                      <div class="image" style="background-image: url({{objj.image.url}});"><a href="/catalog/{{objj.id}}" style="display: block; width: 100%; height: 100%"></a></div>
                       <div style="display:table; height: 10%">
                         <div class="name">
                            <a href="/catalog/{{objj.id}}/" style="text-decoration: none; color: black">{{objj.title}}</a>
@@ -203,7 +208,7 @@
                       </div>
                       <div style="display:table; height: 16%">
                         <div class="price">
-                          {{objj.price}}р.-
+                          {{objj.newprice}}р.-
                         </div>
                       </div>
                   </div>

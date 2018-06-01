@@ -184,6 +184,26 @@ catalog {
 	height: 25%;
 border: 1px solid #CDCDCD;
 }
+
+.nowprice {
+    height: 15%;
+    width: 100%;
+    font-family: Proxima;
+    font-size: 1.8vw;
+    color: #cd1639;
+    font-weight: bold;
+    display: table-cell;
+    vertical-align: bottom;
+}
+.preprice {
+    font-family: Proxima;
+    font-size: 1vw;
+    display: table-cell;
+    vertical-align: bottom;
+    color: #6f6f6f;
+    font-weight: bold;
+
+}
 td {
 
 	width: 20%;
