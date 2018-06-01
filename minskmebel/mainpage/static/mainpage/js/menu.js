@@ -1,7 +1,7 @@
-function showmenu(){
-    if($(".menumobile").css("visibility") == "visible")
-        $(".menumobile").css("visibility", "hidden");
-    else {
-            $(".menumobile").css("visibility", "visible");
+function showmenu() {
+    if($(".menumobile").css("visibility") == "hidden"){
+        $(".menumobile").css("visibility", "visible");
+    } else {
+      $(".menumobile").css("visibility", "hidden");
     }
 }

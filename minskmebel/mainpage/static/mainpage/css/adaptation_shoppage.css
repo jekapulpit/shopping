@@ -1,0 +1,6 @@
+@media only screen and (max-width: 767px) {
+.shopblock {
+	height: 30% !important;
+	padding-bottom: 2%;
+}
+}

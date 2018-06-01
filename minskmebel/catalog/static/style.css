@@ -7,6 +7,9 @@
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
+body {
+overflow-x: hidden !important;
+}
 
 slider *, *:before, *:after {
   -webkit-box-sizing: border-box;

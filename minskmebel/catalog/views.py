@@ -187,6 +187,7 @@ def shoppage(request, shopid):
 
 def shops(request):
         allshops = models.shops.objects.all()
+        sale = Sale.objects.all()
         return render(request, 'shop.html', {'shops' : allshops, 'sale' : sale} )
 
 def sales(request, num):

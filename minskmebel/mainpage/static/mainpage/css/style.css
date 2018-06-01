@@ -2,7 +2,9 @@
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
 }
-
+body {
+overflow-x: hidden !important;
+}
 .swiper-slide {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
