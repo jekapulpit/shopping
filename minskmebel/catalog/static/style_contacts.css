@@ -20,6 +20,8 @@ contacts {
 	font-size: 0;
 	height: 100%;
 	width: 25%;
+    padding-bottom: 2%;
+
 }
 
 .spisok {
@@ -28,6 +30,9 @@ contacts {
 	background-color: white;
     box-shadow: -1px -1px 50px rgba(0,0,0,0.2); /* Параметры тени */
     padding-top: 5%;
+}
+.spisok a {
+color: black;
 }
 .mapandform {
 	margin-left: 2%;

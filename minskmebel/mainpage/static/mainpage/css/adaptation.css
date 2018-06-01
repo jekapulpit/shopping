@@ -163,7 +163,7 @@ slider {
 	font-size: 4vw !important;
 }
 .spisokitems {
-	font-size: 4vw;
+	font-size: 3vw;
 }
 /*            CONTACTS          */
 .callback {
@@ -330,4 +330,27 @@ topshop .stand {
 .links .linktoshop {
 	font-size: 2vw;
 }
+.contentslider2 .name {
+font-size: 5vw !important;
+}
+.contentslider2 .more {
+font-size: 3vw !important;
+}
+.contentslider2 .price {
+font-size: 9vw !important;
+}
+.contentslider2 .preprice {
+font-size: 4vw !important;
+}
+.slider2 .contrs.right, .slider2 .contrs.left{
+display: none;
+}
+.slider2 {
+height: 100%;
+}
+.poptovs {
+font-size: 4vw !important;
+}
+
+
 }

@@ -5,6 +5,9 @@ html, body {
   overflow-x: hidden !important;
 
 }
+.leftside {
+padding-bottom: 2%;
+}
 @font-face {
     font-family: WaverlyCF;
     src: url(../fonts/WaverlyCF-Medium.ttf);
