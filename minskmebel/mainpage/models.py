@@ -1,5 +1,5 @@
 from django.db import models
-
+from datetime import datetime, date, time
 # Create your models here.
 class shops(models.Model):
     title = models.CharField("Название",default="Neme",max_length=40)
@@ -46,27 +46,13 @@ class Collection(models.Model):
 class slider1fill(models.Model):
     image = models.ImageField(upload_to="",null=True, blank=True)
 
-class slider2fill(models.Model):
-    title = models.CharField(max_length=40)
-    discriotion = models.TextField()
-    nowprice = models.CharField(max_length=10)
-    prevprice = models.CharField(max_length=10)
-    image = models.ImageField(upload_to="",null=True, blank=True)
-    def __str__(self):
-        return self.title
 
-class slider3fill(models.Model):
-    title = models.CharField(max_length=100)
-    date = models.DateField()
-    image = models.ImageField(upload_to="",null=True, blank=True)
-    discription = models.TextField()
-    def __str__(self):
-        return self.title
+
 
 class Sale(models.Model):
-    title = models.CharField(max_length=40)
-    discriotion = models.TextField()
-    image = models.ImageField(upload_to="", null=True, blank=True)
+    title = models.CharField("Заголовок акции", max_length=40)
+    discriotion = models.TextField("Описание")
+    image = models.ImageField("Картинка",upload_to="", null=True, blank=True)
 
     def __str__(self):
         return self.title
@@ -74,6 +60,7 @@ class Sale(models.Model):
 class New(models.Model):
     title = models.CharField("Заголовок новости", max_length=40)
     image = models.ImageField("Картинка", upload_to="", null=True, blank=True)
+    date = models.DateField("Дата", default=datetime.today())
     discriotion = models.TextField("Текст новости")
     def __str__(self):
         return self.title

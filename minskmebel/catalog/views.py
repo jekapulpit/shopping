@@ -195,7 +195,7 @@ def sales(request, num):
     alldiscounts1 = models.ShopItem.objects.all();
     alldiscounts = []
     for objj in alldiscounts1:
-        if objj.isdiscount1:
+        if objj.isdiscount:
             alldiscounts.append(objj)
     return render(request, 'sales.html', {'sale': sale, 'slider2': alldiscounts})
 
@@ -207,3 +207,25 @@ def allsales(request):
         if objj.isdiscount:
             alldiscounts.append(objj)
     return render(request, 'allsales.html', {'sales': allsales, 'slider2': alldiscounts})
+
+
+def allnews(request):
+    allnews = New.objects.all()
+    alldiscounts1 = models.ShopItem.objects.all();
+    alldiscounts = []
+    for objj in alldiscounts1:
+        if objj.isdiscount:
+            alldiscounts.append(objj)
+    return render(request, 'allnews.html', {'news': allnews, 'slider2': alldiscounts})
+
+def news(request, num):
+    new = New.objects.get(id=num);
+    alldiscounts1 = models.ShopItem.objects.all();
+    alldiscounts = []
+    for objj in alldiscounts1:
+        if objj.isdiscount:
+            alldiscounts.append(objj)
+    return render(request, 'news.html', {'new': new, 'slider2': alldiscounts})
+
+def contacts(request):
+    return render(request, 'contacts.html')

@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'style_contacts.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/menu.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/adaptation.css' %}">
-
+<title>Новости</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
         <script  src="{% static 'mainpage/js/menu.js' %}"></script>
 
@@ -49,16 +49,16 @@
           <div class="spisok">
             <a href="/contacts" style="color: black"><p class="spisokitems"><b>Контакты</b></p></a>
             <a href="/arend" style="color: black"><p class="spisokitems"><b>Арендаторам</b></p></a>
-            <a href="/sales" style="color: black"><p class="spisokitems active"><b>Акции</b></p></a>
-            <a href="/news" style="color: black"><p class="spisokitems"><b>Новости</b></p></a>
+            <a href="/sales" style="color: black"><p class="spisokitems"><b>Акции</b></p></a>
+            <a href="/news" style="color: black"><p class="spisokitems active"><b>Новости</b></p></a>
           </div>
         </div>
         <div class="mapandform" style="height:auto">
-           {% for sale in sales %}
+           {% for new in news %}
             <div class="news" style="width:100%;">
-                <div class="name" style= "width:100%;font-weight: bold; font-size: 1.8vw; padding-top: 2%; padding-bottom: 2%; font-family: Proxima"><a href="/sales/{{sale.id}}" style="text-decoration: none; color: inherit">{{sale.title}}</a></div>
+              <div class="name" style= "width:100%;font-weight: bold; font-size: 1.8vw; padding-top: 2%; padding-bottom: 2%; font-family: Proxima"><a href="/news/{{new.id}}" style="text-decoration: none; color: inherit">{{new.title}}</a> </div>
               <div class="content" style= "background-color:white;width:92%;font-weight: bold; font-size: 1vw;margin-bottom: 2%; padding: 4%; font-family: Proxima">
-                  {{sale.discriotion}}
+                  {{new.discriotion}}
               </div>
             </div>
             {% endfor %}

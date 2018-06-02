@@ -149,7 +149,7 @@
 			 <div>
                   <li class="listitem" >
                   <div class="contentslider3">
-                  		<div class="image" style="background-image: url({{objj.image.url}});"></div>
+                  		<div class="image" style="background-image: url({{objj.image.url}});"><a href="/news/{{objj.id}}" style="display: block; width: 100%; height: 100%"></a> </div>
                   		<div class="text">
                   			<div style="display: table; padding-left:5%; height: 15%">
                   				<div class="date">{{objj.date}}</div>
@@ -158,7 +158,7 @@
                   				<div class="more">{{objj.title}}</div>
                   			</div>
                   			<div style="display: table; padding-left:5%; height: 35%">
-                  				<div class="morenews">Подробнее...</div>
+                  				<div class="morenews"><a style="text-decoration:none; color: inherit;" href="/news/{{objj.id}}">Подробнее...</a></div>
                   			</div>
                   		</div>
                   </div>
@@ -192,7 +192,9 @@
 	</shop>
 
 	<map>
-		<div class="contacts">
+				<div class="contacts" style="position: absolute; z-index: 9999; margin-bottom: 35%; height: 45%;">
+
+
 			<div class="all">
 				<div class="name">Контакты</div>
 			    <div class="content">Телефон: <br><b>+375 29 666-45-58</b><br><b>+375 29 666-45-58</b></div>
@@ -203,6 +205,8 @@
 				<div class="but" style="vertical-align: bottom">ЗАКАЗАТЬ ЗВОНОК</div>
 			</div>
 		</div>
+		            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c2de2a40fff5204ac543f6eeb6d8149a23a7a1e21c0247a8b57b732a7e7b9ff&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>
+
 	</map>
 
 

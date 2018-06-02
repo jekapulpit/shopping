@@ -1,0 +1,120 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  {% load staticfiles %}
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_index.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style_page.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style_contacts.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/menu.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/adaptation.css' %}">
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script  src="{% static 'mainpage/js/menu.js' %}"></script>
+
+  <script src="{% static 'js/lightslider.js' %}"></script>
+    <script src="{% static 'js/slider2.js' %}" ></script>
+    <link rel="stylesheet"  href="{% static 'lightslider.css' %}"/>
+    <link rel="stylesheet"  href="{% static 'slider2.css' %}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+<body>
+ {% block content %}
+   {% include "header.html" %}
+ {% endblock %}
+ <social>
+    <div class="social_url">
+      <div class="social">
+        <div style=" display:table; float:right">
+          <div style="display:table-cell; vertical-align: middle">ПРИСОЕДИНИТЬСЯ К НАМ В СОЦ. СЕТЯХ</div>
+            <div style="float:right; width: 125px">
+              <a href="#"><div class="social_block1" style="background-color: #4e76a4;"></div></a>
+              <a href="#"><div class="social_block1" style="background-color: #3d5b9a;"></div></a>
+              <a href="#"><div class="social_block1" style="background-color: #f68c33;"></div></a>
+              <a href="#"><div class="social_block1" style="background-color: #cc2027;"></div></a>
+              <a href="#"><div class="social_block1" style="background-color: #1da0f3;"></div></a>
+            </div>
+         </div>
+      </div>
+    </div>
+  </social>
+
+  <contacts>
+    
+      <div class="howtoconnect">
+        <div class="leftside" style="height:auto">
+          <div class="spisok">
+            <a href="/contacts" style="color: black"><p class="spisokitems active"><b>Контакты</b></p></a>
+            <a href="/arend" style="color: black"><p class="spisokitems"><b>Арендаторам</b></p></a>
+            <a href="/sales" style="color: black"><p class="spisokitems"><b>Акции</b></p></a>
+            <a href="/news" style="color: black"><p class="spisokitems"><b>Новости</b></p></a>
+          </div>
+        </div>
+        <div class="mapandform">
+          <div class="header"><p><b>Как связаться с нами</b></p></div>
+          <div class="map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c2de2a40fff5204ac543f6eeb6d8149a23a7a1e21c0247a8b57b732a7e7b9ff&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>
+          </div>
+          <div class="call1">
+            <div class="getcall">
+              <div class="getcallbut">
+                <p>ЗАКАЗАТЬ ЗВОНОК</p>s
+              </div>
+
+              <div class="informations">
+                <p class="topheader">Телефон:</p>
+                <p class="infoitem"><b>+375 29 666-45-58</b></p>
+                <p class="infoitem"><b>+375 29 666-45-58</b></p>
+              </div>
+
+              <div class="informations">
+                <p class="topheader">Адрес:</p>
+                <p class="infoitem"><b>МИНСК</b></p>
+                <p class="infoitem"><b>УЛ. В. ХОРУЖЕЙ, 25</b></p>
+              </div>
+
+              <div class="informations">
+                
+                <p class="topheader">E-mail:</p>
+                <p class="infoitem"><b>SALES@MM.BY</b></p>
+              </div>       </div>
+            <div class="inform">
+              <div class="informin">
+                <p class="infoitem1">dfknsjfkgnjfkngsfdkgfskgbskfgkdfsgbsfdkjgbsfdkgbdsdfmasd;fmds;lfmas;lfmsad;lfma;dslfmadsl;mf;adslmf;aslmf;adslmf;adslfm;adslfm;adslmf;adslfma;dslfm;adslfma;slmfa;dslfm;adslmf;adsmf;ladm;bdfal;dlfmb;dlmbdl;fbmdsl;fmbsf;dlbmsdf;lbmsf;dlbmsfd;lbmsfd;lbmfd;slbmsf;dlbmsdlf;bmsf;dlbmsf;dlbmfskjgbdskSS</p>
+              </div>
+            </div>
+            <div class="callback">
+              <p class="infoitem"><b>ОБРАТНАЯ СВЯЗЬ</b></p>
+              <div class="forma">
+                <form>
+                  <p class="topheader">Имя:</p>
+                  <input class="inputdata" type="text" />
+                  <p class="topheader">Email:</p>
+                  <input class="inputdata" type="text" />
+                  <p class="topheader">Сообщение:</p>
+                  <textarea class="inputdata" rows="10" wrap="hard" cols="20" style="height: 25%;"></textarea> 
+                </form>
+                <div class="getcallbut" style="width: 100%; margin-left: 0; margin-top: 7%;">
+                <p>ОТПРАВИТЬ</p>
+              </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+  </contacts>
+  {% block footer %}
+   {% include "footer.html" %}
+
+ {% endblock %}
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
+</body>
+</html>

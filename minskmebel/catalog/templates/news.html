@@ -10,11 +10,11 @@
     <link rel="stylesheet" type="text/css" href="{% static 'style_contacts.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/menu.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/adaptation.css' %}">
-
+    <title>{{new.title}}</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="{% static 'js/lightslider.js' %}"></script>
         <script  src="{% static 'mainpage/js/menu.js' %}"></script>
 
-  <script src="{% static 'js/lightslider.js' %}"></script>
     <script src="{% static 'js/slider2.js' %}" ></script>
     <link rel="stylesheet"  href="{% static 'lightslider.css' %}"/>
     <link rel="stylesheet"  href="{% static 'slider2.css' %}"/>
@@ -49,19 +49,19 @@
           <div class="spisok">
             <a href="/contacts" style="color: black"><p class="spisokitems"><b>Контакты</b></p></a>
             <a href="/arend" style="color: black"><p class="spisokitems"><b>Арендаторам</b></p></a>
-            <a href="/sales" style="color: black"><p class="spisokitems active"><b>Акции</b></p></a>
-            <a href="/news" style="color: black"><p class="spisokitems"><b>Новости</b></p></a>
+            <a href="/sales" style="color: black"><p class="spisokitems"><b>Акции</b></p></a>
+            <a href="/news" style="color: black"><p class="spisokitems active"><b>Новости</b></p></a>
           </div>
         </div>
         <div class="mapandform" style="height:auto">
-           {% for sale in sales %}
+            <div class="map" style="background-image: url({{new.image.url}}); background-size: 100% 100%; margin-top: 0">
+            </div>
             <div class="news" style="width:100%;">
-                <div class="name" style= "width:100%;font-weight: bold; font-size: 1.8vw; padding-top: 2%; padding-bottom: 2%; font-family: Proxima"><a href="/sales/{{sale.id}}" style="text-decoration: none; color: inherit">{{sale.title}}</a></div>
+              <div class="name" style= "width:100%;font-weight: bold; font-size: 1.8vw; padding-top: 2%; padding-bottom: 2%; font-family: Proxima">{{new.title}}</div>
               <div class="content" style= "background-color:white;width:92%;font-weight: bold; font-size: 1vw;margin-bottom: 2%; padding: 4%; font-family: Proxima">
-                  {{sale.discriotion}}
+                  {{new.discriotion}}
               </div>
             </div>
-            {% endfor %}
         </div>
           </div>
       </div>

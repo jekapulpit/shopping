@@ -5,8 +5,7 @@ from catalog.models import ShopItem
 def index(request):
         slider1 = models.slider1fill.objects.all()
         slider = ShopItem.objects.all()
-
-        slider3 = models.slider3fill.objects.all()
+        slider3 = models.New.objects.all()
         slider2 = []
         for objj in slider:
                 if objj.isdiscount:

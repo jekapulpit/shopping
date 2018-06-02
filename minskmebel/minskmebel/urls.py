@@ -12,6 +12,9 @@ urlpatterns = [
     re_path(r'^shops/$', views.shops),
     re_path(r'^sales/(?P<num>[0-9]+)/', views.sales),
     re_path(r'^sales/$', views.allsales),
+    re_path(r'^news/(?P<num>[0-9]+)/', views.news),
+    re_path(r'^news/$', views.allnews),
+    re_path(r'^contacts/$', views.contacts),
 
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
