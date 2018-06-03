@@ -53,9 +53,13 @@
           </p>
           <div class="links">
 
-            <a href="" class="linktoshop"><b>Спальня</b></a>
-            <p class="linktoshop"><b>|</b></p>
-            <a href="" class="linktoshop"><b>Детская</b></a>
+          {% for item in categories %}
+              <a href="" class="linktoshop"><b>{{item}}</b></a>
+              {% if item != lastitem %}
+              <p class="linktoshop"><b>|</b></p>
+              {% endif %}
+          {% endfor %}
+
           </div>
         </div>
         <div class="contacts">

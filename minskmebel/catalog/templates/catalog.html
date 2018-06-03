@@ -89,8 +89,25 @@
     </div>
       
     <div class="tovarcontent">
-
-      <div class="tovs">
+        <div class="sortout">
+        <div class="sort">
+         <div class="slidersort">  <input type="text" id="slider5" name="slider5" value="" /></div>
+        <div class="sortchecks">
+          {% for objj in shops %}
+          <label  class="brand">
+              {% if objj.title in sort %}
+            <input class ="checkbox" type="checkbox" name="{{objj.title}}" value="{{objj.title}}" onclick="getall(this)" checked>
+              {% else %}
+            <input class ="checkbox" type="checkbox" name="{{objj.title}}" value="{{objj.title}}" onclick="getall(this)">
+              {% endif %}
+            <span class="checkbox-custom"></span>
+            <span class="label"><b>{{objj.title}}</b></span>
+          </label>
+           {% endfor %}
+        </div>
+        </div>
+      </div>
+        <div class="tovs">
 
           {% for objj in items %}
           <div class="tovaritem">
@@ -133,24 +150,7 @@
         </div>
         
 
-       <div class="sortout">
-        <div class="sort">
-         <div class="slidersort">  <input type="text" id="slider5" name="slider5" value="" /></div>
-        <div class="sortchecks">
-          {% for objj in shops %}
-          <label  class="brand">
-              {% if objj.title in sort %}
-            <input class ="checkbox" type="checkbox" name="{{objj.title}}" value="{{objj.title}}" onclick="getall(this)" checked>
-              {% else %}
-            <input class ="checkbox" type="checkbox" name="{{objj.title}}" value="{{objj.title}}" onclick="getall(this)">
-              {% endif %}
-            <span class="checkbox-custom"></span>
-            <span class="label"><b>{{objj.title}}</b></span>
-          </label>
-           {% endfor %}
-        </div>
-        </div>
-      </div>
+
       
       </div>
       <div class="pages">

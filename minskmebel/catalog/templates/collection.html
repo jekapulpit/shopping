@@ -186,9 +186,9 @@
           <div class="name"> <a href="/catalog/{{objj.id}}/" style="text-decoration: none; color: black">{{objj.title}}</a></div>
           <div class="more">{{objj.subtitle}}</div>
             {% if objj.isdiscount %}
-          <div class="nowprice">{{objj.newprice}}р.-</div>
+          <div class="nowprice col">{{objj.newprice}}р.-</div>
             {% else %}
-           <div class="price">{{objj.price}}р.</div>
+           <div class="price col">{{objj.price}}р.</div>
 
             {% endif %}
         </div>
@@ -221,7 +221,7 @@
                       </div>
                       <div style="display:table; height: 16%">
                         <div class="price">
-                          {{objj.now}}р.-
+                          {{objj.newprice}}р.-
                         </div>
                       </div>
                   </div>

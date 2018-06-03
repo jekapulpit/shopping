@@ -41,8 +41,12 @@ def collections(request):
     if (request.GET.get('opt') == 'add'):
         sortparams1.append(SORT)
     else:
-        if (request.GET.get('opt') == 'del'):
-            sortparams1.remove(SORT)
+        if (request.GET.get('opt') == 'del' and SORT in sortparams1):
+            try:
+                sortparams1.remove(SORT)
+            except ValueError:
+                pass
+
 
     values = [];
     allshops = models.shops.objects.all()
@@ -121,7 +125,10 @@ def catalog1(request):
         sortparams1.append(SORT)
     else:
         if(request.GET.get('opt') == 'del'):
-            sortparams1.remove(SORT)
+            try:
+                sortparams1.remove(SORT)
+            except ValueError:
+                pass
 
     values = [];
     allshops = models.shops.objects.all()
@@ -179,7 +186,26 @@ def catalog1(request):
 def shoppage(request, shopid):
     item = models.shops.objects.get(id = shopid)
     Staff = models.ShopItem.objects.filter(seller = item)
-    context = {"item" : item, "staff" : Staff}
+    categories = []
+    check = []
+    categoryTemplate = {
+        1: 'Мягкая мебель',
+        2: 'Гостиная',
+        3: 'Спальня',
+        4: 'Кухня',
+        5: 'Столовая',
+        6: 'Прихожая',
+        7: 'Ванная',
+        8: 'Детская',
+        9: 'Рабочий кабинет',
+    }
+    for item in Staff:
+        if item.Category not in check:
+            categories.append(categoryTemplate[int(item.Category)])
+            check.append(item.Category)
+
+    lastitem = categories[-1]
+    context = {"item" : item, "staff" : Staff, "categories" : categories, "lastitem"  : lastitem}
     return render(request, 'shoppage.html', context)
 
 
