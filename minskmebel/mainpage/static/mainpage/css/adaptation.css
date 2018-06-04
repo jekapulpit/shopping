@@ -198,7 +198,7 @@ contacts {
 	height: 20%;
 }
 .collection .tovar .name {
-	font-size: 3vw;
+	font-size: 4vw !important;
 }
 .tovar .item .content .name {
 	font-size: 2vw;
@@ -357,13 +357,18 @@ font-size: 3vw !important;
 .contentslider2 .price {
 font-size: 9vw !important;
 }
-
+.content .more {
+display: none;
+}
 .nowprice {
 
     font-size: 5vw !important;
 
 }
 .nowprice.col {
+font-size: 4vw !important;
+}
+.price.col {
 font-size: 4vw !important;
 }
 .preprice {
