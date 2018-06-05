@@ -39,6 +39,10 @@
 	height:45%;
 	background-color: #efefef;
 }
+.name {
+	color: black;
+	font-weight: bold;
+}
 .shops {
 	width:70%;
 	height: auto;

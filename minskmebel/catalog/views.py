@@ -199,10 +199,10 @@ def shoppage(request, shopid):
         8: 'Детская',
         9: 'Рабочий кабинет',
     }
-    for item in Staff:
-        if item.Category not in check:
-            categories.append(categoryTemplate[int(item.Category)])
-            check.append(item.Category)
+    for item1 in Staff:
+        if item1.Category not in check:
+            categories.append(categoryTemplate[int(item1.Category)])
+            check.append(item1.Category)
 
     lastitem = categories[-1]
     context = {"item" : item, "staff" : Staff, "categories" : categories, "lastitem"  : lastitem}
