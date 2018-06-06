@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'css/style_index.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style_page.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'style_catalog.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/menu.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/adaptation.css' %}">
 
@@ -34,10 +35,15 @@
   var T = '{{item.qualities}}';
   var M = '{{item.discriotion}}';
 </script>
-  <div class="way">
-    <div class="wayname" style="color:#cd1639">Товары</div>
-
-  </div>
+  <div class="tovsorcollections">
+      <a href="/catalog" class="tovsorcols active">
+        <p>Товары</p>
+      </a>
+      <p class="tovsorcols">|</p>
+      <a href="/catalog/collections/" class="tovsorcols">
+        <p>Коллекции</p>
+      </a>
+    </div>
   <div class="page_content tov">
     <div class="image tov">
         <ul id="sliderphoto" style="cursor: pointer; width:100%; height:100%;">
