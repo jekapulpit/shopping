@@ -406,6 +406,8 @@ height: 100%;
 .poptovs {
 font-size: 4vw !important;
 }
-
+.title.tov {
+	width: 40% !important;
+}
 
 }

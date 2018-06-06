@@ -46,6 +46,7 @@
 
       {% for objj in slider1 %}
       <div class="swiper-slide">
+        <a href="{{objj.link}}" style="display: block; position: absolute; margin-left: 15%; width: 70%; height: 100%;z-index: 1000"></a>
       <figure class="slide-bgimg" style="background-size:100% 100%;background-image:url({{objj.image.url}})">
         <img src="{{objj.image.url}}" class="entity-img" />
       </figure>

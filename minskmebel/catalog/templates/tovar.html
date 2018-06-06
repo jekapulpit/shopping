@@ -30,7 +30,10 @@
   {% include "header.html" %}
 {% endblock %}
 
-
+<script type="text/javascript">
+  var T = '{{item.qualities}}';
+  var M = '{{item.discriotion}}';
+</script>
   <div class="way">
     <div class="wayname" style="color:#cd1639">Товары</div>
 
@@ -177,10 +180,10 @@
       <div class="right tov">
         <div class="right_content tov">
         <div class="name">
-          <a href=""><div class="title">Описание</div></a>
-          <a href=""><div class="title">Характеристики</div></a>
+         <div class="title tov" onclick="opis()">Описание</div>
+         <div class="title tov" onclick="harak()">Характеристики</div>
         </div>
-        <div class="text">{{item.discriotion}}</div>
+        <div class="text" id="changetext">{{item.discriotion}}</div>
       </div>
       </div>
   </div>

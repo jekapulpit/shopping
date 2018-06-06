@@ -17,3 +17,13 @@ function showmenu1() {
       $(".menu1").css("visibility", "hidden");
     }
 }
+
+function opis() {
+  el = document.getElementById("changetext");
+  el.innerHTML = M;
+}
+
+function harak() {
+   el = document.getElementById("changetext");
+  el.innerHTML = T;
+}

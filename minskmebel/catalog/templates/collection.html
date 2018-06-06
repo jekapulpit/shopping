@@ -24,22 +24,16 @@
 {% block content %}
   {% include "header.html" %}
 {% endblock %}
-
+<script type="text/javascript">
+  var T = '{{item.qualities}}';
+  var M = '{{item.discriotion}}';
+</script>
 
   <div class="way">
-    <div class="wayname" style="color:#cd1639">Мебель для гостиной</div>
+    <div class="wayname"><a href="/catalog" style="color: black; text-decoration: none">Товары</a></div>
     <div class="wayname">|</div>
-    <div class="wayname">Мебель под телевизор</div>
-    <div class="wayname">|</div>
-    <div class="wayname">Мягкая мебель</div>
-    <div class="wayname">|</div>
-    <div class="wayname">Столы в гостиную</div>
-    <div class="wayname">|</div>
-    <div class="wayname">Текстиль для гостиной</div>
-    <div class="wayname">|</div>
-    <div class="wayname">Освещение</div>
-    <div class="wayname">|</div>
-    <div class="wayname">Серии</div>
+    <div class="wayname"><a href="/catalog/collections" style="color: black; text-decoration: none">Коллекции</a></div>
+    
   </div>
   <div class="page_content">
     <div class="image">
@@ -168,10 +162,10 @@
       <div class="right">
         <div class="right_content">
         <div class="name">
-          <a href=""><div class="title">Описание</div></a>
-          <a href=""><div class="title">Характеристики</div></a>
+         <div class="title tov" onclick="opis()">Описание</div>
+         <div class="title tov" onclick="harak()">Характеристики</div>
         </div>
-        <div class="text">{{item.discriotion}}</div>
+        <div class="text" id="changetext">{{item.discriotion}}</div>
       </div>
       </div>
   </div>

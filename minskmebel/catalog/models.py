@@ -22,6 +22,8 @@ class ShopItem(models.Model):
     title = models.CharField("Название товара",max_length=40)
     subtitle = models.CharField("Краткое описание",max_length=40)
     discriotion = models.TextField("Описание товара")
+    qualities = models.TextField("Характеристики", default="крутая вещь")
+
     price = models.FloatField("Цена",default=0.00)
     isdiscount = models.BooleanField("На свидке?", default=False)
     newprice = models.FloatField("Новая цена (Если товар не на скидке, пожалуйста, укажите цену, равную обычной)", default=0.00);

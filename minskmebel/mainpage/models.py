@@ -26,7 +26,7 @@ class Collection(models.Model):
     title = models.CharField("Название",default="Название товара", max_length=40)
     subtitle = models.CharField("Краткое описание",default="Краткое описание", max_length=40)
     discriotion = models.TextField("Полное описание", default="Описание товара")
-    properties = models.TextField("Характеристики товара", default="(длина, ширина и т.д.)")
+    qualities = models.TextField("Характеристики", default="крутая вещь")
     price = models.FloatField("Цена",default='', max_length=10)
     Category = models.CharField("Категория",default='Мягкая мебель',max_length=20, choices=categoryTemplate)
     fullprice = models.CharField("Полная цена без скидки",default="",max_length=15)
@@ -45,7 +45,7 @@ class Collection(models.Model):
 
 class slider1fill(models.Model):
     image = models.ImageField(upload_to="",null=True, blank=True)
-
+    link = models.CharField("Ссылка на товар либо новость", max_length=100, default='/catalog')
 
 
 
