@@ -60,6 +60,27 @@ color: white;
 	background-repeat: no-repeat;	
 
 }
+.logo1.mai {
+	background-image: url(../img/home.png);
+}
+.logo1.cat {
+	background-image: url(../img/catalog.png);
+}
+.logo1.new {
+	background-image: url(../img/news.png);
+}
+.logo1.sal {
+	background-image: url(../img/sales.png);
+}
+.logo1.sho {
+	background-image: url(../img/shops.png);
+}
+.logo1.are {
+	background-image: url(../img/arenda.png);
+}
+.logo1.con {
+	background-image: url(../img/contact.png);
+}
 .title {
 	display: inline-block;
 	height: 100%;
