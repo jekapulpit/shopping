@@ -139,6 +139,11 @@
 	.social_url .social {
 		font-size: 1vw;
 	}
+	.stand {
+		margin-left: 0;
+		margin-right: 0;
+		width: 100%;
+	}
 	.content {
 		font-size: 1.3vw !important;
 	}
@@ -146,9 +151,9 @@
 		width:97.5%;
 	}
 	.slidermagazin .preview {
-		width:90% !important;
-		padding-left:5% !important;
-		padding-right:5% !important;
+		width:100% !important;
+		margin: 0 !important;
+		padding: 0 !important;
 	}
 	.contentslider .name .content {
 		font-size: 1.8vw !important;
@@ -217,6 +222,25 @@
 	}
 	.contentslider2 .name {
 		font-size: 4vw;
+	}
+	.stand {
+		margin-right: 0;
+		margin-left: 0;
+		width: 100%;
+	}
+
+	.menumobile .category_name:hover {
+		display: block;
+		position: relative;
+		height: 20%;
+		width: 50%;
+		padding: 0;
+		z-index: 1000;
+		background-color: #cd1639;
+		width:50% !important;
+		padding:0 !important;
+
+
 	}
 	.contentslider2 .more {
 		font-size: 3vw;
@@ -409,7 +433,7 @@
 	.page_contentdown .left .content {
 		width: 33.2%;
 		background-size: 85% 68%;	
-		height: 12%;
+		height: 15%;
 		margin-left: 0;
 		margin-right: 0;
 		margin-bottom: 0;
@@ -435,6 +459,8 @@
 	}
 	.page_contentdown {
 		height:auto;
+		width: 98%;
+		padding-left: 1%;
 	}
 	.page_content .image {
 		float: none;
@@ -445,6 +471,7 @@
 	.page_content .content {
 		width:100%;
 		height: auto;
+
 	}
 	.news .content {
 		font-weight: 100 !important;
@@ -554,10 +581,10 @@
 		background-repeat: no-repeat;
 	}
 	.info .header {
-		font-size: 3vw;
+		font-size: 4vw;
 	}
 	.links .linktoshop {
-		font-size: 2vw;
+		font-size: 3vw;
 	}
 	.contentslider2 .name {
 	font-size: 5vw !important;
@@ -590,10 +617,13 @@
 	font-size: 6vw !important;
 	}
 	.page_content.tov {
-	height: 75%;
+	height: 60%;
+	width: 97%;
+	padding-left: 1%;
+    padding-right: 1%;
 	}
 	.image.tov {
-	height: 50%;
+	height: 60%;
 	}
 	.right.tov {
 	float: none;

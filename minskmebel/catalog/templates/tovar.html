@@ -13,9 +13,11 @@
     <link rel="stylesheet" type="text/css" href="{% static 'style_catalog.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/menu.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/adaptation.css' %}">
-
+ <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/callslider.css' %}"> 
     <title>{{item.title}}</title>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="{% static 'mainpage/js/jquery.arcticmodal.js' %}" type="text/javascript"></script>
+    
     <script src="{% static 'js/lightslider.js' %}"></script>
     <script src="{% static 'js/slider2.js' %}" ></script>
         <script  src="{% static 'mainpage/js/menu.js' %}"></script>
@@ -191,8 +193,8 @@
       <div class="right tov">
         <div class="right_content tov">
         <div class="name">
-         <div class="title tov" onclick="opis()">Описание</div>
-         <div class="title tov" onclick="harak()">Характеристики</div>
+         <div class="title tov active" id="opis1" onclick="opis()">Описание</div>
+         <div class="title tov" id="harak1" onclick="harak()">Характеристики</div>
         </div>
         <div class="text" id="changetext">{{item.discriotion}}</div>
       </div>

@@ -39,7 +39,8 @@
 	height:45%;
 	background-color: #efefef;
 }
-.name {
+
+.tovaritem .name {
 	color: black;
 	font-weight: bold;
 }

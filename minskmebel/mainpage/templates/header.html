@@ -1,5 +1,9 @@
 {% block content %}
 
+
+{% block callback %}
+{% include "callback.html" %}
+{% endblock %}
 <up>
 		<a href="/"><div class="logo"></div></a>
 		<div class="right_header">
@@ -17,7 +21,7 @@
 			<div class="menu"></div>
 			<div class="call">
 				<div class="call_but_header">
-					<div style="display:table-cell; vertical-align: middle"><div class="but">ЗАКАЗАТЬ ЗВОНОК</div></div>
+					<div style="display:table-cell; vertical-align: middle"><div class="but" onClick="$('#call-request').arcticmodal()">ЗАКАЗАТЬ ЗВОНОК</div></div>
 				</div>
 				<div class="block_down">
 					<div class="call_img"></div>

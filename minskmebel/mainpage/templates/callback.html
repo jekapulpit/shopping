@@ -1,0 +1,27 @@
+{% block callback %}
+
+<div class="g-hidden" style="z-index: 9999"> 
+<div class="b-modal" id="call-request"> 
+<div class="b-modal_close arcticmodal-close">X</div> 
+<div class="modal-form" align="center"> 
+<form action="/" method="post" name="call-form" class="call-form"> 
+	 {% csrf_token %}
+	 {{ form.non_field_errors }}
+<h3 style="font-family: Proxima; color: #cd1639">Заказать бесплатный звонок!</h3> 
+{{ form.subject.errors }}
+	  {{ form.subject }}
+{{ form.sender.errors }}
+	  {{ form.sender }}
+
+{{ form.phone.errors }}
+	  {{ form.phone }}
+
+{{ form.time.errors }}
+	  {{ form.time }}
+<input name="" id="submit" type="submit" class="button" value="Перезвоните мне"/> 
+</form> 
+</div> 
+</div> 
+</div>
+
+{% endblock %}

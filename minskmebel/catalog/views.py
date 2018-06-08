@@ -4,22 +4,29 @@ from mainpage.models import shops, Sale, New
 
 from django.views.generic import ListView, DeleteView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from mainpage import forms
+
 sortparams1 = []
 # Create your views here.
 def Tovar(request, number):
     item = models.ShopItem.objects.get(id = number)
+    form =forms.ContactForm()
     SimularItems = models.ShopItem.objects.filter(Category=item.Category).exclude(id = item.id)
-    context = {"item" : item, "SimularItems" : SimularItems}
+    context = {"item" : item, "SimularItems" : SimularItems, "form" : form}
     return render(request, 'tovar.html', context)
 
 def collection(request, number):
     item = models.Collection.objects.get(id=number)
+    form =forms.ContactForm()
+
     inCollection1 = models.ShopItem.objects.filter(inCollection=item)
     SimularItems = models.ShopItem.objects.filter(Category=item.Category)
-    context = {'items': inCollection1, 'item':item, 'SimularItems' : SimularItems}
+    context = {'items': inCollection1, 'item':item, 'SimularItems' : SimularItems, "form" : form}
     return render(request, 'collection.html', context)
 
 def collections(request):
+    form =forms.ContactForm()
+
     categories = {
         "softmebel": '1',
         "leavingroom": '2',
@@ -97,11 +104,15 @@ def collections(request):
                                             'priority' : sortparam,
                                             'minpage' : int(page) - 2,
                                             'maxpage': int(page) + 2,
-                                            'maxpage1': int(paginator.num_pages) - 1,})
+                                            'maxpage1': int(paginator.num_pages) - 1,
+                                            "form" : form})
+
 
 
 
 def catalog1(request):
+    form =forms.ContactForm()
+
     categories = {
         "softmebel" : '1',
         "leavingroom": '2',
@@ -181,11 +192,13 @@ def catalog1(request):
                                             'priority' : sortparam,
                                             'minpage' : int(page) - 2,
                                             'maxpage': int(page) + 2,
-                                            'maxpage1': int(paginator.num_pages) - 1,})
+                                            'maxpage1': int(paginator.num_pages) - 1, "form" : form})
 
 
 
 def shoppage(request, shopid):
+    form =forms.ContactForm()
+
     item = models.shops.objects.get(id = shopid)
     Staff = models.ShopItem.objects.filter(seller = item)
     categories = []
@@ -207,17 +220,21 @@ def shoppage(request, shopid):
             check.append(item1.Category)
 
     lastitem = categories[-1]
-    context = {"item" : item, "staff" : Staff, "categories" : categories, "lastitem"  : lastitem}
+    context = {"item" : item, "staff" : Staff, "categories" : categories, "lastitem"  : lastitem, "form" : form}
     return render(request, 'shoppage.html', context)
 
 
 
 def shops(request):
+        form =forms.ContactForm()
+
         allshops = models.shops.objects.all()
         news = New.objects.all()
-        return render(request, 'shop.html', {'shops' : allshops, 'news': news} )
+        return render(request, 'shop.html', {'shops' : allshops, 'news': news, "form" : form } )
 
 def sales(request, num):
+    form =forms.ContactForm()
+
     sale = Sale.objects.get(id=num);
     allsales = Sale.objects.all()
     alldiscounts1 = models.ShopItem.objects.all();
@@ -225,35 +242,43 @@ def sales(request, num):
     for objj in alldiscounts1:
         if objj.isdiscount:
             alldiscounts.append(objj)
-    return render(request, 'sales.html', {'sale': sale, 'slider2': alldiscounts})
+    return render(request, 'sales.html', {'sale': sale, 'slider2': alldiscounts, "form" : form})
 
 def allsales(request):
+    form =forms.ContactForm()
+
     allsales = Sale.objects.all()
     alldiscounts1 = models.ShopItem.objects.all();
     alldiscounts = []
     for objj in alldiscounts1:
         if objj.isdiscount:
             alldiscounts.append(objj)
-    return render(request, 'allsales.html', {'sales': allsales, 'slider2': alldiscounts})
+    return render(request, 'allsales.html', {'sales': allsales, 'slider2': alldiscounts, "form" : form})
 
 
 def allnews(request):
+    form =forms.ContactForm()
+
     allnews = New.objects.all()
     alldiscounts1 = models.ShopItem.objects.all();
     alldiscounts = []
     for objj in alldiscounts1:
         if objj.isdiscount:
             alldiscounts.append(objj)
-    return render(request, 'allnews.html', {'news': allnews, 'slider2': alldiscounts})
+    return render(request, 'allnews.html', {'news': allnews, 'slider2': alldiscounts, "form" : form})
 
 def news(request, num):
+    form =forms.ContactForm()
+
     new = New.objects.get(id=num);
     alldiscounts1 = models.ShopItem.objects.all();
     alldiscounts = []
     for objj in alldiscounts1:
         if objj.isdiscount:
             alldiscounts.append(objj)
-    return render(request, 'news.html', {'new': new, 'slider2': alldiscounts})
+    return render(request, 'news.html', {'new': new, 'slider2': alldiscounts, "form" : form})
 
 def contacts(request):
-    return render(request, 'contacts.html')
+    form =forms.ContactForm()
+
+    return render(request, 'contacts.html', {"form" : form})

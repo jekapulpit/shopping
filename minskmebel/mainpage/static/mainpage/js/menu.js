@@ -19,11 +19,18 @@ function showmenu1() {
 }
 
 function opis() {
+  $("#opis1").addClass('active');
+  $("#harak1").removeClass('active');
+
   el = document.getElementById("changetext");
+
   el.innerHTML = M;
 }
 
 function harak() {
+  $("#harak1").addClass('active');
+  $("#opis1").removeClass('active');
+
    el = document.getElementById("changetext");
   el.innerHTML = T;
 }

@@ -21,6 +21,9 @@
   	<link rel="stylesheet"  href="{% static 'mainpage/css/slider2.css' %}"/>
   	<link rel="stylesheet"  href="{% static 'mainpage/css/slider3.css' %}"/>
 
+    <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/callslider.css' %}"> 
+    <script src="{% static 'mainpage/js/jquery.arcticmodal.js' %}" type="text/javascript"></script>
+
 </head>
 <body>
  {% block content %}
@@ -80,7 +83,7 @@
 	<div class="block">
 		<div class="info">
 			<div class="name">Совершайте свои лучшие покупки</div>
-			<div class="more"><b>МинскМЕБЕЛЬ</b> - это дorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </div>
+			<div class="more">В ТЦ "<b>МинскМЕБЕЛЬ</b>" на площади 4000 м2 представлен широкий ассортимент корпусной мебели для разных помещений (гостиной, спальни, кухни, прихожей, ванной, детской, офиса, загородного дома), а также мягкой мебели на любой вкус и достаток – от изделий из массива древесины премиум класса до простых и стильных предметов интерьера.</div>
 		</div>
 	<div class="image">
     	<div class="back" style="background-image: url(../static/mainpage/img/geo.png);">
@@ -205,7 +208,7 @@
 	</shop>
 
 	<map>
-				<div class="contacts" style="position: absolute; z-index: 9999; height: 45%;">
+				<div class="contacts" style="position: absolute; z-index: 1000; height: 45%;">
 
 
 			<div class="all">
@@ -215,7 +218,7 @@
 			    <div class="content">E-mail: <br><b>SALES@MM.BY</b></div>
 			</div>
 			<div class="call_but_footer">
-				<div class="but" style="vertical-align: bottom">ЗАКАЗАТЬ ЗВОНОК</div>
+				<div class="but" style="vertical-align: bottom" onClick="$('#call-request').arcticmodal()">ЗАКАЗАТЬ ЗВОНОК</div>
 			</div>
 		</div>
 		            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4c2de2a40fff5204ac543f6eeb6d8149a23a7a1e21c0247a8b57b732a7e7b9ff&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=false"></script>
