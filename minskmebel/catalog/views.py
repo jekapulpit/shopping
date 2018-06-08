@@ -147,7 +147,7 @@ def catalog1(request):
         items2 = models.ShopItem.objects.filter(Category = categories[Categoty]).order_by(sortparam)
     items1 = []
     for objj in items2:
-        if float(objj.newprice) >= float(min1) and float(objj.newprice) <= float(max1):
+        if (float(objj.newprice) >= float(min1) and float(objj.newprice) <= float(max1)) or (objj.newprice == 0.0) :
             items1.append(objj)
     items = []
     if(sortparams1 != []):

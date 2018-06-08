@@ -103,13 +103,16 @@ footer {
 }
 
 .catalog_mobile {
+	 width: 20%;
+    margin-left: 57.5%;
 	height: 100%;
 	display:none;
-	float: right;
+	float: left;
 	text-align: center;
 	cursor: pointer;
 	font-size: 6vw;
 	text-align: center;
+	font-family: Proxima;
 }
 .catalog_mobile .catalog_content{
 	display:table;

@@ -64,32 +64,12 @@
         <p>Коллекции</p>
       </a>
     </div>
-<div class="select">
-       <select id="ssss" onchange="return location.href = ('?max1={{max1}}&min1={{min1}}&page={{items.number}}&priority=' + ($('#ssss').val()))">
-          {% if priority == 'Category' %}
-      <option value="Category" selected>По категориям</option>
-          {% else %}
-      <option value="Category">По категориям</option>
-          {% endif %}
-          {% if priority == 'price' %}
-      <option value="price" selected>Сначала дешевые</option>
-          {% else %}
-      <option value="price">Сначала дешевые</option>
-          {% endif %}
-          {% if priority == '-price' %}
-      <option value="-price" selected>Сначала дорогие</option>
-          {% else %}
-      <option value="-price">Сначала дорогие</option>
-          {% endif %}
 
-      </select>
-    </div>
 
     <div class="tovarcontent">
-       <div class="sortout">
-        <div class="sort">
-         <div class="slidersort">  <input type="text" id="slider5" name="slider5" value="" /></div>
-        <div class="sortchecks">
+       <div class="sortout" style="background-color: white; padding-top: 1%;">
+        <div class="sort" >
+        <div class="sortchecks" >
           {% for objj in shops %}
           <label  class="brand">
               {% if objj.title in sort %}
@@ -121,7 +101,7 @@
                       </div>
                       <div style="display:table; height: 7%;margin-left: 10px;margin-right: 10px;">
                         <div class="price">
-                          {{objj.price}}р.-
+                          Цену уточняйте
                         </div>
                       </div>
 

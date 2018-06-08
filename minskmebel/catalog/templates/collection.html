@@ -121,7 +121,6 @@
       <div class="contentup">
         <div class="name">{{item.title}}</div>
       <div class="more">{{item.subtitle}}</div>
-      <div class="price">{{item.price}}p.-</div>
       <div class="pricemore">Информацию о наличии и цене уточняйте у консультантов</div>
       </div>
       <div class="contentdown">
@@ -185,9 +184,16 @@
           <div class="name"> <a href="/catalog/{{objj.id}}/" style="text-decoration: none; color: black">{{objj.title}}</a></div>
           <div class="more">{{objj.subtitle}}</div>
             {% if objj.isdiscount %}
-          <div class="nowprice col">{{objj.newprice}}р.-</div>
+          <div class="nowprice col">{{objj.newprice}}руб.</div>
             {% else %}
-           <div class="price col">{{objj.price}}р.</div>
+            {% if objj.price == 0.0 %}
+                           
+      <div class="pricemore" style="margin-left: 5%; color: #cd1639">Цену уточняйте</div>
+                          
+                          {% else %}  
+           <div class="price col">{{objj.price}}руб.</div>
+                         
+                          {% endif %}
 
             {% endif %}
         </div>
@@ -197,7 +203,7 @@
     </div>
   </div>
   <products style="background-color: white; margin-top:2%">
-    <div style="font-family: Proxima; font-size: 1.95vw; text-align: center;padding-top: 2%;padding-bottom: 2%;font-weight: bold">Похожие товары</div>
+    <div class = "tovmob" style="font-family: Proxima; font-size: 1.95vw; text-align: center;padding-top: 2%;padding-bottom: 2%;font-weight: bold">Похожие товары</div>
     <div class="slider2">
       <div class="contrs left" onclick="next()"></div>
     <div class="contrs right" onclick="prev()"></div>
@@ -220,7 +226,7 @@
                       </div>
                       <div style="display:table; height: 16%">
                         <div class="price">
-                          {{objj.newprice}}р.-
+                          {{objj.newprice}}руб.
                         </div>
                       </div>
                   </div>

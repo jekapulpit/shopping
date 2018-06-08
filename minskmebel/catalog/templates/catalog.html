@@ -125,20 +125,28 @@
                         {% if objj.isdiscount %}
                         <div style="display:table; height: 7%; margin-left: 10px;margin-right: 10px;">
                   			<div class="nowprice">
-                  				{{objj.newprice}}р.-
+                  				{{objj.newprice}}руб.
                   			</div>
                   		</div>
                   		<div style="display:table; height: 7%; margin-left: 10px;margin-right: 10px;">
                   			<div class="preprice">
-                  				прежняя цена: {{objj.price}}р
+                  				прежняя цена: {{objj.price}}руб.
                   			</div>
                   		</div>
                         {% else %}
-                      <div style="display:table; height: 7%;margin-left: 10px;margin-right: 10px;">
-                        <div class="price">
-                          {{objj.price}}р.-
+                           {% if objj.price == 0.0 %}
+                           <div style="display:table; height: 7%;margin-left: 10px;margin-right: 10px;">
+                             <div class="price" style="font-size: 3vh;"><b>Цену уточняйте у консультантов</b></div>
                         </div>
-                      </div>
+                          
+                          {% else %}  
+                          <div style="display:table; height: 7%;margin-left: 10px;margin-right: 10px;">
+                            <div class="price">
+                            {{objj.price}}руб.
+                            </div>
+                          </div>
+                          {% endif %}
+                      
                         {% endif %}
 
                   </div>

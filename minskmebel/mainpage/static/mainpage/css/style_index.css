@@ -89,6 +89,38 @@ footer {
 	cursor: pointer;
 	transition: 0.1s;
 }
+
+.category_name.active {
+	width: 8%;
+	padding-left: 1.55%;
+	padding-right: 1.55%;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+	background-color: #cd1639;
+	transition: 0.1s;
+}
+.category_name.active .name {
+    color: white;	
+}
+.category_name.active .image {
+	filter: brightness(20);
+	/* filter: grayscale(100%); */
+    /* filter: invert(100%); */
+	height:65%;
+	width: 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+.category_name.active .image {
+	filter: brightness(20);
+	/* filter: grayscale(100%); */
+    /* filter: invert(100%); */
+	height:65%;
+	width: 100%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
 .menu_mobile {
 	width: 15%;
 	height: 100%;

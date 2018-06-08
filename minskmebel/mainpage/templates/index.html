@@ -8,8 +8,9 @@
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
 	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style.css' %}">
 	<link rel="stylesheet" type="text/scss" href="{% static 'mainpage/scss/style.scss' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style_index.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/menu.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style_index.css' %}">
+
 	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/adaptation.css' %}">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   	<script src="{% static 'mainpage/src/js/lightslider.js' %}"></script>
@@ -82,15 +83,26 @@
 			<div class="more"><b>МинскМЕБЕЛЬ</b> - это дorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco </div>
 		</div>
 	<div class="image">
-    	<div class="back" style="background-image: url(../static/mainpage/img/geo.png);"></div>
+    	<div class="back" style="background-image: url(../static/mainpage/img/geo.png);">
+    <a href="/shops" style="display: block;height: 100%; width: 100%"></a>
+        
+      </div>
     	Все белорусские производители в одном месте
     </div>
     <div class="image">
-    	<div class="back" style="background-image: url(../static/mainpage/img/sale.png);"></div>
+
+    	<div class="back" style="background-image: url(../static/mainpage/img/sale.png);">
+      <a href="#" style="display: block;height: 100%; width: 100%"></a>
+        
+      </div>
     	Скидки, акции, распродажи, рассрочка
     </div>
     <div class="image">
-    	<div class="back" style="background-image: url(../static/mainpage/img/shop.png);"></div>
+
+    	<div class="back" style="background-image: url(../static/mainpage/img/shop.png);">
+    <a href="/contacts" style="display: block;height: 100%; width: 100%"></a>
+        
+      </div>
     	Доступность (ст.м. Я.Коласа) и удобный подъезд
     </div>
 </div>
@@ -122,12 +134,12 @@
                   		</div>
                   		<div style="display:table; height: 16%">
                   			<div class="price">
-                  				{{objj.newprice}}р.-
+                  				{{objj.newprice}}руб.
                   			</div>
                   		</div>
                   		<div style="display:table; height: 7%">
                   			<div class="preprice">
-                  				прежняя цена: {{objj.price}}р
+                  				прежняя цена: {{objj.price}}руб.
                   			</div>
                   		</div>
                   </div>
@@ -217,5 +229,12 @@
 
 	<script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
     <script  src="{% static 'mainpage/js/index.js' %}"></script>
+    <script type="text/javascript">
+  $(document).ready(function() {
+      $(".catalog_content").css("padding-right", "1px");
+      $(".catalog_content").css("padding-right", "0");
+
+  });
+</script>
 </body>
 </html>

@@ -89,7 +89,16 @@
         <div class="img" style="background-image: url({{objj.image.url}}); height:65%; background-size: 100% 100%"><a href="/catalog/{{objj.id}}" style="display: block; width: 100%; height: 100%"></a></div>
         <div class="name" style="height:7%"><a style="text-decoration: none; color:black;" href="/catalog/{{objj.id}}" >{{objj.title}}</a></div>
         <div class="more" style="padding-left:5%;height: 7%; font-size:1.5vh; color:#818181; padding-top:2.5%">{{objj.subtitle}}</div>
-        <div class="price" style="padding-left:5%;height: 15%; font-size:3vh; color:black; padding-top:2.5%; padding-bottom:2.5%; font-weight: bold">{{objj.price}}р.-</div>
+        <div class="price" style="padding-left:5%;height: 15%; font-size:3vh; color:black; padding-top:2.5%; padding-bottom:2.5%; font-weight: bold">
+
+         {% if objj.price == 0.0 %}
+         Цену уточняйте
+              
+            {% else %}  
+          {{objj.price}}pуб.
+            {% endif %}
+
+      </div>
       </div>
     </div>
     {% endfor %}

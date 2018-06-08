@@ -21,6 +21,9 @@
 
 
 }
+.adaptitem .title {
+	margin-left: 10%;
+}
 .menumobile .category_name .image { 
 filter: brightness(20);
 

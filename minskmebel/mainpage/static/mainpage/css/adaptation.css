@@ -199,7 +199,20 @@ contacts {
 	height: 20%;
 }
 .collection .tovar .name {
-	font-size: 4vw !important;
+	font-size: 3vw !important;
+}
+.map {
+	display: none;
+}
+.getcall {
+	width: 100%;
+
+}
+.inform {
+	display: none;
+}
+.informations .topheader, .informations .infoitem {
+ font-size: 5vw;
 }
 .tovar .item .content .name {
 	font-size: 2vw;
@@ -208,7 +221,16 @@ contacts {
 	display: none;
 }
 .page_contentdown .left{
-	display: none;
+	width: 100%;
+	height: auto;
+}
+.page_contentdown .left .content {
+	width: 33.2%;
+	background-size: 85% 68%;	
+	height: 12%;
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 0;
 }
 .page_contentdown .right{
 	width:100%;

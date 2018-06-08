@@ -8,7 +8,7 @@
 			<div class="menu"></div>
 			<div class="menu">
 				<div class="menu_name"><a href="/catalog">Каталог</a></div>
-				<div class="menu_name"><a href="/sales">Акции</a></div>
+				<div class="menu_name"><a href="/sales" style="color: #CD1739 !important">Акции</a></div>
                 <div class="menu_name"><a href="/shops">Магазины</a></div>
 				<div class="menu_name"><a href="/news">Новости</a></div>
 				<div class="menu_name"><a href="/arend">Арендаторам</a></div>
@@ -52,7 +52,6 @@
 
           <div class="menu1">
   <div class="adaptitem">
-    <div class="logo1 mai"></div>
     <div class="title">
         <div class="conttitle">
           <a href="/" class="menupunct">Главная</a>
@@ -60,7 +59,6 @@
     </div>
   </div>
  <div class="adaptitem">
-    <div class="logo1 cat"></div>
     <div class="title">
         <div class="conttitle">
           <a href="/catalog/" class="menupunct">Каталог</a>
@@ -68,7 +66,6 @@
     </div>
   </div>
   <div class="adaptitem">
-    <div class="logo1 new"></div>
     <div class="title">
         <div class="conttitle">
           <a href="/news/" class="menupunct">Новости</a>
@@ -76,7 +73,6 @@
     </div>
   </div>
   <div class="adaptitem">
-    <div class="logo1 sal"></div>
     <div class="title">
         <div class="conttitle">
           <a href="/sales/" class="menupunct">Акции</a>
@@ -84,7 +80,6 @@
     </div>
   </div>
   <div class="adaptitem">
-    <div class="logo1 sho"></div>
     <div class="title">
         <div class="conttitle">
           <a href="/shops/" class="menupunct">Магазины</a>
@@ -92,7 +87,6 @@
     </div>
   </div>
   <div class="adaptitem">
-    <div class="logo1 are"></div>
     <div class="title">
         <div class="conttitle">
           <a href="/arend/" class="menupunct">Арендаторам</a>
@@ -100,7 +94,6 @@
     </div>
   </div>
   <div class="adaptitem">
-    <div class="logo1 con"></div>
     <div class="title">
         <div class="conttitle">
           <a href="/contacts/" class="menupunct">Контакты</a>
@@ -422,8 +415,11 @@
 
 
 
-
+{% if category == 'softmebel' %}
+        <div class="category_name active">
+{% else %}
         <div class="category_name">
+{% endif %}
             <a href="/catalog/?category=softmebel&min1={{min1}}&max1={{max1}}" style="text-decoration:none; color: black">
           <div class="image" id="image2">
             <svg height="80%" width="80%" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -449,7 +445,11 @@
             </a>
         </div>
 
+       {% if category == 'leavingroom' %}
+        <div class="category_name active">
+{% else %}
         <div class="category_name">
+{% endif %}
               <a href="/catalog/?category=leavingroom&min1={{min1}}&max1={{max1}}" style="text-decoration:none; color: black">
           <div class="image">
             <svg height="80%" width="80%" version="1.1" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -473,7 +473,11 @@
               </a>
         </div>
 
+        {% if category == 'bedroom' %}
+        <div class="category_name active">
+{% else %}
         <div class="category_name">
+{% endif %}
                           <a href="/catalog/?category=bedroom&min1={{min1}}&max1={{max1}}" style="text-decoration:none; color: black">
 
           <div class="image"><svg height="80%" width="80%" version="1.1" id="svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -498,7 +502,11 @@
                           </a>
         </div>
 
+         {% if category == 'kitchen' %}
+        <div class="category_name active">
+{% else %}
         <div class="category_name">
+{% endif %}
                           <a href="/catalog/?category=kitchen&min1={{min1}}&max1={{max1}}" style="text-decoration:none; color: black">
 
           <div class="image">
@@ -530,7 +538,11 @@
                           </a>
         </div>
 
+         {% if category == 'stolovaya' %}
+        <div class="category_name active">
+{% else %}
         <div class="category_name">
+{% endif %}
                           <a href="/catalog/?category=stolovaya&min1={{min1}}&max1={{max1}}" style="text-decoration:none; color: black">
 
           <div class="image">
@@ -562,7 +574,11 @@
                           </a>
         </div>
 
+       {% if category == 'inner' %}
+        <div class="category_name active">
+{% else %}
         <div class="category_name">
+{% endif %}
                           <a href="/catalog/?category=inner&min1={{min1}}&max1={{max1}}" style="text-decoration:none; color: black">
 
           <div class="image">
@@ -587,7 +603,11 @@
                           </a>
         </div>
 
+        {% if category == 'bathroom' %}
+        <div class="category_name active">
+        {% else %}
         <div class="category_name">
+        {% endif %}
                           <a href="/catalog/?category=bathroom&min1={{min1}}&max1={{max1}}" style="text-decoration:none; color: black">
 
           <div class="image">
@@ -614,7 +634,11 @@
                           </a>
         </div>
 
+         {% if category == 'childroom' %}
+        <div class="category_name active">
+        {% else %}
         <div class="category_name">
+        {% endif %}
                           <a href="/catalog/?category=childroom&min1={{min1}}&max1={{max1}}" style="text-decoration:none; color: black">
 
           <div class="image">
@@ -660,7 +684,11 @@
                           </a>
         </div>
 
+        {% if category == 'office' %}
+        <div class="category_name active">
+        {% else %}
         <div class="category_name">
+        {% endif %}
                           <a href="/catalog/?category=office&min1={{min1}}&max1={{max1}}" style="text-decoration:none; color: black">
 
           <div class="image">

@@ -39,10 +39,10 @@
   </div>
 
 <div class="preview" style="width: 70%; margin-left: 15%; margin-right: 15%;">
-  <ul id="shopslider" style="width:100%; height:80%;">
+  
 
  {% for objj in news %}
-    <li class="listitem" style="display: block;">
+   {% if objj is news|first %}
     <div class="imageslider" style="background-image: url({{objj.image.url}})"><a href="/news/{{objj.id}}" style="display: block; width: 100%; height: 100%"></a></div>
     <div class="contentslider" style="vertical-align: top;">
       <div class="name">
@@ -50,10 +50,9 @@
       </div>
       <div class="text">{{objj.discriotion}}</div>
     </div>
-    </li>
+    {% endif %}
   {% endfor %}
 
-  </ul>
 </div>
 
 
