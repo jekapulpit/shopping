@@ -48,7 +48,13 @@
 
 });
   </script>
-
+<script type="text/javascript">
+  function getall(el) {
+    if(el.checked == true)
+        return location.href = ('?shopsort='+el.value+'&opt=add&category={{category}}&max1={{max1}}&min1={{min1}}&page={{items.number}}');
+    else  return location.href = ('?shopsort='+el.value+'&opt=del&category={{category}}&max1={{max1}}&min1={{min1}}&page={{items.number}}');
+}
+</script>
   {% block content %}
   {% include "header.html" %}
   {% endblock %}
@@ -64,7 +70,7 @@
       </a>
     </div>
 <div class="select">
-      <select id="ssss" onchange="return location.href = ('?max1={{max1}}&min1={{min1}}&page={{items.number}}&priority=' + ($('#ssss').val()))">
+      <select id="ssss" onchange="return location.href = ('?max1={{max1}}&category={{category}}&min1={{min1}}&page={{items.number}}&priority=' + ($('#ssss').val()))">
           {% if priority == '-isdiscount' %}
       <option value="-isdiscount" selected>Сначала популярные</option>
           {% else %}
