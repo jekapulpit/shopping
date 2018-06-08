@@ -117,6 +117,8 @@ def catalog1(request):
     min1 = request.GET.get('min1')
     max1 = request.GET.get('max1')
     Categoty = request.GET.get('category')
+   
+
     SORT = request.GET.get('shopsort')
     sortparam = request.GET.get('priority');
     if(sortparam is None or sortparam is ""):
@@ -141,7 +143,7 @@ def catalog1(request):
         min1 = minvalue
     if max1 is None or max1 is '':
         max1 = maxvalue
-    if Categoty is None:
+    if Categoty == None or Categoty == "" or Categoty == 'None':
         items2 = models.ShopItem.objects.all().order_by(sortparam)
     else:
         items2 = models.ShopItem.objects.filter(Category = categories[Categoty]).order_by(sortparam)
