@@ -429,6 +429,7 @@
 	.page_contentdown .left{
 		width: 100%;
 		height: auto;
+		padding-bottom: 1%;
 	}
 	.page_contentdown .left .content {
 		width: 33.2%;
@@ -612,6 +613,11 @@
 	.preprice {
 	   display: none;
 
+	}
+	.collection {
+		width: 100%;
+		padding-left: 0;
+		
 	}
 	.tovmob {
 	font-size: 6vw !important;
