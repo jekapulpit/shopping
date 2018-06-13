@@ -12,6 +12,7 @@
 		margin: 0;
 		width:100%;
 	}
+
 	up .logo {
 		margin-left: 2%;
 		width:20%;
@@ -227,6 +228,10 @@
 		margin-right: 0;
 		margin-left: 0;
 		width: 100%;
+	}
+
+	.tovsorcols, .tovsorcols p {
+		font-size: 2vh;
 	}
 
 	.menumobile .category_name:hover {

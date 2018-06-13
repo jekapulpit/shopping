@@ -18,7 +18,7 @@ def index(request):
                     phone = form.cleaned_data['phone']
                     time = form.cleaned_data['time']
                     mess= ("E-mail отправителя: " + sender + ", Телефон: " + phone + ", время, в которое удобно звонить: " + time)    
-                    myem = ['q010@bk.ru']
+                    myem = ['tcminskmebel@gmail.com']
                     # Если пользователь захотел получить копию себе, добавляем его в список получателей
                    
                     try:

@@ -56,7 +56,7 @@
           <div class="links">
 
           {% for item1 in categories %}
-              <a href="" class="linktoshop"><b>{{item1}}</b></a>
+              <a href="/catalog/" class="linktoshop"><b>{{item1}}</b></a>
               {% if item1 != lastitem %}
               <p class="linktoshop"><b>|</b></p>
               {% endif %}
@@ -67,13 +67,13 @@
         <div class="contacts">
           <div class="inner">
             <div class="pic" style="background-image: url({{item.image.url}})"></div>
-            <p class="topheader">сайт:</p>
+            <p class="topheader">Сайт:</p>
             <a href="http://vegas.by" class="linktoshop1"><b>www.vegas.by</b></a>
-            <p class="topheader">телефон:</p>
+            <p class="topheader">Телефон:</p>
             <p class="infoitem"><b>{{item.phone1}} - Велком</b></p>
-            <p class="topheader">время работы:</p>
+            <p class="topheader">Время работы:</p>
             <p class="infoitem"><b>Пн.-Вс.: с 10:00 до 20:00</b></p>
-            <a href="" class="linktoshop1"><b>как проехать</b></a>
+            <a href="/contacts" class="linktoshop1"><b>Как проехать</b></a>
           </div>
           
           
@@ -97,7 +97,7 @@
          Цену уточняйте
               
             {% else %}  
-          {{objj.price}}pуб.
+          {{objj.price}} pуб.
             {% endif %}
 
       </div>

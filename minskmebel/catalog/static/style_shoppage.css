@@ -42,13 +42,23 @@ topshop {
 	color: #686868;
 
 }
-.linktoshop {
+a.linktoshop {
 	display: inline;
 	color: #cd1639;
 	font-size: 1vw;
 	font-family: Proxima;
 	text-decoration: none;
-	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 5%;
+}
+p.linktoshop {
+	display: inline;
+	color: #cd1639;
+	font-size: 1vw;
+	font-family: Proxima;
+	text-decoration: none;
+	margin-right : 5% !important;
+	margin-left : 0 !important;
 	margin-bottom: 5%;
 }
 .links {

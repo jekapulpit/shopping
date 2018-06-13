@@ -46,10 +46,11 @@
       <div class="howtoconnect">
         <div class="leftside" style="height:auto">
           <div class="spisok">
-            <a href="/contacts" style="color: black"><p class="spisokitems active"><b>Контакты</b></p></a>
-            <a href="/arend" style="color: black"><p class="spisokitems"><b>Арендаторам</b></p></a>
             <a href="/sales" style="color: black"><p class="spisokitems"><b>Акции</b></p></a>
             <a href="/news" style="color: black"><p class="spisokitems"><b>Новости</b></p></a>
+            
+            <a href="/contacts" style="color: black"><p class="spisokitems active"><b>Контакты</b></p></a>
+            <a href="/arend" style="color: black"><p class="spisokitems"><b>Арендаторам</b></p></a>
           </div>
         </div>
         <div class="mapandform">
@@ -88,17 +89,20 @@
             <div class="callback">
               <p class="infoitem"><b>ОБРАТНАЯ СВЯЗЬ</b></p>
               <div class="forma">
-                <form>
+                <form action="/contacts/" method="post">
+                {% csrf_token %}
+                {{ form1.non_field_errors }}
+
                   <p class="topheader">Имя:</p>
-                  <input class="inputdata" type="text" />
+                 {{ form1.subject }}
                   <p class="topheader">Email:</p>
-                  <input class="inputdata" type="text" />
+                 {{ form1.sender }}
                   <p class="topheader">Сообщение:</p>
-                  <textarea class="inputdata" rows="10" wrap="hard" cols="20" style="height: 25%;"></textarea> 
+                  {{ form1.message }}
+                   <input class="getcallbut" style="width: 100%; margin-left: 0; margin-top: 7%;" type="submit" name="" value="Отправить"> 
+                
                 </form>
-                <div class="getcallbut" style="width: 100%; margin-left: 0; margin-top: 7%;">
-                <p>ОТПРАВИТЬ</p>
-              </div>
+                
               </div>
 
             </div>

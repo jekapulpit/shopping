@@ -38,13 +38,7 @@
   var M = '{{item.discriotion}}';
 </script>
   <div class="tovsorcollections">
-      <a href="/catalog" class="tovsorcols active">
-        <p>Товары</p>
-      </a>
-      <p class="tovsorcols">|</p>
-      <a href="/catalog/collections/" class="tovsorcols">
-        <p>Коллекции</p>
-      </a>
+     
     </div>
   <div class="page_content tov">
     <div class="image tov">
@@ -136,15 +130,15 @@
         <div class="name">{{item.title}}</div>
       <div class="more">{{item.subtitle}}</div>
           {% if item.isdiscount %}
-      <div class="price" style="color: #cd1639;">Новая цена - {{item.newprice}}pуб.</div>
-      <div class="price" style="font-size: 3vh;">Старая цена - {{item.price}}pуб.</div>
+      <div class="price" style="color: #cd1639;">Новая цена - {{item.newprice}} pуб.</div>
+      <div class="price" style="font-size: 3vh;">Старая цена - {{item.price}} pуб.</div>
 
           {% else %}
             {% if item.price == 0 %}
           <div class="pricemore">Информацию о наличии и цене уточняйте у консультантов</div>
               
             {% else %}  
-          <div class="price">{{item.price}}p.</div>
+          <div class="price">{{item.price}} руб.</div>
             {% endif %}
           {% endif %}
       </div>
@@ -229,7 +223,7 @@
                         
                           
                           {% else %}  
-                          <div class="price">{{objj.price}}руб.</div>
+                          <div class="price">{{objj.price}} руб.</div>
                           {% endif %}
                           
                         

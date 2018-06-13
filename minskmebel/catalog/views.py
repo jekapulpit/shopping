@@ -6,6 +6,12 @@ from django.views.generic import ListView, DeleteView
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from mainpage import forms
 
+from django.shortcuts import render_to_response
+from django.core.mail import send_mail
+from django.http import HttpResponse
+from django.template import RequestContext
+from django.http import HttpResponseRedirect
+
 sortparams1 = []
 # Create your views here.
 def Tovar(request, number):
@@ -44,6 +50,7 @@ def collections(request):
     min1 = request.GET.get('min1')
     max1 = request.GET.get('max1')
     Categoty = request.GET.get('category')
+    
     SORT = request.GET.get('shopsort')
     if (request.GET.get('opt') == 'add'):
         sortparams1.append(SORT)
@@ -66,7 +73,7 @@ def collections(request):
         min1 = minvalue
     if max1 is None or '':
         max1 = maxvalue
-    if Categoty is None:
+    if Categoty == None or Categoty == "" or Categoty == 'None':
         items2 = models.Collection.objects.all().order_by(sortparam)
     else:
         items2 = models.Collection.objects.filter(Category=categories[Categoty]).order_by(sortparam)
@@ -134,7 +141,7 @@ def catalog1(request):
     sortparam = request.GET.get('priority');
     if(sortparam is None or sortparam is ""):
         sortparam  = '-isdiscount'
-    if(request.GET.get('opt') == 'add'):
+    if(request.GET.get('opt') == 'add' and request.GET.get('opt') not in sortparams1):
         sortparams1.append(SORT)
     else:
         if(request.GET.get('opt') == 'del'):
@@ -203,6 +210,18 @@ def shoppage(request, shopid):
     Staff = models.ShopItem.objects.filter(seller = item)
     categories = []
     check = []
+    links = []
+    linktemplate = {
+     'Мягкая мебель' : "softmebel", 
+     'Гостиная' :  "leavingroom",
+     'Спальня' : "bedroom",
+     'Кухня' : "kitchen",
+     'Столовая' : "stolovaya",
+     'Прихожая' : "inner",
+     'Ванная' :"bathroom",
+     'Детская' : "childroom",
+     'Рабочий кабинет' :  "office",
+    }
     categoryTemplate = {
         1: 'Мягкая мебель',
         2: 'Гостиная',
@@ -280,5 +299,23 @@ def news(request, num):
 
 def contacts(request):
     form =forms.ContactForm()
+    form1 = forms.SendMessage()
 
-    return render(request, 'contacts.html', {"form" : form})
+    if request.method == 'POST':
+                form1 = forms.SendMessage(request.POST)
+        # Если форма заполнена корректно, сохраняем все введённые пользователем значения
+                if form1.is_valid():
+                    subject = form1.cleaned_data['subject']
+                    sender = form1.cleaned_data['sender']
+                    message = form1.cleaned_data['message']
+                    mess= ("E-mail отправителя: " + sender + ", Сообщение: " + message)    
+                    myem = ['tcminskmebel@gmail.com']
+                    # Если пользователь захотел получить копию себе, добавляем его в список получателей
+                   
+                    try:
+                        send_mail(subject, mess, 'q020@bk.ru', myem)
+                    except Exception: #Защита от уязвимости
+                        return HttpResponse('Invalid header found')
+                    # Переходим на другую страницу, если сообщение отправлено
+                    return HttpResponseRedirect('/')
+    return render(request, 'contacts.html', {"form" : form, "form1" : form1})
