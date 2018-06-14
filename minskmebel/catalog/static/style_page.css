@@ -63,6 +63,7 @@ category {
 	height: auto;
 	width: 100%;
 	overflow: hidden; 
+	border-bottom: 1px solid #818181;
 }
 .contentdown {
 	height:50%;

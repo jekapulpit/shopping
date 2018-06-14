@@ -129,13 +129,14 @@
       <div class="contentup">
         <div class="name">{{item.title}}</div>
       <div class="more">{{item.subtitle}}</div>
+      <div class="pricemore">Информацию о наличии и цене уточняйте у консультантов</div>
+      
           {% if item.isdiscount %}
       <div class="price" style="color: #cd1639;">Новая цена - {{item.newprice}} pуб.</div>
       <div class="price" style="font-size: 3vh;">Старая цена - {{item.price}} pуб.</div>
 
           {% else %}
             {% if item.price == 0 %}
-          <div class="pricemore">Информацию о наличии и цене уточняйте у консультантов</div>
               
             {% else %}  
           <div class="price">{{item.price}} руб.</div>

@@ -329,6 +329,7 @@
 	}
 	.logo {
 		width: 40%;
+		margin-left: 10%;
 	}
 	.right_header {
 		width:43%;
@@ -349,7 +350,7 @@
 	}
 	.block_down .call_number {
 		width:65%;
-		font-size: 1.5vw
+		font-size: 2.5vw
 	}
 
 	/*           SALES              */
@@ -429,7 +430,25 @@
 		font-size: 2vw;
 	}
 	.contentdown {
-		display: none;
+		height: auto;
+
+	}
+
+	.contentdown .text {
+		font-size: 6vw;
+		width: 100%;
+		float: none;
+		text-align: center;
+		height: auto;
+	}
+	.contentdown .text p {
+		font-size: 4vw !important;
+		
+		
+	}
+	.contentdown .image {
+		height: 40% !important;
+		background-size: 75%;
 	}
 	.page_contentdown .left{
 		width: 100%;
@@ -477,6 +496,8 @@
 	.page_content .content {
 		width:100%;
 		height: auto;
+		background-color: #EFEFEF;
+		padding-left: 0; 
 
 	}
 	.news .content {
@@ -510,7 +531,7 @@
 		position: relative;
 	}
 	#ssss {
-	margin-left: 0;
+margin-right: 5%;
 	}
 	.tovaritem {
 		height:12%;
@@ -524,6 +545,7 @@
 	}
 	.tovsorcollections {
 		height: 6%;
+		margin-left: 5%;
 	}
 	.pagess {
 		width:auto;
@@ -616,7 +638,7 @@
 	font-size: 4vw !important;
 	}
 	.preprice {
-	   display: none;
+	   font-size: 3vw;
 
 	}
 	.collection {
@@ -627,7 +649,18 @@
 	.tovmob {
 	font-size: 6vw !important;
 	}
-	.page_content.tov {
+	#stb1 {
+	display: none;	
+	}
+	.call {
+		padding-top: 0;
+	}
+	.block_down {
+		height: 100%;
+		width: 100%;
+	}
+	
+	.page_content.tov, .page_content {
 	height: 60%;
 	width: 98%;
 	padding-left: 1%;
@@ -637,6 +670,7 @@
 	height: 60%;
 	}
 	.right.tov {
+
 	float: none;
 	}
 	.contentslider2 .preprice {

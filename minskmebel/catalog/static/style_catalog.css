@@ -14,7 +14,7 @@ catalog {
 .tovsorcols, .tovsorcols p {
 	display: inline-block;
 	font-family: Proxima;
-    font-size: 2vw;	
+    font-size: 2vh;	
 	
 	color: black;
 	transition-duration: 1s;
