@@ -125,6 +125,35 @@
           {% endif %}
         </ul>
     </div>
+    <div class="left" id="leftmob">
+        <div class="content" onclick="slider1.goToSlide(1);" style="cursor: pointer; background-image: url({{item.image.url}});"></div>
+          {% if item.image1 %}
+        <div class="content" onclick="slider1.goToSlide(2);" style="cursor: pointer; background-image: url({{item.image1.url}});"></div>
+          {% endif %}
+          {% if item.image2 %}
+        <div class="content" onclick="slider1.goToSlide(3);" style="cursor: pointer; background-image: url({{item.image2.url}});"></div>
+          {% endif %}
+           {% if item.image3 %}
+        <div class="content" onclick="slider1.goToSlide(4);" style="cursor: pointer; background-image: url({{item.image3.url}});"></div>
+          {% endif %}
+           {% if item.image4 %}
+        <div class="content" onclick="slider1.goToSlide(5);" style="cursor: pointer; background-image: url({{item.image4.url}});"></div>
+          {% endif %}
+           {% if item.image5 %}
+        <div class="content" onclick="slider1.goToSlide(6);" style="cursor: pointer; background-image: url({{item.image5.url}});"></div>
+          {% endif %}
+           {% if item.image6 %}
+        <div class="content" onclick="slider1.goToSlide(7);" style="cursor: pointer; background-image: url({{item.image6.url}});"></div>
+          {% endif %}
+           {% if item.image7 %}
+        <div class="content" onclick="slider1.goToSlide(8);" style="cursor: pointer; background-image: url({{item.image7.url}});"></div>
+          {% endif %}
+           {% if item.image8 %}
+        <div class="content" onclick="slider1.goToSlide(9);" style="cursor: pointer; background-image: url({{item.image8.url}});"></div>
+          {% endif %}
+
+
+      </div>
     <div class="content">
       <div class="contentup">
         <div class="name">{{item.title}}</div>
@@ -156,7 +185,7 @@
     </div>
   </div>
     <div class="page_contentdown">
-      <div class="left">
+      <div class="left" id="mobhide">
         <div class="content" onclick="slider1.goToSlide(1);" style="cursor: pointer; background-image: url({{item.image.url}});"></div>
           {% if item.image1 %}
         <div class="content" onclick="slider1.goToSlide(2);" style="cursor: pointer; background-image: url({{item.image1.url}});"></div>

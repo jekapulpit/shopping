@@ -20,6 +20,12 @@ catalog {
 	transition-duration: 1s;
 	margin-right: 2%; 
 }
+#leftmob {
+	display: none;
+	    float: left;
+    	margin: 0;
+    	font-size: 0;
+}
 .tovsorcols:hover p{
 	color: #cd1639;
 }

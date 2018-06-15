@@ -288,9 +288,8 @@ def allnews(request):
 
 def news(request, num):
     form =forms.ContactForm()
-
-    new = New.objects.get(id=num);
-    alldiscounts1 = models.ShopItem.objects.all();
+    new = New.objects.get(id=num)
+    alldiscounts1 = models.ShopItem.objects.all()
     alldiscounts = []
     for objj in alldiscounts1:
         if objj.isdiscount:
@@ -319,3 +318,13 @@ def contacts(request):
                     # Переходим на другую страницу, если сообщение отправлено
                     return HttpResponseRedirect('/')
     return render(request, 'contacts.html', {"form" : form, "form1" : form1})
+
+def arend(request):
+    form =forms.ContactForm()
+    alldiscounts = []
+    
+    alldiscounts1 = models.ShopItem.objects.all()
+    for objj in alldiscounts1:
+        if objj.isdiscount:
+            alldiscounts.append(objj)
+    return render(request, 'arend.html', {'slider2': alldiscounts, "form" : form})

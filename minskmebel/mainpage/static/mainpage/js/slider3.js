@@ -3,6 +3,22 @@ $(document).ready(function(){
     if($(window).width() < '767'){
         $("#hellopreloader_preload").css("background-size","30%");
     }
+        if($(window).width() < '641'){
+        $("#hellopreloader_preload").css("background-size","30%");
+        slider1  = $("#content-slider2").lightSlider({
+                loop:true,
+                keyPress:true,
+                item: 1,
+                slideMargin: 15,
+                pager: false,
+                enableDrag: true,
+                 
+                 
+            }); 
+    
+
+    }
+    else {
     slider1  = $("#content-slider2").lightSlider({
                 loop:true,
                 keyPress:true,
@@ -14,7 +30,7 @@ $(document).ready(function(){
                  
             }); 
     
-        
+        }
         
     });
 

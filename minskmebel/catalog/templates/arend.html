@@ -10,7 +10,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'style_contacts.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/menu.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/adaptation.css' %}">
-    <title>{{new.title}}</title>
+
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="{% static 'js/lightslider.js' %}"></script>
         <script  src="{% static 'mainpage/js/menu.js' %}"></script>
@@ -44,24 +44,50 @@
   </social>
 
   <contacts style="height: auto">
-
+    
       <div class="howtoconnect" style="height: auto">
         <div class="leftside" style="height:auto">
           <div class="spisok">
             <a href="/sales" style="color: black"><p class="spisokitems"><b>Акции</b></p></a>
-            <a href="/news" style="color: black"><p class="spisokitems active"><b>Новости</b></p></a>
+            <a href="/news" style="color: black"><p class="spisokitems"><b>Новости</b></p></a>
             
             <a href="/contacts" style="color: black"><p class="spisokitems"><b>Контакты</b></p></a>
-            <a href="/arend" style="color: black"><p class="spisokitems"><b>Арендаторам</b></p></a>
-          </div>
+            <a href="/arend" style="color: black"><p class="spisokitems active"><b>Арендаторам</b></p></a>
+          </div> 
         </div>
         <div class="mapandform" style="height:auto">
-            <div class="map" style="background-image: url({{new.image.url}}); background-size: 100% 100%; margin-top: 0">
-            </div>
+            
             <div class="news" style="width:100%;">
-              <div class="name" style= "width:100%;font-weight: bold; font-size: 1.8vw; padding-top: 2%; padding-bottom: 2%; font-family: Proxima">{{new.title}}</div>
-              <div class="content" style= "background-color:white;width:92%; font-size: 1vw;margin-bottom: 2%; padding: 4%; font-family: Proxima">
-                  {{new.discriotion}}
+              <div class="name" style= "width:100%;font-weight: bold; font-size: 1.8vw; padding-top: 2%; padding-bottom: 2%; font-family: Proxima">АРЕНДАТОРАМ</div>
+              <div class="content" style= "background-color:white;width:92%;font-weight: bold; font-size: 1vw;margin-bottom: 2%; padding: 4%; font-family: Proxima">
+                  Приглашаем к сотрудничеству производителей, распространителей мебельной продукции и предлагаем в аренду площади в мебельном торговом центре "МинскМЕБЕЛЬ" по адресу: г. Минск, ул. Веры Хоружей, 25.<br><br>
+Площадь торгового центра включает торговую площадь, складской комплекс, удобные подъездные пути для выгрузки и погрузки мебели, парковка.<br>
+
+ 
+
+<br><b>Комфортные условия для арендаторов:</b><br><br>
+
+ 
+
+-Аренда помещения любой площади;<br>
+ 
+
+-Корректировка проекта с учетом ваших потребностей, предпочтений и корпоративного стиля;<br>
+ 
+
+-Малые расходы на коммунальные платежи (энергоэффективность);<br>
+ 
+
+-Система пропусков на охраняемую парковку;<br>
+ 
+
+-Регулярные рекламные кампании на Оффлайн и Онлайн рекламных площадках с ежемесячным отчетом перед арендаторами;<br>
+ 
+
+ -Удобные подъездные пути;<br>
+ 
+
+-Шаговая доступность от ст. м. "Якуба Коласа";<br>
               </div>
             </div>
         </div>
