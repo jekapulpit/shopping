@@ -148,7 +148,8 @@ catalog {
 }
 .tovaritem .image {
 	height: 65%;
-	background-size: 100% 100%;
+	background-size: cover; 
+	background-position: center;
 }
 .tovaritem .name {
 			height:15%;

@@ -3,7 +3,7 @@ $(document).ready(function(){
     if($(window).width() < '767'){
         $("#hellopreloader_preload").css("background-size","30%");
     }
-        if($(window).width() < '641'){
+        if($(window).width() < '1025'){
         $("#hellopreloader_preload").css("background-size","30%");
         slider1  = $("#content-slider2").lightSlider({
                 loop:true,

@@ -1,6 +1,6 @@
 
 
-@media only screen and (max-width: 1000px) and (min-width: 621px) {
+@media only screen and (max-width: 1025px) and (min-width: 621px) {
 	.leftside .spisok {
 		height:auto;
 		padding-bottom: 20px;
@@ -12,18 +12,21 @@
 		height: 95%;
 	}
 	products {
-		height: 350px;
+		height: 500px;
 	}
 	.slider2 {
 		height: 100%;
+		width: 54% !important;
+		margin-left: 23% !important;
+		margin-right: 23% !important;
 	}
 	up {
 		background-color:white;
-		height:150px;
+		height:200px;
 	}
 	category {
 		background-color:#cd1639 !important;
-		height:50px;
+		height:100px;
 	}
 	map {
 		display: none;
@@ -91,7 +94,7 @@
 
 	}
 		.contentslider2 {
-		height:90%;
+		height:90% !important;
 	}
 	slider {
 		height: auto;
@@ -103,7 +106,7 @@
 		font-size: 5vw
 	}
 	.info .more {
-		font-size: 6vh;
+		font-size: 6vw;
 		padding-top: 0;
 	}
 	.block .info {
@@ -528,7 +531,10 @@
 		font-size: 4vw !important;
 	}
 	news {
-		height: 350px;
+		height: 500px;
+	}
+	.slider3 {
+		height: 75% !important;
 	}
 	.slider3 .contrs.right {
 		display: none;
@@ -623,7 +629,7 @@ products {
 
 @media only screen and (max-width: 620px) {
 		news {
-		height: 200px;
+		height: 300px;
 	}
 	.shops {
 		width:100% !important;
@@ -903,20 +909,24 @@ products {
 
 	.contentdown .text {
 		font-size: 6vw;
-		width: 100%;
+		width: 49%;
 		float: none;
 		text-align: center;
 		height: auto;
+		display: inline-block !important
+
 	}
 	.contentdown .text p {
 		font-size: 4vw !important;
-		
-		
 	}
 	.contentdown .image {
+		margin-left: 4%;
+		width: 44% !important;
 		height: 40% !important;
 		background-size: 75%;
 		background-color: white;
+		display: inline-block !important;
+
  	}
 
 
@@ -1063,8 +1073,15 @@ products {
 		display: none ;
 	}
 
-	.contacts .inner .linktoshop1{
-		display: none ;
+	.contacts .inner .infoitem.phone1{
+		margin-top: 7% !important;
+	}
+
+	.contacts .inner .linktoshop1.limk2{
+		display: none;
+	}
+	.contacts .inner .linktoshop1.link1{
+		font-size: 3vw;
 	}
 	.contacts .inner{
 		height: 100%;
@@ -1163,7 +1180,7 @@ products {
    		padding-bottom: 1%;
 	}
 	#leftmob .content {
-		width: 22%;
+	width: 22%;
     margin: 1.5%;
     margin-top: 0;
     height: 22%;
@@ -1203,8 +1220,7 @@ products {
 		font-size: 4vw !important;
 	}
 	.mainnews1 {
-		font-size: 3vw !important;
-		
+display: none;		
 	}
 	.contacts.ind {
 		display: block !important;
@@ -1230,4 +1246,21 @@ products {
 	#maplink {
 		display: block !important;
 	}
+	.name .text {
+		font-size: 4vw;
+	}
+	.imageslider {
+		width: 100% !important;
+		display: block;
+
+	}
+	.contentslider {
+		width: 100% !important;
+		display: block;
+		height: auto !important;
+		padding-bottom: 5%;
+		
+	}
+
+
 }

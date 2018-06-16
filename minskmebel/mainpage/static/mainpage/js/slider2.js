@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-if($(window).width() < '767'){
+if($(window).width() < '620'){
 $("#hellopreloader_preload").css("background-size","30%");
 slider = $("#content-slider").lightSlider({
 loop:true,
@@ -13,7 +13,26 @@ enableDrag: true,
 
 });
 }
-else slider = $("#content-slider").lightSlider({
+
+if($(window).width() < '1025' && $(window).width() > '620'){
+$("#hellopreloader_preload").css("background-size","30%");
+
+	slider = $("#content-slider").lightSlider({
+loop:true,
+keyPress:true,
+item: 1,
+slideMargin: 15,
+pager: false,
+enableDrag: true,
+
+
+});
+}
+
+if($(window).width() > '1025'){
+$("#hellopreloader_preload").css("background-size","30%");
+
+	slider = $("#content-slider").lightSlider({
 loop:true,
 keyPress:true,
 item: 4,
@@ -23,7 +42,7 @@ enableDrag: true,
 
 
 });
-
+}
 
 
 });
