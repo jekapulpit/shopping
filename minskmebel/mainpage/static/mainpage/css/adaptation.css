@@ -1,6 +1,10 @@
 
 
 @media only screen and (max-width: 1025px) and (min-width: 621px) {
+	.menu1, .menumobile {
+		top: 300px;
+		height: 105%;
+	}
 	.leftside .spisok {
 		height:auto;
 		padding-bottom: 20px;
@@ -9,6 +13,8 @@
 	overflow-x: hidden;
 	}
 		.contentslider2 {
+		width: 400px !important;
+
 		height: 95%;
 	}
 	products {
@@ -16,9 +22,8 @@
 	}
 	.slider2 {
 		height: 100%;
-		width: 54% !important;
-		margin-left: 23% !important;
-		margin-right: 23% !important;
+		width: 400px !important;
+		margin: auto !important;
 	}
 	up {
 		background-color:white;
@@ -33,6 +38,9 @@
 	}
 	footer {
 		display: none;
+	}
+	.contentslider3 .text {
+		height: 50%;
 	}
 	.sliderTwo {
 		width:100%;
@@ -75,10 +83,10 @@
 	    font-size: 5vw !important;
 	}
 	.contentslider2 .price {
-		font-size: 6vw;
+		font-size: 4vw !important;
 	}
 	.contentslider2 .preprice {
-		font-size: 3vw;
+		font-size: 2.5vw !important;
 	}
 	.nav-slider {
 		width:0;
@@ -106,13 +114,17 @@
 		font-size: 5vw
 	}
 	.info .more {
-		font-size: 6vw;
-		padding-top: 0;
+		font-size: 3vw;
+		margin-top: 20px;
 	}
 	.block .info {
 		padding-right: 1%;
 		width: 100%;
 	}
+	.best_sale {
+		height: 40%;
+	}
+
 	.best_sale .block {
 		margin-left: 2%;
 		width:96%;
@@ -352,10 +364,11 @@
 		position: relative;
 	}
 	#ssss {
-	margin-left: 0;
+	margin-right:  0;
+
 	}
 	.tovaritem {
-		height:400px;
+		height:600px;
 		width:100%;
 		margin: auto;
 		display: block;
@@ -459,9 +472,6 @@
 	.contentslider2 .more {
 	font-size: 3vw !important;
 	}
-	.contentslider2 .price {
-	font-size: 9vw !important;
-	}
 	.content .more {
 	display: none;
 	}
@@ -477,7 +487,8 @@
 	font-size: 4vw !important;
 	}
 	.preprice {
-	   display: none;
+	 font-size: 4vh;
+	 color: #6f6f6f;
 
 	}
 	.collection {
@@ -489,7 +500,7 @@
 	font-size: 6vw !important;
 	}
 	.page_content.tov {
-	height: 100%;
+	height: 90%;
 	width: 98%;
 	padding-left: 1%;
     padding-right: 1%;
@@ -507,7 +518,7 @@
 	display: none;
 	}
 	.slider2 {
-	height: 100%;
+			height: 100%;
 	}
 	.poptovs {
 	font-size: 4vw !important;
@@ -516,7 +527,11 @@
 		width: 40% !important;
 	}
 		.tovsorcols, .tovsorcols p {
-		font-size: 6vh;
+		font-size: 3vh;
+	}
+	.tovsorcollections {
+		height: 6%;
+		margin-left: 5%;
 	}
 	.brand {
 		margin-top:2%;
@@ -525,13 +540,13 @@
 		height: 6%;
 	}
 	.select select {
-		font-size: 4vh;
+		font-size: 3vh;
 	}
 	.name .text {
 		font-size: 4vw !important;
 	}
 	news {
-		height: 500px;
+		height: 550px;
 	}
 	.slider3 {
 		height: 75% !important;
@@ -1261,6 +1276,8 @@ display: none;
 		padding-bottom: 5%;
 		
 	}
-
+		.contentslider3 .text {
+		height: 50%;
+	}
 
 }
