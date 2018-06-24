@@ -233,12 +233,13 @@ def shoppage(request, shopid):
         8: 'Детская',
         9: 'Рабочий кабинет',
     }
+    lastitem='heh'
     for item1 in Staff:
         if item1.Category not in check:
             categories.append(categoryTemplate[int(item1.Category)])
             check.append(item1.Category)
-
-    lastitem = categories[-1]
+    if categories != []:        
+        lastitem = categories[-1]
     context = {"item" : item, "staff" : Staff, "categories" : categories, "lastitem"  : lastitem, "form" : form}
     return render(request, 'shoppage.html', context)
 

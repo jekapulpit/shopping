@@ -32,11 +32,20 @@
 {% block content %}
   {% include "header.html" %}
 {% endblock %}
-
 <script type="text/javascript">
-  var T = '{{item.qualities}}';
-  var M = '{{item.discriotion}}';
+ 
+  var size = "{{item.size}}";
+
+  var matherial = "{{item.matherial}}";
+  var color = "{{item.color}}";
+  var qualities = "{{item.qualities}}";
+   var T = '{{item.discriotion}}';
+ flag = true;
+
+ 
+
 </script>
+
   <div class="tovsorcollections">
      
     </div>
@@ -175,10 +184,10 @@
       <div class="contentdown">
         <div class="text">
           <b>Магазин "{{item.seller.title}}"</b><br><br>
-        <p style="font-size: 1vw">{{item.seller.phone1}} — Велком<br>
-        {{item.seller.phone2}} — МТС <br><br>
-        Пн. - Сб.: с 10.00 до 20.00<br>
-        Вс.: с 11.00 до 20.00</p>
+        <p style="font-size: 1vw">{{item.seller.phone1}}<br>
+      <br><br>
+       {{item.seller.worktime}}<br>
+       </p>
         </div>
         <div class="image" style="background-image: url({{item.seller.image.url}});"><a style="display: block; height: 100%; width:100%" href="/shops/{{item.seller.id}}"></a></div>
       </div>
@@ -217,7 +226,7 @@
       <div class="right tov">
         <div class="right_content tov">
         <div class="name">
-         <div class="title tov active" id="opis1" onclick="opis()">Описание</div>
+         <div class="title tov active" id="opis1" onclick="opis();">Описание</div>
          <div class="title tov" id="harak1" onclick="harak()">Характеристики</div>
         </div>
         <div class="text" id="changetext">{{item.discriotion}}</div>

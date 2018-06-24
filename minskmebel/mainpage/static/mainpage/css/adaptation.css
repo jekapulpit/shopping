@@ -1,6 +1,658 @@
 
+@media only screen and (max-width: 1025px) and (min-width: 1023px) {
+	.menu1, .menumobile {
+		top: 270px;
+		height: 105%;
+	}
+	.leftside .spisok {
+		height:auto;
+		padding-bottom: 20px;
+	}
+	body {
+	overflow-x: hidden;
+	}
+		.contentslider2 {
+		width: 500px !important;
 
-@media only screen and (max-width: 1025px) and (min-width: 621px) {
+		height: 95%;
+	}
+	products {
+		height: 500px;
+	}
+	.slider2 {
+		height: 100%;
+		width: 500px !important;
+		margin: auto !important;
+	}
+	up {
+		background-color:white;
+		height:200px;
+	}
+	category {
+		background-color:#cd1639 !important;
+		height:70px;
+	}
+	.menu_mobile {
+		background-size: 70% 70%;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		width: 12%;
+
+	}
+	.catalog_mobile {
+		font-size: 4vw;
+		margin-left: 67.5%;
+	}
+	map {
+		display: none;
+	}
+	footer {
+		display: none;
+	}
+	.contentslider3 .text {
+		height: 50%;
+	}
+	.sliderTwo {
+		width:100%;
+	}
+	.lslide {
+		width: 90%;
+	}
+	.contrs {
+		display: none;
+	}
+	.social {
+		display: none;
+	}
+	.contentslider2 .name {
+		font-size: 4vw;
+	}
+	.stand {
+		margin-right: 0;
+		margin-left: 0;
+		width: 100%;
+	}
+
+	.menumobile .category_name:hover {
+		display: block;
+		position: relative;
+		height: 20%;
+		width: 50%;
+		padding: 0;
+		z-index: 1000;
+		background-color: #cd1639;
+		width:50% !important;
+		padding:0 !important;
+
+
+	}
+	.contentslider2 .more {
+		font-size: 3vw;
+	}
+	.cintent_news {
+	    font-size: 5vw !important;
+	}
+	.contentslider2 .price {
+		font-size: 4vw !important;
+	}
+	.contentslider2 .preprice {
+		font-size: 2.5vw !important;
+	}
+	.nav-slider {
+		width:0;
+		display: none;
+	}
+	.best_sale .block .image {
+		display:none;
+	}
+	.best_sale {
+		height:100%;
+		padding-top: 2%;
+		padding-bottom: 2%;
+
+	}
+		.contentslider2 {
+		height:90% !important;
+	}
+	slider {
+		height: auto;
+	}
+	.info .name {
+		width:100%;
+		height:20%;
+		text-align: center;
+		font-size: 5vw
+	}
+	.info .more {
+		font-size: 2vw;
+		margin-top: 20px;
+	}
+	.block .info {
+		padding-right: 1%;
+		width: 100%;
+	}
+	.best_sale {
+		height: 40%;
+	}
+
+	.best_sale .block {
+		margin-left: 2%;
+		width:96%;
+	}
+	.swipper-slide {
+		width:100%;
+	}
+	.swiper-button-prev {
+		display: none;
+	}
+	.swiper-button-next {
+		display: none;
+	}
+	.menu_mobile {
+		display: block;
+	}
+	.catalog_mobile {
+		display: block;
+	}
+	.category {
+		width:100%;
+		margin:0;
+	}
+	.swiper-container {
+		width:100%;
+	}
+	.slider_show {
+		margin:0;
+		width:100%;
+		height: 500px;
+	}
+
+	.category_name {
+		display: none;
+	}
+	.menu {
+		display: none;
+	}
+	.call_but_header {
+		display:none;
+	}
+	.logo {
+		width: 30%;
+		margin-left: 5%;
+	}
+	.right_header {
+		width:45%;
+	}
+	.block_down {
+		float: none;
+		height:50%;
+		width: 75%
+	}
+	.call {
+		height:80%;
+		width:80%;
+		padding-left:10%;
+	}
+	.block_down .clock_info {
+		width:65%;
+		font-size: 1.5vw
+	}
+	.block_down .call_number {
+		width:80%;
+		font-size: 1.5vw
+	}
+
+	/*           SALES              */
+	.howtoconnect {
+		margin:0;
+		width:100%;
+	}
+	.howtoconnect .leftside {
+		padding-top:2%;
+		padding-bottom: 2%;
+		height: auto;
+	}
+	.map {
+		height:15%;
+	}
+	.news .name {
+		font-size: 4vw !important;
+	}
+	.news .content {
+		font-size: 3vw !important;
+	}
+	.plus {
+		height: 20%;
+		width:90%;
+		margin:5%;
+	}
+	.content_news {
+		font-size: 4vw !important;
+	}
+	.spisokitems {
+		font-size: 3vw;
+	}
+	/*            CONTACTS          */
+	.callback {
+		display: none;
+	}
+	.inform {
+		width: 55%;
+		overflow-y: hidden;
+	}
+	.infoitem1 {
+		margin-right: 0 !important;
+	}
+	.getcall .getcallbut {
+		height: 25%;
+	}
+		.getcall .getcallbut p{
+		font-size: 3vw;
+	}
+	.mapandform {
+		height: auto;
+		padding-top:2%;
+	}
+
+	contacts {
+		height: auto;
+	}
+	.infoitem {
+		font-size: 2.5vw;
+	}
+	/*              COLLECTIONS               */
+	.way {
+		display: none;
+	}
+	.collection .item {
+		height: 20%;
+	}
+	.collection .tovar .name {
+		font-size: 3vw !important;
+	}
+	.map {
+		display: none;
+	}
+	.getcall {
+		width: 100%;
+
+	}
+	.inform {
+		display: none;
+	}
+	.informations .topheader, .informations .infoitem {
+	 font-size: 5vw;
+	}
+	.tovar .item .content .name {
+		font-size: 2vw;
+	}
+	.contentdown {
+		display: none;
+	}
+	.page_contentdown .left{
+		width: 100%;
+		height: auto;
+		padding-bottom: 1%;
+	}
+	.page_contentdown .right .title {
+		padding-top: 0;
+	}
+	.page_contentdown .left .content {
+		width: 33.2%;
+		background-size: 85% 68%;	
+		height: 150px;
+		margin-left: 0;
+		margin-right: 0;
+		margin-bottom: 0;
+	}
+	.page_contentdown .right{
+		width:100%;
+		padding-left: 0;
+		height: auto;
+	}
+	.right .name {
+		height:7.5%;
+		padding-bottom: 10px;
+	}
+	.content .text .content .name {
+		font-size: 2vw;
+	}
+	.right .title {
+		font-size: 4vw;
+	}
+	.right .text {
+		font-size: 3vw;
+		height: auto;
+		padding-bottom:5%;
+	}
+	.right .right_content {
+		height: auto;
+	}
+	.page_contentdown {
+		height:auto;
+		width: 98%;
+		padding-left: 1%;
+	}
+	.page_content .image {
+		float: none;
+		height: 70%;
+		width: 100%;
+		margin-top: 5%;
+	}
+	.page_content .content {
+		width:100%;
+		height: auto;
+
+	}
+	.news .content {
+		font-weight: 100 !important;
+	}
+	/*                 CATALOG                 */
+	.tovarcontent {
+		margin-left: 5%;
+	    margin-right: 5%;
+	    width: 90%;
+	}
+	.sortout {
+		width:100%;
+		height: auto;
+		right:0;
+		margin-top: 2%;
+		display: block;
+	position: relative;
+
+	}
+	.sort {
+	height: auto;
+	padding-bottom: 10%;
+	}
+	.irs-single {
+		font-size: 3vw !important;
+	}
+	.tovs {
+		width: 100%;
+		display: block;
+		position: relative;
+	}
+	#ssss {
+	margin-right:  0;
+
+	}
+	.tovaritem {
+		height:600px;
+		width:100%;
+		margin: auto;
+		display: block;
+		margin-top: 5%;
+	}
+
+	.tovs {
+		height: auto;
+		padding-bottom: 20px;
+	}
+	.tovaritem .name {
+		font-size: 5vh;
+	}
+	.tovaritem .price {
+		font-size: 5vw !important;
+	}
+		.tovaritem .more {
+		font-size: 4vh;
+	}
+	.tovsorcollections {
+		height: 16%;
+	}
+	.pagess {
+		width:auto;
+		height: auto;
+	}
+	/*              SHOP                  */
+	.preview {
+		width: 100% !important;
+		padding:0 !important;
+		margin:0 !important;
+	}
+	.contentslider .name .content {
+		font-size: 3vw;
+	}
+	.contentslider .name {
+		height: 20%;
+	}
+	.contentslider .text {
+		font-size: 2vw;
+	}
+	.shops .shopblock {
+		width:50% !important;
+		height:200px !important;
+	}
+	.shopblock .content .img {
+		height: 60%;
+		background-size: 70%;
+	}
+	.shopblock .content .name {
+		font-size: 3vw;
+	}
+	.shops .shopname {
+		font-size: 4vw !important;
+	}
+
+	/*                    SHOP PAGE              */
+	topshop {
+	padding-top: 2%;
+	}
+	topshop .stand {
+		height: 400px;
+	}
+	.shopblock .content .price {
+		padding-top: 20px !important;
+	}
+	.info .links {
+		margin-top: 22%;
+	}
+	.info .infoitem {
+		display: none;
+	}
+	.contacts .inner .topheader{
+		display: none ;
+	}
+	.contacts .inner .infoitem{
+		display: none ;
+	}
+	.contacts .inner .linktoshop1{
+		display: none ;
+	}
+	.contacts .inner{
+		height: 100%;
+		display:table;
+	}
+	.contacts .inner .pic{
+		height: 100%;
+		background-size: 100%;
+		background-position: 50% 40%;
+		background-repeat: no-repeat;
+	}
+	.info .header {
+		font-size: 4vw;
+	}
+	.links .linktoshop {
+		font-size: 3vw;
+	}
+	.contentslider2 .name {
+	font-size: 5vw !important;
+	}
+	.contentslider2 .more {
+	font-size: 3vw !important;
+	}
+	.content .more {
+	display: none;
+	}
+	.nowprice {
+
+	    font-size: 5vw !important;
+
+	}
+	.nowprice.col {
+	font-size: 4vw !important;
+	}
+	.price.col {
+	font-size: 4vw !important;
+	}
+	.preprice {
+	 font-size: 4vh;
+	 color: #6f6f6f;
+
+	}
+	.collection {
+		width: 100%;
+		padding-left: 0;
+
+	}
+	.tovmob {
+	font-size: 6vw !important;
+	}
+	.page_content.tov {
+	height: 90%;
+	width: 98%;
+	padding-left: 1%;
+    padding-right: 1%;
+	}
+	.image.tov {
+	height: 80%;
+	}
+	.right.tov {
+	float: none;
+	}
+	.contentslider2 .preprice {
+	font-size: 2.5vw !important;
+	}
+	.slider2 .contrs.right, .slider2 .contrs.left{
+	display: none;
+	}
+	.slider2 {
+			height: 100%;
+	}
+	.poptovs {
+	font-size: 4vw !important;
+	}
+	.title.tov {
+		width: 40% !important;
+	}
+		.tovsorcols, .tovsorcols p {
+		font-size: 3vh;
+	}
+	.tovsorcollections {
+		height: 6%;
+		margin-left: 5%;
+	}
+	.brand {
+		margin-top:2%;
+	}
+	.select {
+		height: 6%;
+	}
+	.select select {
+		font-size: 3vh;
+	}
+	.name .text {
+		font-size: 4vw !important;
+	}
+	news {
+		height: 550px;
+	}
+	.slider3 {
+		height: 75% !important;
+	}
+	.slider3 .contrs.right {
+		display: none;
+	}
+	.slider3 .contrs.left {
+		display: none;
+	}
+	.contentslider3 .date {
+		font-size: 3vw !important;
+	}
+	.contentslider3 .more {
+		font-size: 4vw !important;
+	}
+	.contentslider3 .morenews {
+		font-size: 3vw !important;
+	}
+shop .name .text {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+products {
+	padding-bottom: 10%;
+}
+.mapandform .header {
+	font-size: 3vw;
+}
+#leftmob {
+		background-color: white;
+		display: block;
+		width: 100%;
+   		height: auto;
+   		padding-bottom: 1%;
+	}
+	#leftmob .content {
+	width: 15%;
+    margin: 1.5%;
+    margin-top: 0;
+    height: 22%;
+    display: inline-block;
+    background-color: white;
+    background-size: 60% 50%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+	}
+	#mobhide {
+		display: none;
+	}
+
+	.contentdown {
+		height: auto;
+		display: block;
+
+	}
+
+	.contentdown .text {
+		font-size: 6vw;
+		width: 100%;
+		float: none;
+		text-align: center;
+		height: auto;
+	}
+	.contentdown .text p {
+		font-size: 4vw !important;
+		
+		
+	}
+	.contentdown .image {
+		height: 40% !important;
+		background-size: 30%;
+ 	}
+
+
+
+	#stb1 {
+	display: none;	
+	}
+	.call {
+		padding-top: 0;
+	}
+	.block_down {
+		height: 100%;
+		width: 100%;
+	}
+	.mainnews {
+		font-size: 4vw !important;
+	}
+	.mainnews1 {
+		font-size: 3vw !important;
+		
+	}
+}
+@media only screen and (max-width: 1022px) and (min-width: 621px) {
 	.menu1, .menumobile {
 		top: 300px;
 		height: 105%;

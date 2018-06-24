@@ -6,8 +6,10 @@ class shops(models.Model):
     discription = models.TextField("Описание",default="Описание магазина")
     image = models.ImageField("Мини-логотип", upload_to="",null=True, blank=True)
     mainimage = models.ImageField("Полная картинка",upload_to="",null=True, blank=True, default=None)
-    phone1 = models.CharField("Телефон Velcom",default="+375445106036",max_length=40)
-    phone2 = models.CharField("Телефон МТС",default="+375445106036",max_length=40)
+    phone1 = models.CharField("Телефон1",default="+375445106036",max_length=40)
+    worktime = models.CharField("Время работы", default="Пн.-Пт.: ...", max_length=50)
+    link = models.CharField("Ссылка на магазин", default="vegas.by", max_length=50)
+
     def __str__(self):
         return self.title
 
@@ -26,12 +28,16 @@ class Collection(models.Model):
     title = models.CharField("Название",default="Название товара", max_length=40)
     subtitle = models.CharField("Краткое описание",default="Краткое описание", max_length=40)
     discriotion = models.TextField("Полное описание", default="Описание товара")
-    qualities = models.TextField("Характеристики", default="крутая вещь")
+    size = models.CharField("Размеры",max_length=40, default=None)
+    matherial = models.CharField("Материал",max_length=40, default=None)
+    color = models.CharField("Цвета",max_length=40, default=None)
+    qualities = models.TextField("Доп. характеристики", default=None)
+
     price = models.FloatField("Цена",default='', max_length=10)
     Category = models.CharField("Категория",default='Мягкая мебель',max_length=20, choices=categoryTemplate)
     fullprice = models.CharField("Полная цена без скидки",default="",max_length=15)
     seller = models.ForeignKey(shops, on_delete=models.CASCADE, default=None)
-    image = models.ImageField(upload_to="", null=False, blank=True)
+    image = models.ImageField(upload_to="", null=False, blank=False)
     image1 = models.ImageField(default=None, upload_to="", null=True, blank=True)
     image2 = models.ImageField(default=None, upload_to="", null=True, blank=True)
     image3 = models.ImageField(default=None, upload_to="", null=True, blank=True)

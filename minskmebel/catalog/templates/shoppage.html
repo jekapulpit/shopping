@@ -108,11 +108,12 @@
           <div class="inner">
             <div class="pic" style="background-image: url({{item.image.url}})"></div>
             <p class="topheader">Сайт:</p>
-            <a href="http://vegas.by" class="linktoshop1 link1"><b>www.vegas.by</b></a>
+            <a href="http://{{item.link}}" class="linktoshop1 link1"><b>{{item.link}}</b></a>
             <p class="topheader">Телефон:</p>
-            <p class="infoitem phone1"><b>{{item.phone1}} - Велком</b></p>
+            <p class="infoitem phone1"><b>{{item.phone1}}</b></p>
             <p class="topheader">Время работы:</p>
-            <p class="infoitem"><b>Пн.-Вс.: с 10:00 до 20:00</b></p>
+            <p class="infoitem"><b>{{item.worktime}}</b></p>
+
             <a href="/contacts" class="linktoshop1 limk2"><b>Как проехать</b></a>
           </div>
           

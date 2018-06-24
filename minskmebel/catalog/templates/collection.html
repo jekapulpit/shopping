@@ -23,14 +23,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
+<script type="text/javascript">
+ 
+  var size = "{{item.size}}";
 
+  var matherial = "{{item.matherial}}";
+  var color = "{{item.color}}";
+  var qualities = "{{item.qualities}}";
+   var T = '{{item.discriotion}}';
+ flag = true;
+ 
+</script>
 {% block content %}
   {% include "header.html" %}
 {% endblock %}
-<script type="text/javascript">
-  var T = '{{item.qualities}}';
-  var M = '{{item.discriotion}}';
-</script>
+
 
   <div class="tovsorcollections">
      
@@ -121,10 +128,10 @@
       <div class="contentdown">
         <div class="text">
           <b>Магазин "{{item.seller.title}}"</b><br><br>
-        <p style="font-size: 1vw">{{item.seller.phone1}} — Велком<br>
-        {{item.seller.phone2}} — МТС <br><br>
-        Пн. - Сб.: с 10.00 до 20.00<br>
-        Вс.: с 11.00 до 20.00</p>
+        <p style="font-size: 1vw">{{item.seller.phone1}}<br>
+      <br><br>
+       {{item.seller.worktime}}<br>
+       </p>
         </div>
          <div class="image" style="background-image: url({{item.seller.image.url}});"><a style="display: block; height: 100%; width:100%" href="/shops/{{item.seller.id}}"></a></div>
       </div>
@@ -220,9 +227,16 @@
                         </div>
                       </div>
                       <div style="display:table; height: 16%">
-                        <div class="price">
-                          {{objj.newprice}}руб.
-                        </div>
+                        {% if objj.price == 0.0 %}
+                           
+                          <div class="pricemore" style="  color: #cd1639">Цену уточняйте</div>
+                          
+                          {% else %}  
+                          <div class="price">{{objj.price}}руб.</div>
+                         
+                          {% endif %}
+
+                        
                       </div>
                   </div>
                 </li>
@@ -263,7 +277,27 @@
 {% block footer %}
   {% include "footer.html" %}
 {% endblock %}
+<script type="text/javascript">
+  
+function opis() {
+  $("#opis1").addClass('active');
+  $("#harak1").removeClass('active');
 
+  el = document.getElementById("changetext");
+
+  el.innerHTML = '{{item.discriotion}}';
+}
+
+function harak() {
+  $("#harak1").addClass('active');
+  $("#opis1").removeClass('active');
+
+   el = document.getElementById("changetext");
+  el.innerHTML = '{{item.qualities}}';
+  
+}
+  
+</script>
     <script  src="{% static 'js/photoslider.js' %}"></script>
 
 </body>

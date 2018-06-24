@@ -7,7 +7,6 @@
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
     	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style.css' %}">
     <title>Коллекции</title>
-
     <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style_index.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/menu.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'style_magazine.css' %}">
@@ -52,6 +51,13 @@
 
 });
   </script>
+<script type="text/javascript">
+  function getall(el) {
+    if(el.checked == true)
+        return location.href = ('?shopsort='+el.value+'&opt=add&category={{category}}&max1={{max1}}&min1={{min1}}&page={{items.number}}');
+    else  return location.href = ('?shopsort='+el.value+'&opt=del&category={{category}}&page={{items.number}}');
+}
+</script>
 
   {% block content %}
   {% include "header.html" %}
