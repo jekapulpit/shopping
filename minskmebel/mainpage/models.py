@@ -6,7 +6,8 @@ class shops(models.Model):
     discription = models.TextField("Описание",default="Описание магазина")
     image = models.ImageField("Мини-логотип", upload_to="",null=True, blank=True)
     mainimage = models.ImageField("Полная картинка",upload_to="",null=True, blank=True, default=None)
-    phone1 = models.CharField("Телефон1",default="+375445106036",max_length=40)
+    phone1 = models.CharField("Телефон1",default="+375445106036",max_length=40, blank=False)
+    phone2 = models.CharField("Телефон2 (необязательно)",default="",max_length=40, blank=True)
     worktime = models.CharField("Время работы", default="Пн.-Пт.: ...", max_length=50)
     link = models.CharField("Ссылка на магазин", default="vegas.by", max_length=50)
 

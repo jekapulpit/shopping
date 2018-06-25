@@ -1931,5 +1931,11 @@ display: none;
 		.contentslider3 .text {
 		height: 50%;
 	}
+	.callback.arend {
+		display: none !important;
+	}
+	.content.arend {
+		width: 95% !important;
+	}
 
 }
