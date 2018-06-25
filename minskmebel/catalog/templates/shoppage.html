@@ -96,8 +96,8 @@
           <div class="links">
 
           {% for item1 in categories %}
-              <a href="/catalog/" class="linktoshop"><b>{{item1}}</b></a>
-              {% if item1 != lastitem %}
+              <a href="/catalog/?category={{item1.link}}&shopsort={{item.title}}&opt=add" class="linktoshop"><b>{{item1.categ}}</b></a>
+              {% if item1.categ != lastitem %}
               <p class="linktoshop"><b>|</b></p>
               {% endif %}
           {% endfor %}

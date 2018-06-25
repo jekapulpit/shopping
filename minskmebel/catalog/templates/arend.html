@@ -129,10 +129,32 @@
 
 -Шаговая доступность от ст. м. "Якуба Коласа";<br>
               </div>
+              <div class="callback arend" style="width: 50%; ">
+              <p class="infoitem"><b>ОБРАТНАЯ СВЯЗЬ</b></p>
+              <div class="forma">
+                <form action="/contacts/" method="post">
+                {% csrf_token %}
+                {{ form1.non_field_errors }}
+
+                  <p class="topheader">Имя:</p>
+                 {{ form1.subject }}
+                  <p class="topheader">Email:</p>
+                 {{ form1.sender }}
+                  <p class="topheader">Сообщение:</p>
+                  {{ form1.message }}
+                   <input class="getcallbut" style="width: 100%; margin-left: 0; margin-top: 7%; height: 50px" type="submit" name="" value="Отправить"> 
+                
+                </form>
+                
+              </div>
+
+            </div>
             </div>
         </div>
+
           </div>
       </div>
+
   </contacts>
   <products style="background-color:white">
     <div class="cintent_news" style="font-family: Proxima; font-size: 1.95vw; text-align: center;padding-top: 2%;padding-bottom: 2%;font-weight: bold">Популярные товары и вкусные цены</div>

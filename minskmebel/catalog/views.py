@@ -13,6 +13,11 @@ from django.template import RequestContext
 from django.http import HttpResponseRedirect
 
 sortparams1 = []
+class category1(object):
+    def __init__(self, categ, link):
+        self.categ = categ
+        self.link = link
+
 # Create your views here.
 def Tovar(request, number):
     item = models.ShopItem.objects.get(id = number)
@@ -52,7 +57,7 @@ def collections(request):
     Categoty = request.GET.get('category')
     
     SORT = request.GET.get('shopsort')
-    if (request.GET.get('opt') == 'add'):
+    if (request.GET.get('opt') == 'add' and SORT not in sortparams1):
         sortparams1.append(SORT)
     else:
         if (request.GET.get('opt') == 'del' and SORT in sortparams1):
@@ -204,11 +209,12 @@ def catalog1(request):
 
 
 def shoppage(request, shopid):
-    form =forms.ContactForm()
 
+    form =forms.ContactForm()
+    sortparams1 = []
     item = models.shops.objects.get(id = shopid)
     Staff = models.ShopItem.objects.filter(seller = item)
-    categories = []
+    Allcategories = []
     check = []
     links = []
     linktemplate = {
@@ -236,11 +242,11 @@ def shoppage(request, shopid):
     lastitem='heh'
     for item1 in Staff:
         if item1.Category not in check:
-            categories.append(categoryTemplate[int(item1.Category)])
+            Allcategories.append(category1(categoryTemplate[int(item1.Category)], linktemplate[categoryTemplate[int(item1.Category)]]))
             check.append(item1.Category)
-    if categories != []:        
-        lastitem = categories[-1]
-    context = {"item" : item, "staff" : Staff, "categories" : categories, "lastitem"  : lastitem, "form" : form}
+    if Allcategories != []:        
+        lastitem = Allcategories[-1].categ
+    context = {"item" : item, "staff" : Staff, "categories" : Allcategories, "lastitem"  : lastitem, "form" : form}
     return render(request, 'shoppage.html', context)
 
 
@@ -323,9 +329,9 @@ def contacts(request):
 def arend(request):
     form =forms.ContactForm()
     alldiscounts = []
-    
+    form1 = forms.SendMessage()
     alldiscounts1 = models.ShopItem.objects.all()
     for objj in alldiscounts1:
         if objj.isdiscount:
             alldiscounts.append(objj)
-    return render(request, 'arend.html', {'slider2': alldiscounts, "form" : form})
+    return render(request, 'arend.html', {'slider2': alldiscounts, "form" : form, "form1" : form1})
