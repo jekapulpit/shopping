@@ -1937,5 +1937,10 @@ display: none;
 	.content.arend {
 		width: 95% !important;
 	}
-
+	.contacts .all {
+		height: 300px;
+	} 
+	.call1 {
+		margin-top: 15%;
+	}
 }
