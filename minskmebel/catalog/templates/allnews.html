@@ -104,7 +104,7 @@
                   {{new.discriotion}}
 
               </div>
-              <p style="font-size: 1vw; background-color: white; padding-left: 4%; padding-bottom: 4%"><a href="/news/{{new.id}}" style="color: #CD1639;">Читать далее...</a></p>
+              <p class="readd" style="font-size: 1vw; background-color: white; padding-left: 4%; padding-bottom: 4%"><a href="/news/{{new.id}}" style="color: #CD1639;">Читать далее...</a></p>
             </div>
             {% endfor %}
         </div>
@@ -181,7 +181,7 @@
   els = Array.prototype.slice.call(els);
   els.forEach(function(el) {
       s = el.innerHTML;
-      s = s.substr(0, 50);
+      s = s.substr(0, 150);
       s += '...';
 
       el.innerHTML = s;

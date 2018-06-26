@@ -103,7 +103,7 @@
               <div class="content" style= "background-color:white;width:92%;font-size: 1vw;margin-bottom: 2%; padding: 4%; font-family: Proxima">
                   {{sale.discriotion}}
               </div>
-               <p style="font-size: 1vw; background-color: white; padding-left: 4%; padding-bottom: 4%"><a href="/sales/{{sale.id}}" style="color: #CD1639;">Читать далее...</a></p>
+               <p class="readd" style="font-size: 1vw; background-color: white; padding-left: 4%; padding-bottom: 4%"><a href="/sales/{{sale.id}}" style="color: #CD1639;">Читать далее...</a></p>
             </div>
             {% endfor %}
         </div>
@@ -180,7 +180,7 @@
   els = Array.prototype.slice.call(els);
   els.forEach(function(el) {
       s = el.innerHTML;
-      s = s.substr(0, 50);
+      s = s.substr(0, 150);
       s += '...';
 
       el.innerHTML = s;

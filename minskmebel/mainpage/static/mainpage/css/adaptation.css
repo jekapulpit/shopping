@@ -1932,7 +1932,7 @@ display: none;
 		height: 50%;
 	}
 	.callback.arend {
-		display: none !important;
+		width: 100%;
 	}
 	.content.arend {
 		width: 95% !important;
@@ -1942,5 +1942,8 @@ display: none;
 	} 
 	.call1 {
 		margin-top: 15%;
+	}
+	.readd {
+		font-size: 3vw !important;
 	}
 }
