@@ -98,11 +98,12 @@
         </div>
         <div class="mapandform" style="height:auto">
            {% for sale in sales %}
-            <div class="news" style="width:100%;">
+            <div class="news" style="width:100%; background-color: white;">
                 <div class="name" style="width:100%;font-weight: bold;font-size: 1.8vw;padding-top: 32%;padding-bottom: 2%;font-family: Proxima;background: url({{sale.image.url}});color: white;background-size: cover;background-position: center;"><a href="/sales/{{sale.id}}" style="text-decoration: none;margin-left: 15px;color: inherit;text-shadow: 0px 0px 5px #2f2f2f;">{{sale.title}}</a> </div>
               <div class="content" style= "background-color:white;width:92%;font-size: 1vw;margin-bottom: 2%; padding: 4%; font-family: Proxima">
                   {{sale.discriotion}}
               </div>
+               <p style="font-size: 1vw; background-color: white; padding-left: 4%; padding-bottom: 4%"><a href="/sales/{{sale.id}}" style="color: #CD1639;">Читать далее...</a></p>
             </div>
             {% endfor %}
         </div>
@@ -173,6 +174,23 @@
     </div>
   </div>
 </div>
+<script type="text/javascript">
+  els = $(".news .content");
+  var s;
+  els = Array.prototype.slice.call(els);
+  els.forEach(function(el) {
+      s = el.innerHTML;
+      s = s.substr(0, 50);
+      s += '...';
+
+      el.innerHTML = s;
+      
+  });
+     
+  
+
+
+</script>
   {% block footer %}
   {% include "footer.html" %}
 {% endblock %}
