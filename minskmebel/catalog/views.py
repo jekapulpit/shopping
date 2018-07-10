@@ -329,7 +329,27 @@ def contacts(request):
 def arend(request):
     form =forms.ContactForm()
     alldiscounts = []
-    form1 = forms.SendMessage()
+    form1 = forms.Arendsender()
+    if request.method == 'POST':
+                form1 = forms.Arendsender(request.POST)
+        # Если форма заполнена корректно, сохраняем все введённые пользователем значения
+                if form1.is_valid():
+                    subject = form1.cleaned_data['subject']
+                    sender = form1.cleaned_data['sender']
+                    message = form1.cleaned_data['message1']
+                    message1 = form1.cleaned_data['message']
+                    phone = form1.cleaned_data['phone']
+
+                    mess= ("E-mail отправителя: " + sender + ", Заявка на аренду: " + message + ", Доп. информация: " + message1 + ", Телефон: " + phone)    
+                    myem = ['tcminskmebel@gmail.com']
+                    # Если пользователь захотел получить копию себе, добавляем его в список получателей
+                   
+                    try:
+                        send_mail(subject, mess, 'q020@bk.ru', myem)
+                    except Exception: #Защита от уязвимости
+                        return HttpResponse('Invalid header found')
+                    # Переходим на другую страницу, если сообщение отправлено
+                    return HttpResponseRedirect('/')
     alldiscounts1 = models.ShopItem.objects.all()
     for objj in alldiscounts1:
         if objj.isdiscount:

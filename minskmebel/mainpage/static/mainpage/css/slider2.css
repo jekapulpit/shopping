@@ -65,6 +65,7 @@
 		}
 		.contentslider2 .name {
 			height:15%;
+			font-weight: bold;
 			width:100%;
 			font-family: Proxima;
 			font-size: 1.4vw;

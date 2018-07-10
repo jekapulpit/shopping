@@ -100,3 +100,33 @@
 	width:100%;
 	height:10%;
 }
+.nowprice {
+	margin-left: 5%;
+    width: 150px;
+    font-family: Proxima;
+    font-size: 1.8vw;
+    color: #cd1639;
+    font-weight: bold;
+    display: table;
+    vertical-align: bottom;
+    }
+
+.price {
+    width: 90%;
+    padding-left: 5%;
+    height: 15%;
+    font-size: 2vw;
+    font-weight: bold;
+    font-family: Proxima;
+    overflow: hidden;
+    vertical-align: top;
+}    
+.preprice {
+    font-family: Proxima;
+    font-size: 1vw;
+    display: table-cell;
+    vertical-align: top;
+    color: #6f6f6f;
+    font-weight: bold;
+    padding-top: 0;
+}    

@@ -3,6 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <link rel="shortcut icon" href="/icon.png" type="image/png">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
     	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style.css' %}">
@@ -64,12 +65,13 @@
 
   <catalog>
     <div class="tovsorcollections">
-      <a href="" class="tovsorcols active">
-        <p>Товары</p>
-      </a>
-      <p class="tovsorcols">|</p>
       <a href="collections/?category={{category}}" class="tovsorcols">
         <p>Коллекции</p>
+      </a>
+      
+      <p class="tovsorcols">|</p>
+      <a href="" class="tovsorcols active">
+        <p>Товары</p>
       </a>
     </div>
 <div class="select">
@@ -134,12 +136,12 @@
                         {% if objj.isdiscount %}
                         <div style="display:table; height: 7%; margin-left: 10px;margin-right: 10px;">
                   			<div class="nowprice">
-                  				{{objj.newprice}}руб.
+                  				{{objj.newprice}} руб.
                   			</div>
                   		</div>
                   		<div style="display:table; height: 7%; margin-left: 10px;margin-right: 10px;">
                   			<div class="preprice">
-                  				прежняя цена: {{objj.price}}руб.
+                  				прежняя цена: {{objj.price}} руб.
                   			</div>
                   		</div>
                         {% else %}
@@ -154,7 +156,7 @@
                           {% else %}  
                           <div style="display:table; height: 7%;margin-left: 10px;margin-right: 10px;">
                             <div class="price">
-                            {{objj.price}}руб.
+                            {{objj.price}} руб.
                             </div>
                           </div>
                           {% endif %}
@@ -229,5 +231,6 @@
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js'></script>
     <script  src="{% static 'mainpage/js/index.js' %}"></script>
     <script  src="{% static 'js/func.js' %}"></script>
+    <script  src="{% static 'mainpage/js/height.js' %}"></script>
 </body>
 </html>

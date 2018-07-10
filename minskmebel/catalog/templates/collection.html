@@ -2,6 +2,7 @@
 <head>
   <meta charset="utf-8" />
     {% load staticfiles %}
+    <link rel="shortcut icon" href="/icon.png" type="image/png">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
   <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
@@ -129,6 +130,7 @@
         <div class="text">
           <b>Магазин "{{item.seller.title}}"</b><br><br>
         <p style="font-size: 1vw">{{item.seller.phone1}}<br>
+          {{item.seller.phone2}}
       <br><br>
        {{item.seller.worktime}}<br>
        </p>
@@ -177,7 +179,7 @@
   </div>
   <div class="collection">
     <div class="tovar">
-      <div class="name">В коллекции доступны следующие модули: </div>
+      <div class="name">В коллекции доступны следующие изделия: </div>
 
         {% for objj in items %}
         <div class="item">
@@ -186,14 +188,19 @@
           <div class="name"> <a href="/catalog/{{objj.id}}/" style="text-decoration: none; color: black">{{objj.title}}</a></div>
           <div class="more">{{objj.subtitle}}</div>
             {% if objj.isdiscount %}
-          <div class="nowprice col">{{objj.newprice}}руб.</div>
+          <div class="nowprice col" style=" padding-left: 5%">{{objj.newprice}} руб.</div>
+          <div style="display:table; height: 7%; margin-left: 5%;margin-right: 10px;">
+                        <div class="preprice">
+                          прежняя цена: {{objj.price}} руб.
+                        </div>
+                      </div>
             {% else %}
             {% if objj.price == 0.0 %}
                            
       <div class="pricemore" style="margin-left: 5%; color: #cd1639">Цену уточняйте</div>
                           
                           {% else %}  
-           <div class="price col">{{objj.price}}руб.</div>
+           <div class="price col">{{objj.price}} руб.</div>
                          
                           {% endif %}
 
@@ -227,13 +234,20 @@
                         </div>
                       </div>
                       <div style="display:table; height: 16%">
-                        {% if objj.price == 0.0 %}
+                          {% if objj.price == 0.0 %}
                            
                           <div class="pricemore" style="  color: #cd1639">Цену уточняйте</div>
                           
                           {% else %}  
-                          <div class="price">{{objj.price}}руб.</div>
-                         
+                                {% if objj.isdiscount %}
+                                <div class="nowprice col">{{objj.newprice}} руб.</div>
+                                <div class="preprice col">
+                                  прежняя цена: {{objj.price}} руб.
+                                </div>  
+                                {% else %}
+                                <div class="price" style="  color: black;">{{objj.price}} руб.</div>
+                                  
+                                {% endif %}
                           {% endif %}
 
                         

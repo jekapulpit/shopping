@@ -7,6 +7,9 @@
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
 }
+#mobile_social {
+	display: none;
+}
 
 body {
 overflow-x: hidden !important;

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8" />
     {% load staticfiles %}
-
+<link rel="shortcut icon" href="/icon.png" type="image/png">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
@@ -248,7 +248,7 @@
                       <div class="image" style="background-image: url({{objj.image.url}});"><a href="/catalog/{{objj.id}}" style="display: block; width: 100%; height: 100%"></a></div>
                       <div style="display:table; height: 10%">
                         <div class="name">
-                           <a href="/catalog/{{objj.id}}/" style="text-decoration: none; color: black">{{objj.title}}</a>
+                           <a href="/catalog/{{objj.id}}/" style="text-decoration: none; color: black"><b>{{objj.title}}</b></a>
                         </div>
                       </div>
                       <div style="display:table; height: 7%">
@@ -259,11 +259,19 @@
                       <div style="display:table; height: 16%">
                         
                            {% if objj.price == 0.0 %}
-                          <div class="pricemore"><b>Цену уточняйте у консультантов</b></div>
-                        
+                           
+                          <div class="pricemore" style="  color: #cd1639">Цену уточняйте</div>
                           
                           {% else %}  
-                          <div class="price">{{objj.price}} руб.</div>
+                                {% if objj.isdiscount %}
+                                <div class="nowprice col">{{objj.newprice}} руб.</div>
+                                <div class="preprice col">
+                                  прежняя цена: {{objj.price}} руб.
+                                </div>  
+                                {% else %}
+                                <div class="price" style="  color: black;">{{objj.price}} руб.</div>
+                                  
+                                {% endif %}
                           {% endif %}
                           
                         

@@ -2,6 +2,7 @@
 <head>
   <meta charset="utf-8" />
     {% load staticfiles %}
+    <link rel="shortcut icon" href="/icon.png" type="image/png">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
@@ -29,9 +30,9 @@
  <social>
     <div class="social_url"><div class="social">
     <div style=" display:table; float:right">
-      <div style="display:table-cell; vertical-align: middle">ПРИСОЕДИНИТЬСЯ К НАМ В СОЦ. СЕТЯХ</div>
+      <div style="display:table-cell; vertical-align: middle">ПРИСОЕДИНЯЙТЕСЬ К НАМ В СОЦИАЛЬНЫХ СЕТЯХ</div>
             <div style="float:right; width: 180px">
-          <a href="https://vk.com/tcminskmebel"><div class="social_block1" style="background-color: #4e76a4;">
+          <a href="https://vk.com/tcminskmebel" target="_blank"><div class="social_block1" style="background-color: #4e76a4;">
 
             <svg viewBox="0 0 576 512" role="img" aria-hidden="true" style="
             color: white; height: 90%; width: 95%; margin-top: 5%" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +41,7 @@
           </svg>
           
            </div></a>
-          <a href="https://instagram.com/tcminskmebel"><div class="social_block1" style="background-color: #d62976;">
+          <a href="https://instagram.com/tcminskmebel" target="_blank"><div class="social_block1" style="background-color: #d62976;">
          
           <svg viewBox="0 0 576 512" role="img" aria-hidden="true" style="
             color: white; height: 90%; width: 95%; margin-top: 5%; margin-left: 13%" xmlns="http://www.w3.org/2000/svg">
@@ -49,7 +50,7 @@
           </svg>
 
           </div></a>
-          <a href="https://ok.ru/group/54746760282340"><div class="social_block1" style="background-color: #f68c33;">
+          <a href="https://ok.ru/group/54746760282340" target="_blank"><div class="social_block1" style="background-color: #f68c33;">
          
           <svg viewBox="0 0 576 512" role="img" aria-hidden="true" style="
             color: white; height: 90%; width: 95%; margin-top: 5%; margin-left: 22%" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +59,7 @@
           </svg>
 
           </div></a>
-          <a href="https://youtube.com/channel/UCMDcWtEeOn25G9YZ68FSXtw"><div class="social_block1" style="background-color: #cc2027;">
+          <a href="https://youtube.com/channel/UCMDcWtEeOn25G9YZ68FSXtw" target="_blank"><div class="social_block1" style="background-color: #cc2027;">
          
           <svg viewBox="0 0 576 512" role="img" aria-hidden="true" style="
             color: white; height: 90%; width: 95%; margin-top: 5%;" xmlns="http://www.w3.org/2000/svg">
@@ -68,7 +69,7 @@
 
 
           </div></a>
-          <a href="#"><div class="social_block1" style="background-color: #1da0f3;">
+          <a href="https://www.facebook.com/groups/252781735273804/" target="_blank"><div class="social_block1" style="background-color: #1da0f3;">
           <svg viewBox="0 0 576 512" role="img" aria-hidden="true" style="
             color: white; height: 90%; width: 95%; margin-top: 5%; margin-left: 30%" xmlns="http://www.w3.org/2000/svg">
          
@@ -132,15 +133,19 @@
               <div class="callback arend" style="vertical-align: top">
               <p class="infoitem"><b>ОБРАТНАЯ СВЯЗЬ</b></p>
               <div class="forma">
-                <form action="/contacts/" method="post">
+               <form action="/arend/" method="post">
                 {% csrf_token %}
                 {{ form1.non_field_errors }}
 
-                  <p class="topheader">Имя:</p>
+                  <p class="topheader">Название компании:</p>
                  {{ form1.subject }}
-                  <p class="topheader">Email:</p>
+                 <p class="topheader">Заявка на аренду торгового помещения:</p>
+                 {{ form1.message1 }}
+                  <p class="topheader">Ваш Email:</p>
                  {{ form1.sender }}
-                  <p class="topheader">Сообщение:</p>
+                 <p class="topheader">Ваш Телефон:</p>
+                 {{ form1.phone }}
+                  <p class="topheader">Доп. информация:</p>
                   {{ form1.message }}
                    <input class="getcallbut" style="width: 100%; margin-left: 0; margin-top: 7%; height: 50px" type="submit" name="" value="Отправить"> 
                 
@@ -158,44 +163,7 @@
       </div>
 
   </contacts>
-  <products style="background-color:white">
-    <div class="cintent_news" style="font-family: Proxima; font-size: 1.95vw; text-align: center;padding-top: 2%;padding-bottom: 2%;font-weight: bold">Популярные товары и вкусные цены</div>
-    <div class="slider2">
-      <div class="contrs left" onclick="next()" style="background-image: url(/static/img/right.png);"></div>
-    <div class="contrs right" onclick="prev()"  style="background-image: url(/static/img/left.png);"></div>
-     <ul id="content-slider" class="content-slider">
-               {% for objj in slider2 %}
-             <div>
-                  <li class="listitem" >
-                  <div class="contentslider2">
-                  		<div class="image" style="background-image: url({{objj.image.url}});"><a href="/catalog/{{objj.id}}" style="display: block; width: 100%; height: 100%"></a> </div>
-                  		<div style="display:table; height: 10%">
-                  			<div class="name">
-                  				{{objj.title}}
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 7%">
-                  			<div class="more">
-                  				{{objj.subtitle}}
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 16%">
-                  			<div class="price">
-                  				{{objj.newprice}} руб.
-                  			</div>
-                  		</div>
-                  		<div style="display:table; height: 7%">
-                  			<div class="preprice">
-                  				прежняя цена: {{objj.price}} руб.
-                  			</div>
-                  		</div>
-                  </div>
-                </li>
-            </div>
-             {% endfor %}
-            </ul>
-    </div>
-  </products>
+  
   <div class="plus">
   <div class="content">
     <div class="image" style="background-image: url({% static 'img/geo.png' %});"></div>

@@ -3,6 +3,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <link rel="shortcut icon" href="/icon.png" type="image/png">
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
     	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style.css' %}">
@@ -65,12 +66,12 @@
 
   <catalog>
     <div class="tovsorcollections">
-      <a href="../?category={{category}}" class="tovsorcols">
-        <p>Товары</p>
-      </a>
-      <p class="tovsorcols">|</p>
       <a href="" class="tovsorcols active">
         <p>Коллекции</p>
+      </a>
+      <p class="tovsorcols">|</p>
+      <a href="../?category={{category}}" class="tovsorcols">
+        <p>Товары</p>
       </a>
     </div>
 

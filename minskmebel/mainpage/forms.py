@@ -11,3 +11,13 @@ class SendMessage(forms.Form):
     subject = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'inputdata'}))
     sender = forms.EmailField(widget=forms.TextInput(attrs={'class': 'inputdata'}))
     message = forms.CharField(widget=forms.Textarea(attrs={'class': 'inputdata', 'rows' : '10', 'wrap' : 'hard', 'cols' : '20', 'style': 'height: 25%;'}))
+
+class Arendsender(forms.Form):
+    phone = forms.CharField(widget=forms.TextInput(attrs={'class': 'inputdata'}))
+
+    subject = forms.CharField(max_length=100, widget=forms.TextInput(attrs={'class': 'inputdata'}))
+    message1 = forms.CharField(widget=forms.Textarea(attrs={'class': 'inputdata', 'rows' : '10', 'wrap' : 'hard', 'cols' : '20', 'style': 'height: 25%;'}))
+
+
+    sender = forms.EmailField(widget=forms.TextInput(attrs={'class': 'inputdata'}))
+    message = forms.CharField(widget=forms.Textarea(attrs={'class': 'inputdata', 'rows' : '10', 'wrap' : 'hard', 'cols' : '20', 'style': 'height: 25%;'}))

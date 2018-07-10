@@ -3,6 +3,7 @@
   <meta charset="utf-8" />
   {% load staticfiles %}
   <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"> -->
+  <link rel="shortcut icon" href="/icon.png" type="image/png">
     <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css'>
       	<link rel="stylesheet" type="text/css" href="{% static 'mainpage/css/style.css' %}">
 
@@ -32,8 +33,8 @@
    <div class="social_url"><div class="social">
     <div style=" display:table; float:right">
       <div style="display:table-cell; vertical-align: middle">ПРИСОЕДИНИТЬСЯ К НАМ В СОЦ. СЕТЯХ</div>
-            <div style="float:right; width: 125px">
-          <a href="https://vk.com/tcminskmebel"><div class="social_block1" style="background-color: #4e76a4;">
+            <div style="float:right; width: 180px">
+          <a href="https://vk.com/tcminskmebel" target="_blank"><div class="social_block1" style="background-color: #4e76a4;">
 
             <svg viewBox="0 0 576 512" role="img" aria-hidden="true" style="
             color: white; height: 90%; width: 95%; margin-top: 5%" xmlns="http://www.w3.org/2000/svg">
@@ -42,7 +43,7 @@
           </svg>
           
            </div></a>
-          <a href="https://instagram.com/tcminskmebel"><div class="social_block1" style="background-color: #d62976;">
+          <a href="https://instagram.com/tcminskmebel" target="_blank"><div class="social_block1" style="background-color: #d62976;">
          
           <svg viewBox="0 0 576 512" role="img" aria-hidden="true" style="
             color: white; height: 90%; width: 95%; margin-top: 5%; margin-left: 13%" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +52,7 @@
           </svg>
 
           </div></a>
-          <a href="https://ok.ru/group/54746760282340"><div class="social_block1" style="background-color: #f68c33;">
+          <a href="https://ok.ru/group/54746760282340" target="_blank"><div class="social_block1" style="background-color: #f68c33;">
          
           <svg viewBox="0 0 576 512" role="img" aria-hidden="true" style="
             color: white; height: 90%; width: 95%; margin-top: 5%; margin-left: 22%" xmlns="http://www.w3.org/2000/svg">
@@ -60,7 +61,7 @@
           </svg>
 
           </div></a>
-          <a href="https://youtube.com/channel/UCMDcWtEeOn25G9YZ68FSXtw"><div class="social_block1" style="background-color: #cc2027;">
+          <a href="https://youtube.com/channel/UCMDcWtEeOn25G9YZ68FSXtw" target="_blank"><div class="social_block1" style="background-color: #cc2027;">
          
           <svg viewBox="0 0 576 512" role="img" aria-hidden="true" style="
             color: white; height: 90%; width: 95%; margin-top: 5%;" xmlns="http://www.w3.org/2000/svg">
@@ -70,7 +71,7 @@
 
 
           </div></a>
-          <a href="#"><div class="social_block1" style="background-color: #1da0f3;">
+          <a href="#" target="_blank"><div class="social_block1" style="background-color: #1da0f3;">
           <svg viewBox="0 0 576 512" role="img" aria-hidden="true" style="
             color: white; height: 90%; width: 95%; margin-top: 5%; margin-left: 30%" xmlns="http://www.w3.org/2000/svg">
          
@@ -96,7 +97,7 @@
           <div class="links">
 
           {% for item1 in categories %}
-              <a href="/catalog/?category={{item1.link}}&shopsort={{item.title}}&opt=add" class="linktoshop"><b>{{item1.categ}}</b></a>
+              <a href="/catalog/collections/?category={{item1.link}}&shopsort={{item.title}}&opt=add" class="linktoshop"><b>{{item1.categ}}</b></a>
               {% if item1.categ != lastitem %}
               <p class="linktoshop"><b>|</b></p>
               {% endif %}
@@ -128,21 +129,29 @@
   <div class="shops">
     <div class="shopname">Товары</div>
     {% for objj in staff %}
-    <div class="shopblock" style="width:33.33%;height:50%">
+    <div class="shopblock" style="width:33.33%;height:350px">
       <div class="content" style="padding-top:0%; height:100%">
         <div class="img" style="background-image: url({{objj.image.url}}); height:65%; background-size: 100% 100%"><a href="/catalog/{{objj.id}}" style="display: block; width: 100%; height: 100%"></a></div>
-        <div class="name" style="height:7%"><a style="text-decoration: none; color:black;" href="/catalog/{{objj.id}}" >{{objj.title}}</a></div>
-        <div class="more" style="padding-left:5%;height: 7%; font-size:1.5vh; color:#818181; padding-top:2.5%">{{objj.subtitle}}</div>
-        <div class="price" style="padding-left:5%;height: 15%; font-size:3vh; color:black; padding-top:2.5%; padding-bottom:2.5%; font-weight: bold">
+        <div class="name" style="height:7%"><a style="text-decoration: none; color:black;" href="/catalog/{{objj.id}}" ><b>{{objj.title}}</b></a></div>
+        <div class="more" style="padding-left:5%;height: 7%; font-size:1.5vh; color:#818181; padding-top:5%">{{objj.subtitle}}</div>
+        {% if objj.isdiscount %}
+          <div class="nowprice col">{{objj.newprice}} руб.</div>
+          <div style="display:table; height: 7%; margin-left: 5%;margin-right: 10px;">
+                        <div class="preprice">
+                          прежняя цена: {{objj.price}} руб.
+                        </div>
+                      </div>
+            {% else %}
+            {% if objj.price == 0.0 %}
+                           
+            <div class="pricemore" style="margin-left: 5%; color: #cd1639">Цену уточняйте</div>
+                          
+                          {% else %}  
+           <div class="price col">{{objj.price}} руб.</div>
+                         
+                          {% endif %}
 
-         {% if objj.price == 0.0 %}
-         Цену уточняйте
-              
-            {% else %}  
-          {{objj.price}} pуб.
             {% endif %}
-
-      </div>
       </div>
     </div>
     {% endfor %}

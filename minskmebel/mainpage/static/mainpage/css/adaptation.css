@@ -1298,6 +1298,15 @@ products {
 		news {
 		height: 300px;
 	}
+	#mobile_social {
+		width:100%;
+		padding-top:10px;
+		display: block;
+	}
+	#mobile_social .social {
+		display: block !important;
+		width:100%;
+	}
 	.shops {
 		width:100% !important;
 		padding-right: 0 !important;
@@ -1861,27 +1870,28 @@ products {
 		display: none;
 	}
 	.plus {
+		height: auto;
 		margin: 0;
 		width: 100%;
 		background-color: transparent;
 	}
 	.plus .content {
-		width: 100%;
-		
-	} 
+		width:100%;
+		height:70px;
+	}
 	.contacts.shoppage {
 		height: 40%;
 	}
 	.plus .content .image {
 		background-size: 60%;
-		width: 20%;
+		width: 25%;
 		}
 	.text .content .name {
    
     font-size: 3.5vw;
 	}
 	.plus .content .text {
-    width: 75%;
+    width: 70%;
 	}
 	.mainnews {
 		font-size: 4vw !important;
@@ -1893,6 +1903,7 @@ display: none;
 		display: block !important;
 		position: relative !important;
 		width: 100% !important;
+		height: auto !important;
 	}
 	.contacts .all {
 		text-align: center;
@@ -1908,7 +1919,8 @@ display: none;
 	.contacts .call_but_footer {
 		margin-left: 15%;
 		width: 70%;
-		height:  12.5%;
+		height: auto;
+		padding-bottom: 30px;
 	}
 	#maplink {
 		display: block !important;
@@ -1941,7 +1953,8 @@ display: none;
 		height: 300px;
 	} 
 	.call1 {
-		margin-top: 15%;
+		margin-top: 5%;
+		height: auto;
 	}
 	.readd {
 		font-size: 3vw !important;

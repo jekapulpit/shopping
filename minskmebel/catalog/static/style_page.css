@@ -226,7 +226,7 @@ category {
 }
 .collection .item {
 	width:30%;
-	height:40%;
+	height:300px;
 	padding:1.666%;
 	display: inline-block;
 	vertical-align: bottom;
@@ -268,6 +268,7 @@ category {
 	font-weight: bold;
 	font-family: Proxima;
 	overflow: hidden;
+	vertical-align: top;
 }
 .tovar .name {
 	padding-left: 1.666%;
