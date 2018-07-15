@@ -217,7 +217,7 @@ def catalog1(request):
     if Categoty == None or Categoty == "" or Categoty == 'None':
         items2 = models.ShopItem.objects.all().order_by(sortparam, "-price")
     else:
-        items2 = models.ShopItem.objects.filter(Category = categories[Categoty]).order_by(sortparam, -price)
+        items2 = models.ShopItem.objects.filter(Category = categories[Categoty]).order_by(sortparam, "-price")
     items1 = []
     for objj in items2:
         if (float(objj.newprice) >= float(min1) and float(objj.newprice) <= float(max1)) or (objj.newprice == 0.0) :
