@@ -62,7 +62,24 @@
  
 
 </script>
+<script type="text/javascript">
+    $(document).ready(function() {
+                  
+        var m = "{{worktime}}";
+       
+        var re = /(&)/ 
+        var re1 = /(amp;)/ 
 
+
+        for (i = 0; i < 10; i++) {
+          m = m.replace(re, "<br>\n");
+          m = m.replace(re1, "");
+        }
+       
+        el = document.getElementById("wt");
+        el.innerHTML = m;
+    });
+  </script>
   <div class="tovsorcollections">
      
     </div>
@@ -204,7 +221,7 @@
         <p style="margin: 0;font-size: 1vw; width: 55%;">Телефоны:<strong><br>{{item.seller.phone1}}<br>
           {{item.seller.phone2}}</strong>
       Время работы:<br>
-       <strong>{{item.seller.worktime}}</strong><br>
+       <strong id="wt">{{item.seller.worktime}}</strong><br>
        </p>
         </div>
         <div class="image" style="background-image: url({{item.seller.image.url}});"><a style="display: block; height: 100%; width:100%" href="/shops/{{item.seller.id}}"></a></div>

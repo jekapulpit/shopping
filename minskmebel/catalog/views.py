@@ -26,6 +26,8 @@ def Tovar(request, number):
     SimularItems = models.ShopItem.objects.filter(Category=item.Category).exclude(id = item.id)
     qualitiess = item.qualities.splitlines()
     qualities = ""
+    worktime = item.seller.worktime
+
     Category = request.GET.get('category')
 
     for s in qualitiess:
@@ -41,7 +43,8 @@ def Tovar(request, number):
                 "form" : form, 
                 "qualities":qualities, 
                 "discriotion": discriotion,
-                "category": Category}
+                "category": Category,
+                "worktime":worktime}
     return render(request, 'tovar.html', context)
 
 def collection(request, number):
@@ -54,6 +57,8 @@ def collection(request, number):
     SimularItems = models.ShopItem.objects.filter(Category=item.Category)
     qualitiess = item.qualities.splitlines()
     qualities = ""
+    worktime = item.seller.worktime
+
     for s in qualitiess:
         qualities += s 
         qualities += u'<br>'
@@ -70,7 +75,8 @@ def collection(request, number):
                 "form" : form, 
                 "qualities":qualities, 
                 "discriotion": discriotion,
-                "category":Category}
+                "category":Category,
+                "worktime":worktime}
 
     return render(request, 'collection.html', context)
 
