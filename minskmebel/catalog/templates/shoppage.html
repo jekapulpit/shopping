@@ -23,7 +23,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body >
+<script type="text/javascript">
+    $(document).ready(function() {
+                  
+        var m = "{{worktime}}";
+        var m1 = "{{info}}";
+        var re = /(&)/ 
+        var re1 = /(amp;)/ 
+        var re2 = /((&lt;br&gt;))/;
 
+
+        for (i = 0; i < 10; i++) {
+          m = m.replace(re, "<br>\n");
+          m = m.replace(re1, "");
+        }
+        for (i = 0; i<100; i++ ){
+          m1 = m1.replace(re2, "<br>\n")
+        }
+        el = document.getElementById("wt");
+        el1 = document.getElementById("maginfo");
+        el.innerHTML = m;
+        el1.innerHTML = m1;
+    });
+  </script>
 {% block content %}
   {% include "header.html" %}
 {% endblock %}
@@ -71,7 +93,7 @@
 
 
           </div></a>
-          <a href="#" target="_blank"><div class="social_block1" style="background-color: #1da0f3;">
+          <a href="https://www.facebook.com/groups/252781735273804/" target="_blank"><div class="social_block1" style="background-color: #004672;">
           <svg viewBox="0 0 576 512" role="img" aria-hidden="true" style="
             color: white; height: 90%; width: 95%; margin-top: 5%; margin-left: 30%" xmlns="http://www.w3.org/2000/svg">
          
@@ -91,36 +113,35 @@
       <div class="screen" style="background-color:white;background-image: url({{item.mainimage.url}}); background-size: 80%; background-position: 50% 50%; background-repeat: no-repeat;"></div>
         <div class="info">
           <p class="header"><b>{{item.title}}</b></p>
-          <p class="infoitem">
+          <p class="infoitem" id="maginfo" >
             {{item.discription}}
           </p>
-          <div class="links">
-
-          {% for item1 in categories %}
-              <a href="/catalog/collections/?category={{item1.link}}&shopsort={{item.title}}&opt=add" class="linktoshop"><b>{{item1.categ}}</b></a>
-              {% if item1.categ != lastitem %}
-              <p class="linktoshop"><b>|</b></p>
-              {% endif %}
-          {% endfor %}
-
-          </div>
+          
         </div>
         <div class="contacts shoppage">
           <div class="inner">
             <div class="pic" style="background-image: url({{item.image.url}})"></div>
             <p class="topheader">Сайт:</p>
-            <a href="http://{{item.link}}" class="linktoshop1 link1"><b>{{item.link}}</b></a>
+            <a href="http://{{item.link}}" target="_blank" class="linktoshop1 link1"><b>{{item.link}}</b></a>
             <p class="topheader">Телефоны:</p>
             <p class="infoitem phone1" style="margin-bottom: 0"><b>{{item.phone1}}</b></p>
             <p class="infoitem phone1"><b>{{item.phone2}}</b></p>
             <p class="topheader">Время работы:</p>
-            <p class="infoitem"><b>{{item.worktime}}</b></p>
+            <p class="infoitem" ><b id="wt">{{item.worktime}}</b></p>
 
             <a href="/contacts" class="linktoshop1 limk2"><b>Как проехать</b></a>
           </div>
           
           
         </div>
+        <div class="links">
+
+          {% for item1 in categories %}
+              <a href="/catalog/collections/?shopsort={{item.title}}&opt=clear" class="linktoshop"><b>{{item1.categ}}</b></a>
+              
+          {% endfor %}
+
+          </div>
 
     </div>
 
@@ -131,11 +152,11 @@
     {% for objj in staff %}
     <div class="shopblock" style="width:33.33%;height:350px">
       <div class="content" style="padding-top:0%; height:100%">
-        <div class="img" style="background-image: url({{objj.image.url}}); height:65%; background-size: 100% 100%"><a href="/catalog/{{objj.id}}" style="display: block; width: 100%; height: 100%"></a></div>
-        <div class="name" style="height:7%"><a style="text-decoration: none; color:black;" href="/catalog/{{objj.id}}" ><b>{{objj.title}}</b></a></div>
+        <div class="img" style="background-image: url({{objj.image.url}}); height:65%; background-size: 100% 100%"><a href="/catalog/{{objj.id}}/?categoty={{category}}" style="display: block; width: 100%; height: 100%"></a></div>
+        <div class="name" style="height:7%"><a style="text-decoration: none; color:black;" href="/catalog/{{objj.id}}/?categoty={{category}}" ><b>{{objj.title}}</b></a></div>
         <div class="more" style="padding-left:5%;height: 7%; font-size:1.5vh; color:#818181; padding-top:5%">{{objj.subtitle}}</div>
         {% if objj.isdiscount %}
-          <div class="nowprice col">{{objj.newprice}} руб.</div>
+          <div class="nowprice col" style="margin-left: 5%">{{objj.newprice}} руб.</div>
           <div style="display:table; height: 7%; margin-left: 5%;margin-right: 10px;">
                         <div class="preprice">
                           прежняя цена: {{objj.price}} руб.
@@ -155,8 +176,12 @@
       </div>
     </div>
     {% endfor %}
-    <div class="shopbot"></div>
-
+    <div class="shopbot"> 
+      <div class="name" style="height: 100%; text-align: center; display: block; font-size: 1.5vw">
+        <a href="/catalog/collections/?shopsort={{item.title}}&opt=clear" style="text-decoration: none; color: #cd1639"><p style="cursor: pointer; ">ещё</p></a>
+    </div>
+  </div>
+   
   </div>
 {% block footer %}
   {% include "footer.html" %}

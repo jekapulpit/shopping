@@ -95,9 +95,10 @@ color: black;
 }
 .callback {
 	width: 33%;
-	height: 100%;
+	height: auto;
 	display: inline-block;
 	font-size: 0;
+	padding-bottom: 30px;
 
 }
 .getcallbut {

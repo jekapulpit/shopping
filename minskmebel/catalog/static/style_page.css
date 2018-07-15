@@ -49,7 +49,7 @@ category {
 	background-repeat: no-repeat;
 }
 .page_content .image .listitem {
-    background-size: 70% 60% !important;
+    background-size: 100% 100% !important;
 }
 .page_content .content {
 	padding-left:3%;
@@ -63,19 +63,21 @@ category {
 	height: auto;
 	width: 100%;
 	overflow: hidden; 
-	border-bottom: 1px solid #818181;
 }
 .contentdown {
 	height:50%;
 	width: 100%;
 	overflow: hidden;
+	background:white;
 	font-size: 3vh;
 }
 .contentdown .text {
-	width: 70%;
+	width: 55%;
 	height:100%;
 	float: left;
-	margin-top: 5%;
+	padding: 15px; 
+	padding-top: 0;
+	margin-top: 1%;
 }
 .contentdown .image {
 	width:30%;
@@ -284,3 +286,12 @@ footer {
 .contentup { 
 padding-bottom: 10px; 
 }
+.preprice {
+    font-family: Proxima;
+    font-size: 1vw;
+    display: table-cell;
+    vertical-align: top;
+    color: #6f6f6f;
+    font-weight: bold;
+    padding-top: 0;
+}    

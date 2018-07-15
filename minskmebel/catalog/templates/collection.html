@@ -30,8 +30,27 @@
 
   var matherial = "{{item.matherial}}";
   var color = "{{item.color}}";
-  var qualities = "{{item.qualities}}";
-   var T = '{{item.discriotion}}';
+  var qualities = "{{qualities}}";
+  var re = /((&lt;br&gt;))/ 
+    
+  
+   var T = "{{discriotion}}";
+    T = T.replace(re, "<br>\n");  
+
+    T = T.replace(re, "<br>\n");  
+
+    T = T.replace(re, "<br>\n");  
+    T = T.replace(re, "<br>\n");  
+    T = T.replace(re, "<br>\n");  
+    T = T.replace(re, "<br>\n");  
+    T = T.replace(re, "<br>\n");  
+    T = T.replace(re, "<br>\n");  
+    
+  for (i = 0; i < 20; i++){
+    
+    qualities = qualities.replace(re, "<br>\n");  
+
+   } 
  flag = true;
  
 </script>
@@ -128,11 +147,11 @@
       </div>
       <div class="contentdown">
         <div class="text">
-          <b>Магазин "{{item.seller.title}}"</b><br><br>
-        <p style="font-size: 1vw">{{item.seller.phone1}}<br>
-          {{item.seller.phone2}}
-      <br><br>
-       {{item.seller.worktime}}<br>
+          <b>Магазин "{{item.seller.title}}"</b>
+        <p style="font-size: 1vw; width: 55%;">Телефоны:<strong><br>{{item.seller.phone1}}<br>
+          {{item.seller.phone2}}</strong>
+      Время работы:<br>
+       <strong>{{item.seller.worktime}}</strong><br>
        </p>
         </div>
          <div class="image" style="background-image: url({{item.seller.image.url}});"><a style="display: block; height: 100%; width:100%" href="/shops/{{item.seller.id}}"></a></div>
@@ -193,7 +212,7 @@
                         <div class="preprice">
                           прежняя цена: {{objj.price}} руб.
                         </div>
-                      </div>
+          </div>
             {% else %}
             {% if objj.price == 0.0 %}
                            

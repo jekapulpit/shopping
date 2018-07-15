@@ -101,10 +101,9 @@
 	height:10%;
 }
 .nowprice {
-	margin-left: 5%;
-    width: 150px;
+    width: 100%;
     font-family: Proxima;
-    font-size: 1.8vw;
+    font-size: 1vw;
     color: #cd1639;
     font-weight: bold;
     display: table;

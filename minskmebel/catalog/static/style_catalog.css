@@ -173,7 +173,7 @@ catalog {
 			font-family: Proxima;
 			font-size: 3.6vh	;
 			font-weight: bold;
-			display:table-cell;
+			display:table;
 			vertical-align: bottom;
 }
 
@@ -186,9 +186,12 @@ catalog {
 
 } 
 .pagess {
-	width: 20%;
-	height: 25%;
+	
 border: 1px solid #CDCDCD;
+}
+.pagess td {
+	width: 30px;
+	height: 30px;	
 }
 
 .nowprice.col {
@@ -213,18 +216,23 @@ border: 1px solid #CDCDCD;
 }
 td {
 
-	width: 20%;
-	height: 100%;
+	
 	border: 1px solid #CDCDCD;
 	text-align: center;
 	display: table-cell;
 	vertical-align: middle;
 	transition-duration: 1s;
+	padding: 0;
 }
 td a {
 	text-decoration: none;
 	color: black;
 	font-family: Proxima;
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	width: 50px;
+	height: 30px;
 transition-duration: 1s;
 
 }

@@ -11,6 +11,7 @@ from django.core.mail import send_mail
 from django.http import HttpResponse
 from django.template import RequestContext
 from django.http import HttpResponseRedirect
+import re
 
 sortparams1 = []
 class category1(object):
@@ -23,20 +24,58 @@ def Tovar(request, number):
     item = models.ShopItem.objects.get(id = number)
     form =forms.ContactForm()
     SimularItems = models.ShopItem.objects.filter(Category=item.Category).exclude(id = item.id)
-    context = {"item" : item, "SimularItems" : SimularItems, "form" : form}
+    qualitiess = item.qualities.splitlines()
+    qualities = ""
+    Category = request.GET.get('category')
+
+    for s in qualitiess:
+        qualities += s 
+        qualities += u'<br>'
+    discriotions = item.discriotion.splitlines()
+    discriotion = ""
+    for s in discriotions:
+        discriotion += s 
+        discriotion += u'<br>'
+    context = {"item" : item,
+                'SimularItems' : SimularItems, 
+                "form" : form, 
+                "qualities":qualities, 
+                "discriotion": discriotion,
+                "category": Category}
     return render(request, 'tovar.html', context)
 
 def collection(request, number):
+    
     item = models.Collection.objects.get(id=number)
     form =forms.ContactForm()
+    Category = request.GET.get('category')
 
     inCollection1 = models.ShopItem.objects.filter(inCollection=item)
     SimularItems = models.ShopItem.objects.filter(Category=item.Category)
-    context = {'items': inCollection1, 'item':item, 'SimularItems' : SimularItems, "form" : form}
+    qualitiess = item.qualities.splitlines()
+    qualities = ""
+    for s in qualitiess:
+        qualities += s 
+        qualities += u'<br>'
+    discriotions = item.discriotion.splitlines()
+    discriotion = ""
+    for s in discriotions:
+        discriotion += s 
+        discriotion += u'<br>'
+        
+
+    context = {'items': inCollection1, 
+                'item':item, 
+                'SimularItems' : SimularItems, 
+                "form" : form, 
+                "qualities":qualities, 
+                "discriotion": discriotion,
+                "category":Category}
+
     return render(request, 'collection.html', context)
 
 def collections(request):
-    form =forms.ContactForm()
+    form = forms.ContactForm()
 
     categories = {
         "softmebel": '1',
@@ -56,7 +95,13 @@ def collections(request):
     max1 = request.GET.get('max1')
     Categoty = request.GET.get('category')
     
+
     SORT = request.GET.get('shopsort')
+    if(request.GET.get('opt') == 'clear'):
+        sortparams1.clear()
+        if(SORT not in sortparams1 and SORT is not None and SORT != ""  ):
+            sortparams1.append(SORT)
+
     if (request.GET.get('opt') == 'add' and SORT not in sortparams1):
         sortparams1.append(SORT)
     else:
@@ -87,7 +132,7 @@ def collections(request):
         if float(objj.price) >= float(min1) and float(objj.price) <= float(max1):
             items1.append(objj)
     items = []
-    if (sortparams1 != []):
+    if (sortparams1):
         for objj in items1:
             if objj.seller.title in sortparams1:
                 items.append(objj)
@@ -141,12 +186,15 @@ def catalog1(request):
     max1 = request.GET.get('max1')
     Categoty = request.GET.get('category')
    
-
     SORT = request.GET.get('shopsort')
+    if(request.GET.get('opt') =='clear'):
+        sortparams1.clear()
+        if(SORT not in sortparams1 and SORT is not None and SORT != ""  ):
+            sortparams1.append(SORT)
     sortparam = request.GET.get('priority');
     if(sortparam is None or sortparam is ""):
         sortparam  = '-isdiscount'
-    if(request.GET.get('opt') == 'add' and request.GET.get('opt') not in sortparams1):
+    if(request.GET.get('opt') == 'add' and SORT not in sortparams1):
         sortparams1.append(SORT)
     else:
         if(request.GET.get('opt') == 'del'):
@@ -167,15 +215,15 @@ def catalog1(request):
     if max1 is None or max1 is '':
         max1 = maxvalue
     if Categoty == None or Categoty == "" or Categoty == 'None':
-        items2 = models.ShopItem.objects.all().order_by(sortparam)
+        items2 = models.ShopItem.objects.all().order_by(sortparam, "-price")
     else:
-        items2 = models.ShopItem.objects.filter(Category = categories[Categoty]).order_by(sortparam)
+        items2 = models.ShopItem.objects.filter(Category = categories[Categoty]).order_by(sortparam, -price)
     items1 = []
     for objj in items2:
         if (float(objj.newprice) >= float(min1) and float(objj.newprice) <= float(max1)) or (objj.newprice == 0.0) :
             items1.append(objj)
     items = []
-    if(sortparams1 != []):
+    if(sortparams1):
         for objj in items1:
             if objj.seller.title in sortparams1:
                 items.append(objj)
@@ -213,7 +261,7 @@ def shoppage(request, shopid):
     form =forms.ContactForm()
     sortparams1 = []
     item = models.shops.objects.get(id = shopid)
-    Staff = models.ShopItem.objects.filter(seller = item)
+    Staff = models.ShopItem.objects.filter(seller = item)[:9]
     Allcategories = []
     check = []
     links = []
@@ -240,13 +288,20 @@ def shoppage(request, shopid):
         9: 'Рабочий кабинет',
     }
     lastitem='heh'
+    worktime = item.worktime
+    maginfo = item.discription.splitlines()
+    info = ""
+    for s in maginfo:
+        info += s 
+        info += "<br>"
+
     for item1 in Staff:
         if item1.Category not in check:
             Allcategories.append(category1(categoryTemplate[int(item1.Category)], linktemplate[categoryTemplate[int(item1.Category)]]))
             check.append(item1.Category)
     if Allcategories != []:        
         lastitem = Allcategories[-1].categ
-    context = {"item" : item, "staff" : Staff, "categories" : Allcategories, "lastitem"  : lastitem, "form" : form}
+    context = {"item" : item, "staff" : Staff, "categories" : Allcategories, "lastitem"  : lastitem, "form" : form,"info":info, "worktime" : worktime }
     return render(request, 'shoppage.html', context)
 
 
@@ -261,14 +316,22 @@ def shops(request):
 def sales(request, num):
     form =forms.ContactForm()
 
-    sale = Sale.objects.get(id=num);
+
+    sale = Sale.objects.get(id=num)
+    disc = sale.discriotion.splitlines()
+    discs = ""
+    for s in disc:
+        discs += s 
+        discs += "<br>"
+
+
     allsales = Sale.objects.all()
-    alldiscounts1 = models.ShopItem.objects.all();
+    alldiscounts1 = models.ShopItem.objects.all()
     alldiscounts = []
     for objj in alldiscounts1:
         if objj.isdiscount:
             alldiscounts.append(objj)
-    return render(request, 'sales.html', {'sale': sale, 'slider2': alldiscounts, "form" : form})
+    return render(request, 'sales.html', {'sale': sale, 'slider2': alldiscounts, "form" : form, "discriotion":discs})
 
 def allsales(request):
     form =forms.ContactForm()
@@ -298,10 +361,15 @@ def news(request, num):
     new = New.objects.get(id=num)
     alldiscounts1 = models.ShopItem.objects.all()
     alldiscounts = []
+    disc = new.discriotion.splitlines()
+    discs = ""
+    for s in disc:
+        discs += s 
+        discs += "<br>"
     for objj in alldiscounts1:
         if objj.isdiscount:
             alldiscounts.append(objj)
-    return render(request, 'news.html', {'new': new, 'slider2': alldiscounts, "form" : form})
+    return render(request, 'news.html', {'new': new, 'slider2': alldiscounts, "form" : form , "discriotion":discs})
 
 def contacts(request):
     form =forms.ContactForm()

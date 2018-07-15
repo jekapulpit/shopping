@@ -1071,7 +1071,7 @@ products {
 		background-size: 70%;
 	}
 	.shopblock .content .name {
-		font-size: 3vw;
+		font-size: 2vw;
 	}
 	.shops .shopname {
 		font-size: 4vw !important;
@@ -1085,7 +1085,14 @@ products {
 		height: 200px;
 	}
 	.shopblock .content .price {
-		padding-top: 20px !important;
+		padding-top: 5px !important;
+		font-size: 2vw !important;
+	}
+	category {
+		height: 50px;
+	}
+	.preprice {
+		font-size: 1.5vw;
 	}
 	.info .links {
 		margin-top: 22%;
@@ -1133,7 +1140,8 @@ products {
 
 	}
 	.nowprice.col {
-	font-size: 4vw !important;
+	font-size: 2vw !important;
+	padding-top: 5px;
 	}
 	.price.col {
 	font-size: 4vw !important;
@@ -1297,6 +1305,9 @@ products {
 @media only screen and (max-width: 620px) {
 		news {
 		height: 300px;
+	}
+	.stand .info {
+		width:20%;
 	}
 	#mobile_social {
 		width:100%;
@@ -1790,13 +1801,20 @@ products {
 	.nowprice {
 
 	    font-size: 3.6vh !important;
+	    padding-top: 5%;
 
+	}
+	.content .preprice {
+		font-size: 3vw;
+		padding-top: 5%;
 	}
 	.nowprice.col {
 	font-size: 4vw !important;
+	padding-top: 5%;
 	}
 	.price.col {
 	font-size: 4vw !important;
+	padding-top: 15%;
 	}
 	.preprice {
 	   font-size: 3vw;
