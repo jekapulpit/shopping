@@ -654,8 +654,14 @@ products {
 }
 @media only screen and (max-width: 1022px) and (min-width: 621px) {
 	.menu1, .menumobile {
-		top: 300px;
+		top: 250px;
 		height: 105%;
+	}
+	.topheader {
+		font-size: 2vw;
+	}
+	.menupunct {
+		font-size: 5vw;
 	}
 	.leftside .spisok {
 		height:auto;
@@ -1082,7 +1088,7 @@ products {
 	padding-top: 2%;
 	}
 	topshop .stand {
-		height: 200px;
+		height: 250px;
 	}
 	.shopblock .content .price {
 		padding-top: 5px !important;

@@ -256,7 +256,7 @@ category {
 .item .content .more {
 	width:90%;
 	padding-left: 5%;
-	height:15%;
+	height: auto;
 	font-size: 1vw;
 	overflow: hidden;
 	color: #818181;
